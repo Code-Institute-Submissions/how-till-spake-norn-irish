@@ -55,7 +55,7 @@ The site is aimed at:
 - Anyone who has visited and was lucky enough to learn some of the words and phrases used by locals during their visit, and wants to share this with other travellers
 - Anyone from Northern Ireland who wants to share some of the words and phrases they use, to help anyone visiting the country
 
-First time visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing, and so they can also create a collection of their favorite words and phrases within their user profile.
+First time visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing, as well as rate the words and phrases featured in the dictionary.
 
 ### User Stories
 
@@ -73,7 +73,7 @@ First time visitors to the site will be able to sign up for an account so they c
 - As a **registered user**, I want to be able to easily add words or phrases to the dictionary
 - As a **registered user**, I want to be able to edit any words or phrases I've added to the dictionary
 - As a **registered user|**, I want to be able to delete any words or phrases I've added to the dictionary
-- As a **registered user**, I want to be able to 'favorite/like' any of the words and phrases in the dictionary
+- As a **registered user**, I want to be able to rate any of the words or phrases featured in the dictionary
 
 #### Site Owner Goals
 
@@ -82,7 +82,7 @@ First time visitors to the site will be able to sign up for an account so they c
 - As a **site owner**, I want to provide the user with access to the dictionary without having to create an account
 - As a **site owner**, I want to allow the user to easily sign up for an account to allow them to add their own suggestions to the dictionary
 - As a **site owner**, I want to allow the user to easily edit and delete any words or phrases they've added to the
-- As a **site owner**, I want to allow the user to add any words and phrases to their favorites collection located in their profile
+- As a **site owner**, I want to allow the user to rate the words and phrases featured in the dictionary
 - As a **site owner**, I want all visitors and registered users to be able to easily contact me through email or social media platforms
 
 ### Design
@@ -99,7 +99,7 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 
 Links to the wireframes can be found below:
 
-- **Add Table**
+- **Add Links to Wireframes**
 
 [Contents](#contents)
 
@@ -111,19 +111,47 @@ Links to the wireframes can be found below:
 
 ### Features left to be implemented
 
+- Responsive Design
+
+- Navigation Bar (all pages):
+  - About (section featured on home page)
+  - Dictionary
+  - Login
+    - Dictionary
+    - Profile
+    - Logout
+  - Sign Up
+  - Contact Us
+
+- Footer with Social Links/Email Address (all pages):
+  - Facebook
+  - Twitter
+  - Instagram
+  - Email Address
+
 - Home Page
   - About Section
+  - Button link to Sign Up Page
+  - Button link to Login Page
+  - Button link to Dictionary
+
+- Dictionary
+  - Filter system
+    - Alphabetically
+    - Search for a word
+  - Voting System
+
 - Login Page
-  - Link to Sign Up Page
+  - Button link to Sign Up Page
   - Profile
-    - Submissions
-    - Favorites
+    - Submissions (with options to edit or delete)
+    - Favorites (add this later and replace with voting system?)
+
 - Sign Up Page
+  - Link to Login Page
+
 - Contact Page
   - Email Form
-
-- Navigation Bar on all pages
-- Social Links on all pages
 
 - 404 Error Page
 
