@@ -1,12 +1,12 @@
 # How Till Spake Norn Irish
 
-Short Project Description
+How Till Spake Norn Irish (How to Speak Northern Irish) is a online guide to all the words and phrases you're likely to hear when visiting Northern Ireland.
 
-- **Insert Am I Responsive Screenshot Later**
+- **Insert Am I Responsive Screenshot**
 
 The image above is a screenshot of the site displayed on different devices using [Am I Responsive](http://ami.responsivedesign.is/).
 
-A demo of the website can be found here: **Add Link to Deployed Site on Heroku Later**
+A demo of the website can be found here: **Add Link to Deployed Site on Heroku**
 
 ## Contents
 
@@ -20,7 +20,7 @@ A demo of the website can be found here: **Add Link to Deployed Site on Heroku L
     - Colour Scheme
     - Typography
     - Imagery
-- Wireframes
+  - Wireframes
 
 - [**Features**](#features)
   - Features that have been implemented
@@ -46,23 +46,44 @@ A demo of the website can be found here: **Add Link to Deployed Site on Heroku L
 
 ### Project Goals
 
-The goal of this project is to...
+The goal of this project is to create an online dictionary of all the different words and phrases used in Northern Ireland. Each word or phrase in the dictionary will have a definition along with an example of how the word or phrase might typically be used in conversation by locals.
+
+The site is aimed at:
+
+- Anyone visiting Northern Ireland for the first time
+- Anyone who has visited but struggled to understand some of the words and phrases used by locals
+- Anyone who has visited and was lucky enough to learn some of the words and phrases used by locals during their visit, and wants to share this with other travellers
+- Anyone from Northern Ireland who wants to share some of the words and phrases they use, to help anyone visiting the country
+
+First time visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing, and so they can also create a collection of their favorite words and phrases within their user profile.
 
 ### User Stories
 
 #### First Time Visitor Goals
 
-- As a **first time visitor**, I want to easily understand the main purpose of the site
+- As a **first time visitor**, I want to understand the main purpose of the site
 - As a **first time visitor**, I want to be able to easily navigate through the site
+- As a **first time visitor**, I want to be able to find out which common words and phrases are used by locals in Northern Ireland
+- As a **first time visitor**, I want to be able to sign up for an account to add my own suggestions
+- As a **first time visitor**, I want to be able to easily contact the site owner
 
 #### Registered User Goals
 
 - As a **registered user**, I want to be able to easily login and logout of my account
-- As a **registered user**, I want to be able to update my account details
+- As a **registered user**, I want to be able to easily add words or phrases to the dictionary
+- As a **registered user**, I want to be able to edit any words or phrases I've added to the dictionary
+- As a **registered user|**, I want to be able to delete any words or phrases I've added to the dictionary
+- As a **registered user**, I want to be able to 'favorite/like' any of the words and phrases in the dictionary
 
 #### Site Owner Goals
 
-- As a **site owner**, I want all visitors and registered users to be able to easily contact me
+- As a **site owner**, I want to provide the user with information about the purpose of the site
+- As a **site owner**, I want to include a navigation bar to allow users to easily navigate to other pages on the site
+- As a **site owner**, I want to provide the user with access to the dictionary without having to create an account
+- As a **site owner**, I want to allow the user to easily sign up for an account to allow them to add their own suggestions to the dictionary
+- As a **site owner**, I want to allow the user to easily edit and delete any words or phrases they've added to the
+- As a **site owner**, I want to allow the user to add any words and phrases to their favorites collection located in their profile
+- As a **site owner**, I want all visitors and registered users to be able to easily contact me through email or social media platforms
 
 ### Design
 
@@ -73,6 +94,12 @@ The goal of this project is to...
 #### Imagery
 
 #### Wireframes
+
+The wireframes for my site were created using [Balsamiq](https://balsamiq.com/). I created wireframe for mobile, tablet and desktop devices.
+
+Links to the wireframes can be found below:
+
+- **Add Table**
 
 [Contents](#contents)
 
@@ -89,12 +116,16 @@ The goal of this project is to...
 - Login Page
   - Link to Sign Up Page
   - Profile
+    - Submissions
+    - Favorites
 - Sign Up Page
 - Contact Page
   - Email Form
 
 - Navigation Bar on all pages
 - Social Links on all pages
+
+- 404 Error Page
 
 [Contents](#contents)
 
@@ -140,12 +171,12 @@ Further Testing information can be found in a separate document: [TESTING.md](TE
 
 ## Deployment
 
-This project was coded using VS Code using the following steps:
+This project was coded in VS Code using the following steps:
 
 1. Create a new folder in your preferred area in your local drive
 2. Open the folder in VS Code and create a README.md file
 3. Open source control in VS Code and select "Publish to GitHub"
-4. If prompted, sign into GitHub to connect your account to VS Code if you haven't do so already
+4. If prompted, sign into GitHub to connect your account to VS Code if you haven't done so already
 5. In source control, select "Publish to GitHub"
 6. Give your repository a name and select "Publish to GitHub public repository"
 7. After the repository is successfully published to GitHub, you can use git bash to add, commit and push any changes to the GitHub repository
@@ -155,7 +186,7 @@ This project was coded using VS Code using the following steps:
 
 ### Heroku
 
-Add heroku deployment steps
+- **Add Heroku Deployment Steps**
 
 ### Making a Local Clone
 
@@ -165,12 +196,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 2. Under the repository name, click "Code" or "Clone" and copy the link to clone the repository using "HTTPS".
 3. After copying the link, open terminal on your computer. This step can also be done in the terminal on an IDE.
 4. Change the current working directory to the location where you want the cloned directory to be saved.
-5. Type git clone, and then paste the URL:
+5. Type ```git clone```, and then paste the URL:
 6. Press Enter to create a local clone.
-
-```bash
-git clone
-```
 
 [Contents](#contents)
 
