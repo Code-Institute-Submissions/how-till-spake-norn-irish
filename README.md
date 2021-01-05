@@ -72,7 +72,7 @@ First time visitors to the site will be able to sign up for an account so they c
 - As a **registered user**, I want to be able to easily login and logout of my account
 - As a **registered user**, I want to be able to add words or phrases to the dictionary
 - As a **registered user**, I want to be able to edit any words or phrases I've added to the dictionary
-- As a **registered user|**, I want to be able to delete any words or phrases I've added to the dictionary
+- As a **registered user**, I want to be able to delete any words or phrases I've added to the dictionary
 - As a **registered user**, I want to be able to rate any of the words or phrases featured in the dictionary
 
 #### Site Owner Goals
@@ -114,7 +114,6 @@ Links to the wireframes can be found below:
 - Responsive Design
 
 - Navigation Bar (all pages):
-  - About (section featured on home page)
   - Dictionary
   - Login (Link to Sign Up Page)
     - Dictionary
