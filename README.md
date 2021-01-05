@@ -1,6 +1,6 @@
 # How Till Spake Norn Irish
 
-How Till Spake Norn Irish (How to Speak Northern Irish) is a online guide to all the words and phrases you're likely to hear when visiting Northern Ireland.
+How Till Spake Norn Irish (How to Speak Northern Irish) is an online guide to all the words and phrases you're likely to hear when visiting Northern Ireland.
 
 - **Insert Am I Responsive Screenshot**
 
@@ -53,7 +53,7 @@ The site is aimed at:
 - Anyone visiting Northern Ireland for the first time
 - Anyone who has visited but struggled to understand some of the words and phrases used by locals
 - Anyone who has visited and was lucky enough to learn some of the words and phrases used by locals during their visit, and wants to share this with other travellers
-- Anyone from Northern Ireland who wants to share some of the words and phrases they use, to help anyone visiting the country
+- Anyone from Northern Ireland who wants to share some of the words and phrases they use to help anyone visiting the country
 
 First time visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing, as well as rate the words and phrases featured in the dictionary.
 
@@ -65,12 +65,12 @@ First time visitors to the site will be able to sign up for an account so they c
 - As a **first time visitor**, I want to be able to easily navigate through the site
 - As a **first time visitor**, I want to be able to find out which common words and phrases are used by locals in Northern Ireland
 - As a **first time visitor**, I want to be able to sign up for an account to add my own suggestions
-- As a **first time visitor**, I want to be able to easily contact the site owner
+- As a **first time visitor**, I want to be able to contact the site owner
 
 #### Registered User Goals
 
 - As a **registered user**, I want to be able to easily login and logout of my account
-- As a **registered user**, I want to be able to easily add words or phrases to the dictionary
+- As a **registered user**, I want to be able to add words or phrases to the dictionary
 - As a **registered user**, I want to be able to edit any words or phrases I've added to the dictionary
 - As a **registered user|**, I want to be able to delete any words or phrases I've added to the dictionary
 - As a **registered user**, I want to be able to rate any of the words or phrases featured in the dictionary
@@ -81,7 +81,7 @@ First time visitors to the site will be able to sign up for an account so they c
 - As a **site owner**, I want to include a navigation bar to allow users to easily navigate to other pages on the site
 - As a **site owner**, I want to provide the user with access to the dictionary without having to create an account
 - As a **site owner**, I want to allow the user to easily sign up for an account to allow them to add their own suggestions to the dictionary
-- As a **site owner**, I want to allow the user to easily edit and delete any words or phrases they've added to the
+- As a **site owner**, I want to allow the user to easily edit and delete any words or phrases they've added to the dictionary
 - As a **site owner**, I want to allow the user to rate the words and phrases featured in the dictionary
 - As a **site owner**, I want all visitors and registered users to be able to easily contact me through email or social media platforms
 
@@ -116,7 +116,7 @@ Links to the wireframes can be found below:
 - Navigation Bar (all pages):
   - About (section featured on home page)
   - Dictionary
-  - Login
+  - Login (Link to Sign Up Page)
     - Dictionary
     - Profile
     - Logout
@@ -147,8 +147,7 @@ Links to the wireframes can be found below:
     - Submissions (with options to edit or delete)
     - Favorites (add this later and replace with voting system?)
 
-- Sign Up Page
-  - Link to Login Page
+- Sign Up Page (Link to Login Page)
 
 - Contact Page
   - Email Form
