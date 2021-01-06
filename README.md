@@ -21,6 +21,8 @@ A demo of the website can be found here: **Add Link to Deployed Site on Heroku**
     - Typography
     - Imagery
   - Wireframes
+  
+- [**Database Schema**](#database-schema)
 
 - [**Features**](#features)
   - Features that have been implemented
@@ -29,6 +31,7 @@ A demo of the website can be found here: **Add Link to Deployed Site on Heroku**
 - [**Technologies**](#technologies)
   - Languages Used
   - Frameworks, Libraries and Programs Used
+  - Dependencies
 
 - [**Testing**](#testing)
 
@@ -100,6 +103,23 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 Links to the wireframes can be found below:
 
 - **Add Links to Wireframes**
+
+[Contents](#contents)
+
+---
+
+## Database Schema
+
+MongoDB Collections Examples:
+
+Collection: dictionary
+
+| Key | Value |
+| :---: | :---: | :---: |
+| _id: | ObjectId("unique_id") |
+| word: | "dictionary_word" |
+| definition: | "dictionary_definition" |
+| example: | "dictionary_example" |
 
 [Contents](#contents)
 
@@ -181,11 +201,13 @@ Links to the wireframes can be found below:
 - [GitHub](https://github.com/)
   - GitHub was used to store the project code that was pushed from VS Code.
 - [Heroku](https://www.heroku.com/)
-  - Heroku was used to...
+  - Heroku is a cloud platform that was used to deploy and run the application from the GitHub repository.
 - [MongoDB](https://www.mongodb.com/)
-  - MongoDB Atlas was used to...
+  - MongoDB Atlas is a cloud database service used to create and store the database collections for the application.
 - [VS Code](https://code.visualstudio.com/)
   - Visual Studio Code was the IDE used to code the project.
+
+### Dependencies
 
 [Contents](#contents)
 
@@ -195,35 +217,62 @@ Further Testing information can be found in a separate document: [TESTING.md](TE
 
 [Contents](#contents)
 
+## Version Control
+
+- **Branches Used**
+
 ## Deployment
 
-This project was coded in VS Code using the following steps:
+### VS Code
 
-1. Create a new folder in your preferred area in your local drive
-2. Open the folder in VS Code and create a README.md file
-3. Open source control in VS Code and select "Publish to GitHub"
-4. If prompted, sign into GitHub to connect your account to VS Code if you haven't done so already
-5. In source control, select "Publish to GitHub"
-6. Give your repository a name and select "Publish to GitHub public repository"
-7. After the repository is successfully published to GitHub, you can use git bash to add, commit and push any changes to the GitHub repository
-8. To stage a file commit, use ```git add``` and the name of the file you want to commit
-9. After adding a file to commit, use ```git commit -m "add commit message"``` to specify what changes you have made to that file
-10. After committing a file, use ```git push``` to push all staged changes to the GitHub repository
+This project was coded in VS Code and pushed to GitHub using the following steps:
+
+- Create a new folder in your preferred area in your local drive
+- Open the folder in VS Code and create a README.md file
+- Open source control in VS Code and select **"Publish to GitHub"**
+- If prompted, sign into GitHub to connect your account to VS Code if you haven't done so already
+- In source control, select **"Publish to GitHub"**
+- Give your repository a name and select **"Publish to GitHub public repository"**
+- After the repository is successfully published to GitHub, you can use git bash to add, commit and push any changes to the GitHub repository
+- To stage a file commit, use ```git add``` and the name of the file you want to commit
+- After adding a file to commit, use ```git commit -m "add commit message"``` to specify what changes you have made to that file
+- After committing a file, use ```git push``` to push all staged changes to the GitHub repository
+- Before installing any additional packages, create a virtual environment - this will ensure that packages installed are only installed in the virtual environment folder: ```python3 -m venv venv```
+- Ensure that the interpreter path at the bottom left of the IDE window is the virtual environment you created: ```Python 3.7.4 64-bit('venv': venv)```
+- Create a **env.py** file to store environment variables: IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME
+- Add the **env.py** file and the virtual environment folder to a **.gitgnore** file to ensure this information isn't pushed to the repository
 
 ### Heroku
 
-- **Add Heroku Deployment Steps**
+This project is hosted on Heroku - A cloud platform service that enables developers to build, run and operate applications entirely in the cloud:
+
+- Before creating a Heroku app, open the repository in VS Code and create a requirements file that lists all the applications and dependencies required to run the application: ```pip3 freeze --local > requirements.txt```
+- Create a Heroku specific file called a Procfile - this is what Heroku looks for to know which file runs the app and how to run it: ```echo web: python run.py > Procfile```
+- Open [Heroku](www.heroku.com) and login to your account - or sign up for an account if you don't already have one
+- Open the dashboard and select **"New"** to create a new app
+- Name the app and set the region to Europe
+- Open the settings tab and open **"Reveal Config Vars"**
+- Add the environment variables from the **env.py** file:
+  - KEY: IP | VALUE: 0.0.0.0
+  - KEY: PORT | VALUE: 5000
+  - KEY: SECRET_KEY | VALUE:
+  - KEY: MONGO_URI | VALUE:
+  - KEY: MONGO_DBNAME | VALUE:
+- To deploy the app from GitHub, open the deploy tab and change the deployment method to GitHub
+- Connect to your GitHub account and search for the name of the repository to connect to
+- Once connected, **"Enable Automatic Deployments"** and select the **"Master"** or **"Main"** branch to deploy
+- Click the **"Deploy Branch"** button to deploy the app to Heroku
 
 ### Making a Local Clone
 
 To clone the repository and make a local copy on your computer, follow these steps:
 
-1. Open GitHub and locate the GitHub repository:
-2. Under the repository name, click "Code" or "Clone" and copy the link to clone the repository using "HTTPS".
-3. After copying the link, open terminal on your computer. This step can also be done in the terminal on an IDE.
-4. Change the current working directory to the location where you want the cloned directory to be saved.
-5. Type ```git clone```, and then paste the URL:
-6. Press Enter to create a local clone.
+- Open GitHub and locate the GitHub repository: [https://github.com/KirstChat/how-till-spake-norn-irish](https://github.com/KirstChat/how-till-spake-norn-irish)
+- Under the repository name, click "Code" and copy the link to clone the repository using "HTTPS"
+- After copying the link, open terminal on your computer - this step can also be done in the terminal in your preferred IDE
+- Change the current working directory to the location where you want the cloned directory to be saved
+- Type ```git clone```, and then paste the URL: [https://github.com/KirstChat/how-till-spake-norn-irish.git](https://github.com/KirstChat/how-till-spake-norn-irish.git)
+- Press Enter to create a local clone
 
 [Contents](#contents)
 
@@ -232,6 +281,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 ## Credits
 
 ### Code
+
+- The following video by Corey Schafer provided some guidance on creating a virtual environment in VS Code on Mac: www.youtube.com/watch?v=06I63_p-2A4&t=1571s
 
 ### Content
 
