@@ -36,6 +36,9 @@ A demo of the website can be found here: **Add Link to Deployed Site on Heroku**
 - [**Testing**](#testing)
 
 - [**Deployment**](#deployment)
+  - GitHub
+  - Heroku
+  - Cloning the Repository
 
 - [**Credits**](#credits)
   - Code
@@ -112,7 +115,7 @@ Links to the wireframes can be found below:
 
 MongoDB Collections Examples:
 
-Collection: dictionary
+### Dictionary Collection
 
 | Key | Value |
 | :---: | :---: | :---: |
@@ -223,7 +226,7 @@ Further Testing information can be found in a separate document: [TESTING.md](TE
 
 ## Deployment
 
-### VS Code
+### GitHub
 
 This project was coded in VS Code and pushed to GitHub using the following steps:
 
@@ -240,7 +243,7 @@ This project was coded in VS Code and pushed to GitHub using the following steps
 - Before installing any additional packages, create a virtual environment - this will ensure that packages installed are only installed in the virtual environment folder: ```python3 -m venv venv```
 - Ensure that the interpreter path at the bottom left of the IDE window is the virtual environment you created: ```Python 3.7.4 64-bit('venv': venv)```
 - Create a **env.py** file to store environment variables: IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME
-- Add the **env.py** file and the virtual environment folder to a **.gitgnore** file to ensure this information isn't pushed to the repository
+- Add the **env.py** file and the virtual environment folder to a **.gitignore** file to ensure this information isn't pushed to the repository
 
 ### Heroku
 
@@ -263,7 +266,7 @@ This project is hosted on Heroku - A cloud platform service that enables develop
 - Once connected, **"Enable Automatic Deployments"** and select the **"Master"** or **"Main"** branch to deploy
 - Click the **"Deploy Branch"** button to deploy the app to Heroku
 
-### Making a Local Clone
+### Cloning the Repository
 
 To clone the repository and make a local copy on your computer, follow these steps:
 
