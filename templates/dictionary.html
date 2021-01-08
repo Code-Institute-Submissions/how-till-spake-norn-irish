@@ -2,9 +2,17 @@
 {% block content %}
 
 {% for words in dictionary %}
-{{ words.word }}<br>
-{{ words.definition }}<br>
-{{ words.example }}<br>
+<div class="container">
+    <ul class="collapsible z-depth-0">
+        <li>
+            <div class="collapsible-header">{{ words.word }}</div>
+            <div class="collapsible-body">
+                <p><span>Definition: </span> {{ words.definition }}</p>
+                <p><span>Example: </span> "{{ words.example }}"</p>
+            </div>
+        </li>
+    </ul>
+</div>
 {% endfor %}
 
 {% endblock %}

@@ -118,7 +118,7 @@ MongoDB Collections Examples:
 ### Dictionary Collection
 
 | Key | Value |
-| :---: | :---: | :---: |
+| :---: | :---: |
 | _id: | ObjectId("unique_id") |
 | word: | "dictionary_word" |
 | definition: | "dictionary_definition" |
