@@ -1,18 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for words in dictionary %}
-<div class="container">
-    <ul class="collapsible z-depth-0">
-        <li>
-            <div class="collapsible-header">{{ words.word }}</div>
-            <div class="collapsible-body">
-                <p><span>Definition: </span> {{ words.definition }}</p>
-                <p><span>Example: </span> "{{ words.example }}"</p>
+<main class="dictionary valign-wrapper">
+    <div class="container">
+        <div class="row">
+            {% for words in dictionary %}
+            <div class="col s12 m6">
+                <div class="card valign-wrapper">
+                    <div class="card-content waves-effect waves activator">
+                        <div class="card-title">
+                            <p class="bold-text">{{ words.word }}<i class="fas fa-ellipsis-v right"></i></p>
+                        </div>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title">{{ words.word }}<i class="fas fa-times right"></i></span>
+                        <p>Definition: {{ words.definition }}</p>
+                        <p>Example: {{ words.example }}</p>
+                    </div>
+                </div>
             </div>
-        </li>
-    </ul>
-</div>
-{% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</main>
 
 {% endblock %}

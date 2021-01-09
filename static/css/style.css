@@ -1,11 +1,38 @@
+/* ---------- Color Variables ---------- */
+
+:root {
+    --black: #2F2E2B;
+    /* Jet */
+    --white: #F6F2DF;
+    /* Eggshell */
+    --yellow: #FCBF49;
+    /* Maximum Yellow Red */
+    --green: #599E42;
+    /* May Green */
+    --blue: #003049;
+    /* Prussian Blue */
+}
+
+/* ---------- End Color Variables ---------- */
+
 body {
     margin: 0;
     padding: 0;
+
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    height: 100vh;
 }
 
-.green-background {
-    background-color: #4F9039;
+.green-bg {
+    background-color: var(--green);
 }
+
+/* ---------- Dictionary Cards ---------- */
+
+.card-content {
+    width: 100vw;
+    height: 25vh;
+}
+
+/* ---------- End Dictionary Cards ---------- */
