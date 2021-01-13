@@ -103,9 +103,15 @@ First time visitors to the site will be able to sign up for an account so they c
 
 The wireframes for my site were created using [Balsamiq](https://balsamiq.com/). I created wireframe for mobile, tablet and desktop devices.
 
-Links to the wireframes can be found below:
+Links to the wireframes can be found below. Each link contains the wireframes for mobile, tablet and desktop devices:
 
-- **Add Links to Wireframes**
+- [Site Map](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/site-map.pdf)
+- [Home](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/home.pdf)
+- [Dictionary](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/dictionary.pdf)
+- [Login](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/login.pdf)
+- [Profile](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/profile.pdf)
+- [Sign Up](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/sign-up.pdf)
+- [Contact](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/contact-us.pdf)
 
 [Contents](#contents)
 
