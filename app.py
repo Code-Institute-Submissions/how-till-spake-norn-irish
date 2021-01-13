@@ -18,14 +18,15 @@ mongo = PyMongo(app)
 
 # Render Home Page
 
-# @app.route("/home")
-# def home():
-#     return render_template('index.html')
+
+@app.route("/")
+@app.route("/home")
+def home():
+    return render_template('index.html')
 
 # Render Dictionary
 
 
-@app.route("/")
 @app.route("/dictionary")
 def dictionary():
     dictionary = mongo.db.dictionary.find()
