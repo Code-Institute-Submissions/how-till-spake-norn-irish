@@ -22,6 +22,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+
+    color: var(--white);
 }
 
 .green-bg {
@@ -30,9 +32,21 @@ body {
 
 /* ---------- Dictionary Cards ---------- */
 
+.card {
+    color: var(--black);
+}
+
 .card-content {
     width: 100vw;
     height: 25vh;
 }
 
 /* ---------- End Dictionary Cards ---------- */
+
+/* ---------- Footer ---------- */
+
+.social-link {
+    color: var(--white);
+}
+
+/* ---------- End Footer ---------- */
