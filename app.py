@@ -20,14 +20,14 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/home")
+@app.route("/how-till-spake-norn-irish")
 def home():
     return render_template('index.html')
 
 # Render Dictionary
 
 
-@app.route("/dictionary")
+@app.route("/our-wee-guide")
 def dictionary():
     dictionary = mongo.db.dictionary.find()
     return render_template("dictionary.html", dictionary=dictionary)

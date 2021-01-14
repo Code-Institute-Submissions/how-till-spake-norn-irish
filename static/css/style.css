@@ -23,7 +23,6 @@ body {
     flex-direction: column;
     height: 100vh;
 
-    color: var(--white);
     background-color: var(--white);
 }
 
@@ -31,12 +30,42 @@ body {
     background-color: var(--green);
 }
 
+/* ---------- Navigation Bar ---------- */
+
+.logo {
+    width: 30%;
+    padding: 10px;
+}
+
+/* ---------- End Navigation Bar ---------- */
+
+/* ---------- Home ---------- */
+
+.bg-img-heading {
+    background: linear-gradient(rgba(246, 242, 223, 0.4), rgba(246, 242, 223, 0.4)),
+        url('../images/dark-hedges.jpg');
+}
+
+.bg-img-login {
+    background: linear-gradient(rgba(246, 242, 223, 0.4), rgba(246, 242, 223, 0.4)),
+        url('../images/titanic-belfast.jpg');
+}
+
+.bg-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+
+/* ---------- End Home ---------- */
+
 /* ---------- Dictionary ---------- */
 .dictionary {
     margin: 20px 0;
 }
 
-main div.row {
+section div.row {
     margin-bottom: 0;
 }
 
