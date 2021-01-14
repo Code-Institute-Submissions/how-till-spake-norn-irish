@@ -24,13 +24,14 @@ body {
     height: 100vh;
 
     color: var(--white);
+    background-color: var(--white);
 }
 
 .green-bg {
     background-color: var(--green);
 }
 
-/* ---------- Dictionary Cards ---------- */
+/* ---------- Dictionary ---------- */
 .dictionary {
     margin: 20px 0;
 }
@@ -61,12 +62,18 @@ main div.row {
     font-weight: 700;
 }
 
-/* ---------- End Dictionary Cards ---------- */
+/* ---------- End Dictionary ---------- */
 
 /* ---------- Footer ---------- */
 
+.page-footer,
 .social-link {
     color: var(--white);
+    font-size: 1.5rem;
+}
+
+.social-link {
+    padding: 10px 10px 10px 0;
 }
 
 /* ---------- End Footer ---------- */
