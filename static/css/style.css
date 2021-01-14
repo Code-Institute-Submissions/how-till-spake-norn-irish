@@ -3,13 +3,13 @@
 :root {
     --black: #2F2E2B;
     /* Jet */
-    --white: #F6F2DF;
-    /* Eggshell */
+    --white: #FBF9EF;
+    /* Floral White */
     --yellow: #FCBF49;
-    /* Maximum Yellow Red */
-    --green: #599E42;
-    /* May Green */
-    --blue: #003049;
+    /* Selective Yellow */
+    --green: #3F8927;
+    /* Forest Green Web */
+    --blue: #002A41;
     /* Prussian Blue */
 }
 
@@ -41,13 +41,13 @@ body {
 
 /* ---------- Home ---------- */
 
-.bg-img-heading {
-    background: linear-gradient(rgba(246, 242, 223, 0.4), rgba(246, 242, 223, 0.4)),
+.bg-heading {
+    background: linear-gradient(rgba(251, 249, 239, 0.4), rgba(251, 249, 239, 0.4)),
         url('../images/dark-hedges.jpg');
 }
 
-.bg-img-login {
-    background: linear-gradient(rgba(246, 242, 223, 0.4), rgba(246, 242, 223, 0.4)),
+.bg-login {
+    background: linear-gradient(rgba(251, 249, 239, 0.4), rgba(251, 249, 239, 0.4)),
         url('../images/titanic-belfast.jpg');
 }
 
@@ -56,6 +56,10 @@ body {
     background-position: center;
     background-size: cover;
     height: 40vh;
+}
+
+.btn {
+    background-color: var(--yellow);
 }
 
 /* ---------- End Home ---------- */
@@ -98,11 +102,16 @@ section div.row {
 .page-footer,
 .social-link {
     color: var(--white);
-    font-size: 1.5rem;
 }
 
-.social-link {
-    padding: 10px 10px 10px 0;
+.social-link i {
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* ---------- End Footer ---------- */
