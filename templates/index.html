@@ -2,52 +2,67 @@
 {% block content %}
 
 <!-- Page Heading -->
-<section class="bg-img bg-heading">
-    <div class="container center-align">
+<div class="contatiner center-align">
+    <div class="heading">
         <h1>How Till Spake Norn Irish</h1>
     </div>
-</section>
+    <div class="description">
+        <p>A Guide to Understanding<br>the Northern Irish</p>
+    </div>
+</div>
+
+<!-- Parallax Image -->
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="{{ url_for('static', filename='images/giants-causeway.jpg')}}"
+            alt="Giants Causeway, Northern Ireland">
+    </div>
+</div>
 
 <!-- About Section -->
-<section class="about">
-    <div class="container center-align">
-        <h2>About Us</h2>
-        <p>
-            Are you planning a visit to Northern Ireland and want to
-            mingle with the locals?
-        </p>
-        <p>
-            Or have you already visited 'Our Wee Country' but didn't
-            understand what the locals were saying?
-        </p>
-        <p>
-            This handy guide will help you understand all those strange
-            words and phrases you might hear from the locals!
-        </p>
-        <a href="{{ url_for('dictionary') }}" class="btn">Our Wee Guide</a>
+<div class="container center-align">
+    <h2 class="about heading">About Us</h2>
+    <p>
+        Are you planning a visit to Northern Ireland and want to
+        mingle with the locals?
+    </p>
+    <p>
+        Or have you already visited 'Our Wee Country' but didn't
+        understand what the locals were saying?
+    </p>
+    <p>
+        This handy guide will help you understand all those strange
+        words and phrases you might hear during your visit to Northern Ireland!
+    </p>
+    <a href="{{ url_for('dictionary') }}" class="btn waves-effect waves-light">Our Wee Guide</a>
+</div>
+
+<!-- Image -->
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="{{ url_for('static', filename='images/dark-hedges.jpg')}}" alt="Dark Hedges, Northern Ireland">
     </div>
-</section>
+</div>
 
 <!-- Login/Sign Up Section -->
-<section class="bg-img bg-login">
-    <div class="container center-align">
-        <div class="row">
-            <div class="col s12 m6">
-                <p>
-                    Have some words or phrases you'd like to add to our wee guide?
-                    Why not sign up for an account?
-                </p>
-                <a href="" class="btn waves-effect waves-light">Sign Up</a>
-            </div>
-            <div class="col s12 m6">
-                <p>
-                    Already have a wee account? Login to continue adding words
-                    and rate words that have recently been added!
-                </p>
-                <a href="" class="btn waves-effect waves-light">Login</a>
-            </div>
+<div class="container center-align">
+    <div class="row">
+        <div class="col s12 m6">
+            <p>
+                Have some words or phrases you'd like to add to our wee guide?
+                Why not sign up for an account?
+            </p>
+            <a href="" class="btn waves-effect waves-light">Sign Up</a>
+        </div>
+        <div class="col s12 m6">
+            <p>
+                Already have a wee account? Login to continue adding words
+                and rate words that have recently been added!
+            </p>
+            <a href="" class="btn waves-effect waves-light">Login</a>
         </div>
     </div>
-</section>
+</div>
+
 
 {% endblock %}

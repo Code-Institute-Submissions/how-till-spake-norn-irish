@@ -1,16 +1,21 @@
 /* ---------- Color Variables ---------- */
 
+/* Color Palette from coolors.co */
+/* Based on discovernorthernireland.com */
+
 :root {
-    --black: #2F2E2B;
-    /* Jet */
-    --white: #FBF9EF;
-    /* Floral White */
-    --yellow: #FCBF49;
-    /* Selective Yellow */
-    --green: #3F8927;
-    /* Forest Green Web */
-    --blue: #002A41;
-    /* Prussian Blue */
+    --white: #F2F2F2;
+    /* Cultured */
+    --black: #292825;
+    /* Eerie Black */
+    --dark-blue: #0A1D4A;
+    /* Oxford Blue */
+    --blue: #139FCD;
+    /* Cerulean Crayola */
+    --green: #0B5650;
+    /* Deep Jungle Green */
+    --pink: #A90F5E;
+    /* Jazzberry Jam */
 }
 
 /* ---------- End Color Variables ---------- */
@@ -18,51 +23,78 @@
 body {
     margin: 0;
     padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    box-sizing: border-box;
 
     background-color: var(--white);
-}
-
-.green-bg {
-    background-color: var(--green);
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* ---------- Navigation Bar ---------- */
 
-.logo {
-    width: 30%;
-    padding: 10px;
+nav {
+    background-color: var(--white);
+}
+
+nav i {
+    color: var(--black);
+}
+
+#nav-mobile a {
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#nav-mobile a:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+
+#mobile-side-nav {
+    background-color: var(--green);
+}
+
+#mobile-side-nav a {
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 /* ---------- End Navigation Bar ---------- */
 
 /* ---------- Home ---------- */
 
-.bg-heading {
-    background: linear-gradient(rgba(251, 249, 239, 0.4), rgba(251, 249, 239, 0.4)),
-        url('../images/dark-hedges.jpg');
+.heading {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--pink);
 }
 
-.bg-login {
-    background: linear-gradient(rgba(251, 249, 239, 0.4), rgba(251, 249, 239, 0.4)),
-        url('../images/titanic-belfast.jpg');
-}
-
-.bg-img {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 40vh;
-}
-
-.btn {
-    background-color: var(--yellow);
+.about {
+    color: var(--green);
 }
 
 /* ---------- End Home ---------- */
+
+/* ---------- Images ---------- */
+
+.logo img {
+    height: 6vh;
+}
+
+/* ---------- End Images ---------- */
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    background-color: var(--dark-blue);
+}
+
+.btn:hover {
+    background-color: var(--blue);
+}
+
+/* ---------- End Buttons ---------- */
 
 /* ---------- Dictionary ---------- */
 .dictionary {
@@ -99,6 +131,15 @@ section div.row {
 
 /* ---------- Footer ---------- */
 
+.page-footer {
+    background-color: var(--pink);
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 .page-footer,
 .social-link {
     color: var(--white);
@@ -107,11 +148,6 @@ section div.row {
 .social-link i {
     font-size: 1.2rem;
     padding: 0 10px;
-}
-
-footer h5 {
-    font-size: 1.2rem;
-    font-weight: 700;
 }
 
 /* ---------- End Footer ---------- */
