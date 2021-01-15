@@ -8,10 +8,10 @@
     /* Cultured */
     --black: #292825;
     /* Eerie Black */
-    --dark-blue: #0A1D4A;
-    /* Oxford Blue */
-    --blue: #139FCD;
-    /* Cerulean Crayola */
+    --dark-blue: #0F2B6C;
+    /* Royal Blue Dark */
+    --blue: #137BB3;
+    /* Star Command Blue */
     --green: #0B5650;
     /* Deep Jungle Green */
     --pink: #A90F5E;
@@ -19,6 +19,10 @@
 }
 
 /* ---------- End Color Variables ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -29,6 +33,23 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* ---------- Fonts ---------- */
+h1,
+h2 {
+    font-family: 'Permanent Marker',
+        cursive;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+/* ---------- End Fonts ---------- */
+
 /* ---------- Navigation Bar ---------- */
 
 nav {
@@ -37,6 +58,7 @@ nav {
 
 nav i {
     color: var(--black);
+    font-size: 2.6rem;
 }
 
 #nav-mobile a {
@@ -50,13 +72,13 @@ nav i {
     color: var(--white);
 }
 
-
 #mobile-side-nav {
     background-color: var(--green);
 }
 
 #mobile-side-nav a {
     color: var(--white);
+    font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -65,21 +87,46 @@ nav i {
 
 /* ---------- Home ---------- */
 
-.heading {
-    font-family: 'Permanent Marker', cursive;
+.heading h1 {
     color: var(--pink);
+    padding: 40px 20px;
+    margin: 0;
 }
 
-.about {
+.description {
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.4rem;
+    padding: 10px 20px 20px;
+}
+
+.about h2 {
     color: var(--green);
+    padding: 20px 20px 10px;
+    margin: 0;
+}
+
+.about-description {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    margin: 0;
 }
 
 /* ---------- End Home ---------- */
 
 /* ---------- Images ---------- */
 
-.logo img {
-    height: 6vh;
+.heading-bg-img {
+    background: linear-gradient(rgba(242, 242, 242, 0.7), rgba(242, 242, 242, 0.7)), url('../images/open-mouth.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.brand-logo {
+    height: 5vh;
+    margin-top: 7px;
 }
 
 /* ---------- End Images ---------- */
@@ -87,11 +134,21 @@ nav i {
 /* ---------- Buttons ---------- */
 
 .btn {
-    background-color: var(--dark-blue);
+    background-color: var(--white);
+    border: 3px solid var(--blue);
+    border-radius: 50px;
+
+    color: var(--blue);
+    font-size: 1.4rem;
+    margin: 10px 0 20px;
+    padding: 20px;
+    width: 80%;
+    height: auto;
 }
 
 .btn:hover {
     background-color: var(--blue);
+    color: var(--white);
 }
 
 /* ---------- End Buttons ---------- */

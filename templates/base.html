@@ -10,7 +10,8 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Permanent+Marker&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -33,9 +34,10 @@
     <header>
         <nav class="z-depth-0">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo logo">
-                    <img src="{{ url_for('static', filename='images/open-mouth.png') }}" alt="Open Mouth Logo">
-                </a>
+                {# <a href="{{ url_for('home') }}">
+                    <img class="brand-logo left" src="{{ url_for('static', filename='images/open-mouth.png') }}"
+                        alt="Open Mouth Logo">
+                </a> #}
                 <a href="#" data-target="mobile-side-nav" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -82,7 +84,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container center-align">
-                <a href="#">© 2020 Created by Kirsty Chatterton</a>
+                <a href="#">© 2021 Created by Kirsty Chatterton</a>
             </div>
         </div>
     </footer>
