@@ -93,9 +93,13 @@ First time visitors to the site will be able to sign up for an account so they c
 
 ### Design
 
+Design, Colours and Typography based on discovernorthernireland.com
+
 #### Colour Scheme
 
 #### Typography
+
+Google Fonts: Permanent Marker with suggested pairing of Open Sans
 
 #### Imagery
 

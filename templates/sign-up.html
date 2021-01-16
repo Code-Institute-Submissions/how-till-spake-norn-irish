@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Page Heading -->
+<div class="heading container center-align">
+    <div>
+        <h1>Create a Wee Account</h1>
+    </div>
+    <div class="description">
+        <p>With an account, you can:</p>
+        <ul>
+            <li>Add words to Our Wee Guide</li>
+            <li>Edit or Delete words you've added to Our Wee Guide</li>
+            <li>Rate any of the words in Our Wee Guide</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
+            <div class="card-panel">
+
+                <!-- First Name -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Enter Your First Name" id="first-name" name="first-name" type="text"
+                            class="validate">
+                        <label for="first-name">First Name</label>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+
+                <!-- Sign Up Button -->
+                <div class="row">
+                    <button type="submit" class="col s12 btn z-depth-0">Sign Up</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
