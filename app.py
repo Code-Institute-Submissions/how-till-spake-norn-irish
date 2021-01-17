@@ -30,6 +30,29 @@ def home():
 
 @app.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
+
+    # Check if the username already exists in MongDB collection
+    if request.method == "POST":
+        existing_user = mongo.db.user_profile.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists.", "error")
+            return redirect(url_for("sign_up"))
+
+        new_user = {
+            "first-name": request.form.get("first_name").lower(),
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+
+        # Add new user details to user_profile collection in MongoDB
+        mongo.db.user_profile.insert_one(new_user)
+
+        # Put the new user into a 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("You've successfully signed up!", "success")
+
     return render_template("sign-up.html")
 
 # Render Dictionary Page

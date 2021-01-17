@@ -16,25 +16,62 @@
     </div>
 </div>
 
+<!-- Sign Up Form -->
 <div class="container">
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
             <div class="card-panel">
 
+                <!-- Flash Messages -->
+                <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+                <div class="row">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    {% if category == "success" %}
+                    <div class="success">
+                        <h4>{{ message }}</h4>
+                    </div>
+                    {% endif %}
+
+                    {% if category == "error" %}
+                    <div class="error">
+                        <h4>{{ message }}</h4>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+
                 <!-- First Name -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input placeholder="Enter Your First Name" id="first-name" name="first-name" type="text"
-                            class="validate">
-                        <label for="first-name">First Name</label>
+                        <i class="fas fa-user prefix"></i>
+                        <input placeholder="Enter Your First Name" id="first_name" name="first_name" type="text"
+                            minlength="5" maxlength="15" data-length="15" pattern="^[a-zA-Z]{5,15}$" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                </div>
+
+                <!-- Username -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-tag prefix"></i>
+                        <input placeholder="Enter A Username" id="username" name="username" type="text" minlength="5"
+                            maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
+                        <label for=" username">Username</label>
                     </div>
                 </div>
 
                 <!-- Password -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" name="password" type="password" class="validate">
-                        <label for="password">Password</label>
+                        <i class="fas fa-key prefix"></i>
+                        <input placeholder="Enter a Password" id="password" name="password" type="password"
+                            minlength="5" maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$"
+                            class="validate">
+                        <label for=" password">Password</label>
                     </div>
                 </div>
 

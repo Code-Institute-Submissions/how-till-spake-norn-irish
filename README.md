@@ -295,7 +295,9 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 ### Code
 
-- The following video by Corey Schafer provided some guidance on creating a virtual environment in VS Code on Mac: www.youtube.com/watch?v=06I63_p-2A4&t=1571s
+- The following video by Corey Schafer provided some guidance on creating a virtual environment in VS Code on Mac: [https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s](https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s)
+
+- The following video by Pretty Printed explained how to use categories with flash messages in Flask to display messages to the user in specific places on each template: [https://www.youtube.com/watch?v=lcVdZtVvnnk](https://www.youtube.com/watch?v=lcVdZtVvnnk)
 
 ### Content
 
