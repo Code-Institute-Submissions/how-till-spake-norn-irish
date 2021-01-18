@@ -79,8 +79,8 @@ def login():
                     existing_user["password"], request.form.get("password")):
 
                 # Put existing user into a 'session' cookie using first_name and username
-                session["name"] = request.form.get["first_name"]
-                session["user"] = request.form.get("username")
+                session["name"] = existing_user["first_name"]
+                session["user"] = existing_user["username"]
 
                 # Redirect user to their profile
                 return redirect(url_for("profile", username=session["user"]))
@@ -105,7 +105,24 @@ def profile(username):
         {"username": session["user"]})["username"]
     first_name = mongo.db.user_profile.find_one(
         {"first_name": session["name"]})["first_name"]
-    return render_template("profile.html", username=username, first_name=first_name)
+
+    if session["user"]:
+        return render_template("profile.html", username=username, first_name=first_name)
+
+    return redirect(url_for("login"))
+
+# Logout Functionality
+
+
+@app.route("/logout")
+def logout():
+    # If user has been logged out, display flash message
+    flash("You've been logged out!", "logout")
+
+    # Remove user from session cookies
+    session.pop("user")
+    session.pop("name")
+    return redirect(url_for("login"))
 
 # Render Dictionary Page
 
