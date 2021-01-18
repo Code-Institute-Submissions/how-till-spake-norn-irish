@@ -20,14 +20,8 @@
                     {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
                     {% for category, message in messages %}
-                    {% if category == "welcome" %}
-                    <div class="success">
-                        <h4>{{ message }}</h4>
-                    </div>
-                    {% endif %}
-
                     {% if category == "incorrect" %}
-                    <div class="error">
+                    <div>
                         <h4>{{ message }}</h4>
                     </div>
                     {% endif %}

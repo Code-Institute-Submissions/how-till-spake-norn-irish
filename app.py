@@ -57,6 +57,9 @@ def sign_up():
         # If sign up is successful, display flash message
         flash("You've successfully signed up!", "success")
 
+        # Redirect user to their profile
+        return redirect(url_for("profile", username=session["user"]))
+
     return render_template("sign-up.html")
 
 # Render Login Page
@@ -75,9 +78,12 @@ def login():
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
 
-                session["name"] = existing_user["first_name"]
-                session["user"] = existing_user["username"]
-                flash(f"Bout ye {session['name'].capitalize()}?", "welcome")
+                # Put existing user into a 'session' cookie using first_name and username
+                session["name"] = request.form.get["first_name"]
+                session["user"] = request.form.get("username")
+
+                # Redirect user to their profile
+                return redirect(url_for("profile", username=session["user"]))
 
             # If password doesn't match input, display flash message
             else:
@@ -90,6 +96,16 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # Grab the session users username from MongoDB user_profile collection
+    username = mongo.db.user_profile.find_one(
+        {"username": session["user"]})["username"]
+    first_name = mongo.db.user_profile.find_one(
+        {"first_name": session["name"]})["first_name"]
+    return render_template("profile.html", username=username, first_name=first_name)
 
 # Render Dictionary Page
 

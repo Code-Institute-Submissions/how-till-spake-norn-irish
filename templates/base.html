@@ -43,6 +43,7 @@
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('dictionary') }}">Our Wee Guide</a></li>
                     <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -53,6 +54,7 @@
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('dictionary') }}">Our Wee Guide</a></li>
             <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
