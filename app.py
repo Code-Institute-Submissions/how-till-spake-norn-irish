@@ -25,24 +25,26 @@ mongo = PyMongo(app)
 def home():
     return render_template('index.html')
 
-
 # Render Sign Up Page
+
 
 @app.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
 
-    # Check if the username already exists in MongDB collection
     if request.method == "POST":
+        # Check if the username already exists in MongoDB user_profile collection
         existing_user = mongo.db.user_profile.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username")})
 
         if existing_user:
+            # If username already exists, display flash message
             flash("Username already exists.", "error")
             return redirect(url_for("sign_up"))
 
+        # Add new user details to collection
         new_user = {
-            "first-name": request.form.get("first_name").lower(),
-            "username": request.form.get("username").lower(),
+            "first_name": request.form.get("first_name"),
+            "username": request.form.get("username"),
             "password": generate_password_hash(request.form.get("password"))
         }
 
@@ -50,10 +52,44 @@ def sign_up():
         mongo.db.user_profile.insert_one(new_user)
 
         # Put the new user into a 'session' cookie
-        session["user"] = request.form.get("username").lower()
+        session["user"] = request.form.get("username")
+
+        # If sign up is successful, display flash message
         flash("You've successfully signed up!", "success")
 
     return render_template("sign-up.html")
+
+# Render Login Page
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+
+    if request.method == "POST":
+        # Check if username exists in MongoDB user_profile collection
+        existing_user = mongo.db.user_profile.find_one(
+            {"username": request.form.get("username")})
+
+        if existing_user:
+            # Check if hashed password matches user input
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+
+                session["name"] = existing_user["first_name"]
+                session["user"] = existing_user["username"]
+                flash(f"Bout ye {session['name'].capitalize()}?", "welcome")
+
+            # If password doesn't match input, display flash message
+            else:
+                flash("Incorrect Username and/or Password", "incorrect")
+                return redirect(url_for("login"))
+
+        # If username doesn't exist, display flash mesage
+        else:
+            flash("Incorrect Username and/or Password", "incorrect")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
 
 # Render Dictionary Page
 

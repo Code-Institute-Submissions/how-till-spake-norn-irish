@@ -299,6 +299,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following video by Pretty Printed explained how to use categories with flash messages in Flask to display messages to the user in specific places on each template: [https://www.youtube.com/watch?v=lcVdZtVvnnk](https://www.youtube.com/watch?v=lcVdZtVvnnk)
 
+- The following function was used to capitalise the users first name: [https://www.w3schools.com/python/ref_string_capitalize.asp](https://www.w3schools.com/python/ref_string_capitalize.asp)
+
 ### Content
 
 ### Media
