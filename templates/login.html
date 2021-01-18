@@ -8,27 +8,27 @@
     </div>
 </div>
 
+<!-- Flash Messages -->
+<!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+<div class="row">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category == "logout" %}
+    <div>
+        <h4>{{ message }}</h4>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+</div>
+
 <!-- Sign Up Form -->
 <div class="container">
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel">
-
-                <!-- Flash Messages -->
-                <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
-                <div class="row">
-                    {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                    {% for category, message in messages %}
-                    {% if category == "incorrect" %}
-                    <div>
-                        <h4>{{ message }}</h4>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    {% endwith %}
-                </div>
 
                 <!-- Username -->
                 <div class="row">
