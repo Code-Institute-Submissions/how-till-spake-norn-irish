@@ -247,18 +247,23 @@ section div.row {
 }
 
 footer h5 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
 .page-footer,
 .social-link {
     color: var(--white);
+    font-size: 1.2rem;
 }
 
 .social-link i {
     font-size: 1.2rem;
     padding: 0 10px;
+}
+
+.footer-copyright a {
+    color: var(--white);
 }
 
 /* ---------- End Footer ---------- */
