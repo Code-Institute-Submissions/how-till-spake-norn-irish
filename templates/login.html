@@ -2,33 +2,35 @@
 {% block content %}
 
 <!-- Page Heading -->
-<div class="heading container center-align">
+<section class="heading container center-align">
     <div>
         <h1>Login to your wee account</h1>
     </div>
-</div>
+</section>
 
 <!-- Flash Messages -->
 <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
-<div class="row">
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    {% for category, message in messages %}
-    {% if category == "logout" %}
-    <div>
-        <h4>{{ message }}</h4>
+<section class="container center-align">
+    <div class="row logout">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        {% if category == "logout" %}
+        <div>
+            <h4>{{ message }}</h4>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
     </div>
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-    {% endwith %}
-</div>
+</section>
 
 <!-- Sign Up Form -->
-<div class="container">
+<section class="form-container bg-img-form">
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-            <div class="card-panel">
+            <div class="card">
 
                 <!-- Username -->
                 <div class="row">
@@ -53,12 +55,21 @@
 
                 <!-- Login Button -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn z-depth-0">Login</button>
+                    <button type="submit" class="col s12 btn waves-effect waves-light z-depth-0">Login</button>
+                </div>
+
+                <!-- Sign Up Button -->
+                <div class="row">
+                    <p>Don't have an account yet? Click the button below to sign up now!</p>
+                    <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
                 </div>
 
             </div>
         </form>
     </div>
-</div>
+    <div class="img-description">
+        <p><span>Titanic Museum</span> - Belfast, Northern Ireland</p>
+    </div>
+</section>
 
 {% endblock %}

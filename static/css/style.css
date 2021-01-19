@@ -47,7 +47,7 @@ h2 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4.8rem;
 }
 
 h2 {
@@ -93,8 +93,10 @@ nav i {
 
 /* ---------- Home Page ---------- */
 
-.heading {
-    padding: 20px 0 10px;
+.heading,
+.about,
+.login-signup {
+    padding: 20px 0 20px;
 }
 
 .heading h1 {
@@ -103,12 +105,11 @@ nav i {
 }
 
 .heading-bg-img {
-    height: 40vh;
-
     background: linear-gradient(var(--white-opacity), var(--white-opacity)), url('../images/open-mouth.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    height: auto;
 }
 
 .description {
@@ -143,19 +144,15 @@ nav i {
     font-size: 1rem;
     text-align: center;
 
-    background-color: var(--green-opacity);
+    background-color: var(--blue-opacity);
 }
 
 .img-description span {
-    font-weight: 700;
-}
-
-.about {
-    padding: 20px 0;
+    font-weight: 800;
 }
 
 .about h2 {
-    color: var(--green);
+    color: var(--blue);
     margin: 0;
 }
 
@@ -177,7 +174,12 @@ nav i {
 
 .login-signup {
     font-size: 1.4rem;
-    padding: 20px 0;
+}
+
+.login,
+.signup {
+    padding: 10px 20px;
+    margin: 0;
 }
 
 /* ---------- End Home Page ---------- */
@@ -187,21 +189,22 @@ nav i {
 
 .btn {
     background-color: var(--white);
-    border: 3px solid var(--blue);
+    border: 3px solid var(--pink);
     border-radius: 50px;
 
-    color: var(--blue);
+    color: var(--pink);
     font-size: 1.2rem;
     font-weight: 700;
 
     padding: 10px 20px;
-    margin-bottom: 10px;
+    margin: 20px 0;
     width: 70%;
     height: auto;
 }
 
-.btn:hover {
-    background-color: var(--blue);
+.btn:hover,
+.btn:focus {
+    background-color: var(--pink);
     color: var(--white);
 }
 
@@ -240,6 +243,34 @@ section div.row {
 
 /* ---------- End Dictionary ---------- */
 
+/* ---------- Login ---------- */
+
+.logout {
+    text-transform: uppercase;
+}
+
+.form-container {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+}
+
+.bg-img-form {
+    background: url('../images/titanic-belfast.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+form .card {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 10% 10% 20%;
+}
+
+/* ---------- End Login ---------- */
+
 /* ---------- Footer ---------- */
 
 .page-footer {
@@ -270,8 +301,10 @@ footer h5 {
 
 /* ---------- Media Queries ---------- */
 
-/*  */
-@media only screen and (min-width: px) {}
+/* For devices bigger than mobile screen size 425px */
+@media only screen and (min-width: 425px) {}
 
-/* */
-@media only screen and (min-width: px) {}
+/* For devices bigger than tablet screen size 768px */
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {}
