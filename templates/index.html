@@ -2,22 +2,24 @@
 {% block content %}
 
 <!-- Page Heading -->
-<div class="heading container center-align">
-    <div class="heading-bg-img">
-        <h1>Welcome to How Till Spake Norn Irish</h1>
+<section class="heading container center-align">
+    <div class="heading-bg-img valign-wrapper">
+        <h1>How Till Spake<br>Norn Irish</h1>
     </div>
     <div class="description">
         <p>A Guide to Understanding<br>the Northern Irish</p>
     </div>
-</div>
+</section>
 
 <!-- Image 1 -->
-<div class="img-container bg-img-1">
-    <!-- Add Image Description -->
-</div>
+<section class="img-container bg-img-1">
+    <div class="img-description">
+        <p><span>Giants Causeway</span> - Bushmills, Northern Ireland</p>
+    </div>
+</section>
 
 <!-- About Section -->
-<div class="about container center-align">
+<section class="about container center-align">
     <h2>About Us</h2>
     <div class="about-description">
         <p>
@@ -25,7 +27,7 @@
             mingle with the locals?
         </p>
         <p>
-            Or have you already visited 'Our Wee Country' but didn't
+            Or have you already visited<br><span>'Our Wee Country'</span><br>but didn't
             understand what the locals were saying?
         </p>
         <p>
@@ -34,15 +36,17 @@
         </p>
     </div>
     <a href="{{ url_for('dictionary') }}" class="btn waves-effect waves-light z-depth-0">Our Wee Guide</a>
-</div>
+</section>
 
 <!-- Image 2 -->
-<div class="img-container bg-img-2">
-    <!-- Add Image Description -->
-</div>
+<section class="img-container bg-img-2">
+    <div class="img-description">
+        <p><span>The Dark Hedges</span> - Ballymoney, Northern Ireland</p>
+    </div>
+</section>
 
 <!-- Login/Sign Up Section -->
-<div class="container center-align">
+<section class="login-signup container center-align">
     <div class="row">
         <div class="col s12 m6">
             <p>
@@ -56,9 +60,9 @@
                 Already have a wee account? Login to continue adding words
                 and rate words that have recently been added!
             </p>
-            <a href="#" class="btn waves-effect waves-light z-depth-0">Login</a>
+            <a href="{{ url_for('login') }}" class="btn waves-effect waves-light z-depth-0">Login</a>
         </div>
     </div>
-</div>
+</section>
 
 {% endblock %}

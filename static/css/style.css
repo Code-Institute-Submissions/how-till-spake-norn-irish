@@ -16,6 +16,13 @@
     /* Deep Jungle Green */
     --pink: #A90F5E;
     /* Jazzberry Jam */
+
+    --white-opacity: rgba(242, 242, 242, 0.7);
+    --black-opacity: rgba(41, 40, 37, 0.7);
+    --dark-opacity: rgba(15, 43, 108, 0.7);
+    --blue-opacity: rgba(19, 123, 179, 0.7);
+    --green-opacity: rgba(11, 86, 80, 0.7);
+    --pink-opacity: rgba(169, 15, 94, 0.7);
 }
 
 /* ---------- End Color Variables ---------- */
@@ -36,16 +43,15 @@ body {
 /* ---------- Fonts ---------- */
 h1,
 h2 {
-    font-family: 'Permanent Marker',
-        cursive;
+    font-family: 'Permanent Marker', sans-serif;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 4rem;
 }
 
 /* ---------- End Fonts ---------- */
@@ -87,28 +93,34 @@ nav i {
 
 /* ---------- Home Page ---------- */
 
-.heading-bg-img {
-    background: linear-gradient(rgba(242, 242, 242, 0.7), rgba(242, 242, 242, 0.7)), url('../images/open-mouth.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.heading {
+    padding: 20px 0 10px;
 }
 
 .heading h1 {
     color: var(--pink);
-    padding: 40px 20px;
-    margin: 0;
+    margin: auto;
+}
+
+.heading-bg-img {
+    height: 40vh;
+
+    background: linear-gradient(var(--white-opacity), var(--white-opacity)), url('../images/open-mouth.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .description {
     color: var(--black);
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 1.4rem;
-    padding: 10px 20px 20px;
+    font-size: 1.6rem;
 }
 
 .img-container {
+    position: relative;
+
     width: 100%;
     height: 60vh;
 }
@@ -119,9 +131,31 @@ nav i {
     background-position: center;
 }
 
+/* Adding text block to images from - https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
+.img-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    width: 100%;
+
+    color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+
+    background-color: var(--green-opacity);
+}
+
+.img-description span {
+    font-weight: 700;
+}
+
+.about {
+    padding: 20px 0;
+}
+
 .about h2 {
     color: var(--green);
-    padding: 20px 20px 10px;
     margin: 0;
 }
 
@@ -131,10 +165,19 @@ nav i {
     margin: 0;
 }
 
+.about-description span {
+    font-weight: 700;
+}
+
 .bg-img-2 {
     background: url('../images/dark-hedges.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.login-signup {
+    font-size: 1.4rem;
+    padding: 20px 0;
 }
 
 /* ---------- End Home Page ---------- */
@@ -148,10 +191,12 @@ nav i {
     border-radius: 50px;
 
     color: var(--blue);
-    font-size: 1.4rem;
-    margin: 10px 0 20px;
-    padding: 20px;
-    width: 80%;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    width: 70%;
     height: auto;
 }
 

@@ -301,6 +301,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following function was used to capitalise the users first name: [https://www.w3schools.com/python/ref_string_capitalize.asp](https://www.w3schools.com/python/ref_string_capitalize.asp)
 
+- The following CSS was used to add text blocks to images: [https://www.w3schools.com/howto/howto_css_image_text_blocks.asp](https://www.w3schools.com/howto/howto_css_image_text_blocks.asp)
+
 ### Content
 
 ### Media
