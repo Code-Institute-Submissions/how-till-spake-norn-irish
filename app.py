@@ -37,7 +37,7 @@ def sign_up():
             {"username": request.form.get("username")})
 
         if existing_user:
-            # If username already exists, display flash message
+            # Display flash message if username already exists
             flash("Username already exists.", "error")
             return redirect(url_for("sign_up"))
 
@@ -54,7 +54,7 @@ def sign_up():
         # Put the new user into a 'session' cookie
         session["user"] = request.form.get("username")
 
-        # If sign up is successful, display flash message
+        # Display flash message if sign up is successful
         flash("You've successfully signed up!", "success")
 
         # Redirect user to their profile
@@ -85,12 +85,12 @@ def login():
                 # Redirect user to their profile
                 return redirect(url_for("profile", username=session["user"]))
 
-            # If password doesn't match input, display flash message
+            # Display flash message if password doesn't match input
             else:
                 flash("Incorrect Username and/or Password", "incorrect")
                 return redirect(url_for("login"))
 
-        # If username doesn't exist, display flash mesage
+        # Display flash message if username doesn't exist
         else:
             flash("Incorrect Username and/or Password", "incorrect")
             return redirect(url_for("login"))
@@ -116,7 +116,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # If user has been logged out, display flash message
+    # Display flash message if user has been logged out
     flash("You've been logged out!", "logout")
 
     # Remove user from session cookies

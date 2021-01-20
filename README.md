@@ -97,6 +97,9 @@ Design, Colours and Typography based on discovernorthernireland.com
 
 #### Colour Scheme
 
+![Colour palette generated using coolors.co](static/images/spake-norn-irish-palette.png)
+_Colour palette generated using [coolors.co](https://coolors.co)_
+
 #### Typography
 
 Google Fonts: Permanent Marker with suggested pairing of Open Sans
@@ -123,7 +126,7 @@ Links to the wireframes can be found below. Each link contains the wireframes fo
 
 ## Database Schema
 
-MongoDB Collections Examples:
+MongoDB Collections:
 
 ### Dictionary Collection
 
@@ -134,6 +137,15 @@ MongoDB Collections Examples:
 | definition: | "dictionary_definition" |
 | example: | "dictionary_example" |
 
+### User Profile Collection
+
+| Key | Value |
+| :---: | :---: |
+| _id: | ObjectId("unique_id") |
+| first_name: | "first_name" |
+| username: | "username" |
+| password: | "password" |
+
 [Contents](#contents)
 
 ---
@@ -142,18 +154,11 @@ MongoDB Collections Examples:
 
 ### Features that have been implemented
 
-### Features left to be implemented
-
-- Responsive Design
-
-- Navigation Bar (all pages):
-  - Dictionary
-  - Login (Link to Sign Up Page)
-    - Dictionary
-    - Profile
-    - Logout
-  - Sign Up
-  - Contact Us
+- Home Page
+  - About Section
+  - Button link to Sign Up Page
+  - Button link to Login Page
+  - Button link to Dictionary
 
 - Footer with Social Links/Email Address (all pages):
   - Facebook
@@ -161,11 +166,18 @@ MongoDB Collections Examples:
   - Instagram
   - Email Address
 
-- Home Page
-  - About Section
-  - Button link to Sign Up Page
-  - Button link to Login Page
-  - Button link to Dictionary
+### Features left to be implemented
+
+- Responsive Design
+
+- Navigation Bar (all pages):
+  - Dictionary
+  - Login (With link to Sign Up Page)
+    - Dictionary
+    - Profile
+    - Logout
+  - Sign Up (With link to Login Page)
+  - Contact Us
 
 - Dictionary
   - Filter system
@@ -179,7 +191,8 @@ MongoDB Collections Examples:
     - Submissions (with options to edit or delete)
     - Favorites (add this later and replace with voting system?)
 
-- Sign Up Page (Link to Login Page)
+- Sign Up Page
+  - Button link to Login Page
 
 - Contact Page
   - Email Form
@@ -266,11 +279,11 @@ This project is hosted on Heroku - A cloud platform service that enables develop
 - Name the app and set the region to Europe
 - Open the settings tab and open **"Reveal Config Vars"**
 - Add the environment variables from the **env.py** file:
-  - KEY: IP | VALUE: 0.0.0.0
-  - KEY: PORT | VALUE: 5000
-  - KEY: SECRET_KEY | VALUE:
-  - KEY: MONGO_URI | VALUE:
-  - KEY: MONGO_DBNAME | VALUE:
+  - **KEY:** IP | **VALUE:** 0.0.0.0
+  - **KEY:** PORT | **VALUE:** 5000
+  - **KEY:** SECRET_KEY | **VALUE:** SECRET_KEY
+  - **KEY:** MONGO_URI | **VALUE:** MONGO_URI
+  - **KEY:** MONGO_DBNAME | **VALUE:** MONGO_DBNAME
 - To deploy the app from GitHub, open the deploy tab and change the deployment method to GitHub
 - Connect to your GitHub account and search for the name of the repository to connect to
 - Once connected, **"Enable Automatic Deployments"** and select the **"Master"** or **"Main"** branch to deploy

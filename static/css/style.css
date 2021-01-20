@@ -8,8 +8,6 @@
     /* Cultured */
     --black: #292825;
     /* Eerie Black */
-    --dark-blue: #0F2B6C;
-    /* Royal Blue Dark */
     --blue: #137BB3;
     /* Star Command Blue */
     --green: #0B5650;
@@ -19,7 +17,6 @@
 
     --white-opacity: rgba(242, 242, 242, 0.7);
     --black-opacity: rgba(41, 40, 37, 0.7);
-    --dark-opacity: rgba(15, 43, 108, 0.7);
     --blue-opacity: rgba(19, 123, 179, 0.7);
     --green-opacity: rgba(11, 86, 80, 0.7);
     --pink-opacity: rgba(169, 15, 94, 0.7);
