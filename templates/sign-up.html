@@ -6,8 +6,8 @@
     <div>
         <h1>Create a Wee Account</h1>
     </div>
-    <div class="description">
-        <p>With an account, you can:</p>
+    <div class="account-description">
+        <p>When you create an account with us, you can:</p>
         <ul>
             <li>Add words to Our Wee Guide</li>
             <li>Edit or Delete words you've added to Our Wee Guide</li>
@@ -39,51 +39,77 @@
 </div>
 
 <!-- Sign Up Form -->
-<div class="container">
+<section class="form-container bg-img-signup">
     <div class="row">
+        <!-- Flash Messages -->
+        <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+        <div class="row">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            {% if category == "success" %}
+            <div class="success">
+                <h4>{{ message }}</h4>
+            </div>
+            {% endif %}
+
+            {% if category == "error" %}
+            <div class="error">
+                <h4>{{ message }}</h4>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
-            <div class="card-panel">
+            <div class="card center-align">
 
                 <!-- First Name -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user prefix"></i>
-                        <input placeholder="Enter Your First Name" id="first_name" name="first_name" type="text"
-                            minlength="5" maxlength="15" data-length="15" pattern="^[a-zA-Z]{5,15}$" class="validate"
-                            required>
-                        <label for="first_name">First Name</label>
-                    </div>
+                <div class="input-field">
+                    <i class="fas fa-user prefix"></i>
+                    <input placeholder="Enter Your First Name" id="first_name" name="first_name" type="text"
+                        minlength="5" maxlength="15" data-length="15" pattern="^[a-zA-Z]{5,15}$" class="validate"
+                        required>
+                    <label for="first_name">First Name</label>
                 </div>
 
                 <!-- Username -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-tag prefix"></i>
-                        <input placeholder="Enter A Username" id="username" name="username" type="text" minlength="5"
-                            maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for=" username">Username</label>
-                    </div>
+                <div class="input-field">
+                    <i class="fas fa-user-tag prefix"></i>
+                    <input placeholder="Enter A Username" id="username" name="username" type="text" minlength="5"
+                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for=" username">Username</label>
                 </div>
 
                 <!-- Password -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-key prefix"></i>
-                        <input placeholder="Enter a Password" id="password" name="password" type="password"
-                            minlength="5" maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate"
-                            required>
-                        <label for=" password">Password</label>
-                    </div>
+                <div class="input-field">
+                    <i class="fas fa-key prefix"></i>
+                    <input placeholder="Enter a Password" id="password" name="password" type="password" minlength="5"
+                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for=" password">Password</label>
                 </div>
 
                 <!-- Sign Up Button -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn z-depth-0">Sign Up</button>
+                <button type="submit" class="btn waves-effect waves-light z-depth-0">
+                    Sign Up
+                </button>
+
+                <!-- Login Button -->
+                <div class="login-btn">
+                    <p>
+                        Already have a wee account with us?<br>
+                        Click the button below to login to your account now!
+                    </p>
+                    <a href="{{ url_for('login') }}" class="btn waves-effect waves-light z-depth-0">Login</a>
                 </div>
 
             </div>
         </form>
     </div>
-</div>
+    <div class="img-description">
+        <p><span>Carrick-A-Rede Rope Bridge</span> - Ballintoy, Northern Ireland</p>
+    </div>
+</section>
 
 {% endblock %}

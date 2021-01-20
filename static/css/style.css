@@ -15,11 +15,11 @@
     --pink: #A90F5E;
     /* Jazzberry Jam */
 
-    --white-opacity: rgba(242, 242, 242, 0.7);
-    --black-opacity: rgba(41, 40, 37, 0.7);
-    --blue-opacity: rgba(19, 123, 179, 0.7);
-    --green-opacity: rgba(11, 86, 80, 0.7);
-    --pink-opacity: rgba(169, 15, 94, 0.7);
+    --white-opacity: rgba(242, 242, 242, 0.8);
+    --black-opacity: rgba(41, 40, 37, 0.8);
+    --blue-opacity: rgba(19, 123, 179, 0.8);
+    --green-opacity: rgba(11, 86, 80, 0.8);
+    --pink-opacity: rgba(169, 15, 94, 0.8);
 }
 
 /* ---------- End Color Variables ---------- */
@@ -189,11 +189,11 @@ nav i {
 /* ---------- Buttons ---------- */
 
 .btn {
-    background-color: var(--white);
-    border: 3px solid var(--pink);
+    background-color: var(--pink);
+    /* border: 3px solid var(--pink); */
     border-radius: 50px;
 
-    color: var(--pink);
+    color: var(--white);
     font-size: 1.2rem;
     font-weight: 700;
 
@@ -205,7 +205,7 @@ nav i {
 
 .btn:hover,
 .btn:focus {
-    background-color: var(--pink);
+    background-color: var(--green);
     color: var(--white);
 }
 
@@ -239,7 +239,18 @@ section div.row {
 
 /* ---------- End Dictionary ---------- */
 
-/* ---------- Login ---------- */
+/* ---------- Login/Sign Up ---------- */
+
+.account-description p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.account-description ul li {
+    font-size: 1.2rem;
+    list-style-type: disc;
+    list-style-position: inside;
+}
 
 .form-container {
     position: relative;
@@ -248,14 +259,20 @@ section div.row {
     height: auto;
 }
 
-.bg-img-form {
+.bg-img-login {
     background: url('../images/titanic-belfast.jpg');
     background-position: center;
     background-size: cover;
 }
 
+.bg-img-signup {
+    background: url('../images/carrick-a-rede.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
 form .card {
-    background-color: var(--white);
+    background-color: var(--white-opacity);
     border-radius: 20px;
     padding: 40px;
     margin: 40px 20px 100px;
@@ -273,12 +290,13 @@ form .card {
     color: var(--blue);
 }
 
-.sign-up p {
-    font-size: 1.4rem;
+.signup-btn p,
+.login-btn p {
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
-/* ---------- End Login ---------- */
+/* ---------- End Login/Sign Up ---------- */
 
 /* ---------- Flash Messages ---------- */
 
@@ -290,7 +308,7 @@ form .card {
     color: var(--white);
     font-size: 1rem;
     font-weight: 700;
-    padding: 20px 0 10px;
+    padding: 20px 20px 10px;
 }
 
 /* ---------- End Flash Messages --------- */
