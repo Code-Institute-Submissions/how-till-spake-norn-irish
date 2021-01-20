@@ -8,58 +8,54 @@
     </div>
 </section>
 
-<!-- Flash Messages -->
-<!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
-<section class="container center-align">
-    <div class="row logout">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-        {% for category, message in messages %}
-        {% if category == "logout" %}
-        <div>
-            <h4>{{ message }}</h4>
-        </div>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        {% endwith %}
-    </div>
-</section>
-
 <!-- Sign Up Form -->
 <section class="form-container bg-img-form">
     <div class="row">
+
+        <!-- Flash Messages -->
+        <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+        <section class="center-align logout">
+            <div class="row">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                {% if category == "logout" %}
+                <div>
+                    <h4>{{ message }}</h4>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+        </section>
+
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card">
 
                 <!-- Username -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-tag prefix"></i>
-                        <input placeholder="Enter Your Username" id="username" name="username" type="text" minlength="5"
-                            maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for=" username">Username</label>
-                    </div>
+                <div class="input-field">
+                    <i class="fas fa-user-tag prefix"></i>
+                    <input placeholder="Enter Your Username" id="username" name="username" type="text" minlength="5"
+                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for=" username">Username</label>
                 </div>
 
                 <!-- Password -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-key prefix"></i>
-                        <input placeholder="Enter Your Password" id="password" name="password" type="password"
-                            minlength="5" maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate"
-                            required>
-                        <label for=" password">Password</label>
-                    </div>
+                <div class="input-field">
+                    <i class="fas fa-key prefix"></i>
+                    <input placeholder="Enter Your Password" id="password" name="password" type="password" minlength="5"
+                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for=" password">Password</label>
                 </div>
 
                 <!-- Login Button -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn waves-effect waves-light z-depth-0">Login</button>
+                <div class="center-align">
+                    <button type="submit" class="btn waves-effect waves-light z-depth-0">Login</button>
                 </div>
 
                 <!-- Sign Up Button -->
-                <div class="row">
+                <div class="center-align">
                     <p>Don't have an account yet? Click the button below to sign up now!</p>
                     <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
                 </div>

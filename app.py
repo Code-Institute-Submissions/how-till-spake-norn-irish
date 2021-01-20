@@ -97,6 +97,8 @@ def login():
 
     return render_template("login.html")
 
+# Render Profile Page
+
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -111,13 +113,13 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-# Logout Functionality
+# Render Logout Functionality
 
 
 @app.route("/logout")
 def logout():
     # Display flash message if user has been logged out
-    flash("You've been logged out!", "logout")
+    flash("Ach, you've logged out of your wee account! If you want to, you can log back in below:", "logout")
 
     # Remove user from session cookies
     session.pop("user")

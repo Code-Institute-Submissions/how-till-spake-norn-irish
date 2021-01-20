@@ -33,6 +33,10 @@ body {
     padding: 0;
     box-sizing: border-box;
 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
     background-color: var(--white);
     font-family: 'Open Sans', sans-serif;
 }
@@ -50,6 +54,12 @@ h1 {
 h2 {
     font-size: 4rem;
 }
+
+.italics {
+    font-style: italic;
+    font-weight: 700;
+}
+
 
 /* ---------- End Fonts ---------- */
 
@@ -129,7 +139,13 @@ nav i {
     background-position: center;
 }
 
-/* Adding text block to images from - https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
+.bg-img-2 {
+    background: url('../images/dark-hedges.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add text block to images from - https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 .img-description {
     position: absolute;
     bottom: 0;
@@ -137,11 +153,10 @@ nav i {
     padding: 10px 20px;
     width: 100%;
 
+    background-color: var(--blue-opacity);
     color: var(--white);
     font-size: 1rem;
     text-align: center;
-
-    background-color: var(--blue-opacity);
 }
 
 .img-description span {
@@ -161,12 +176,6 @@ nav i {
 
 .about-description span {
     font-weight: 700;
-}
-
-.bg-img-2 {
-    background: url('../images/dark-hedges.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .login-signup {
@@ -195,7 +204,7 @@ nav i {
 
     padding: 10px 20px;
     margin: 20px 0;
-    width: 70%;
+    width: 80%;
     height: auto;
 }
 
@@ -233,18 +242,9 @@ section div.row {
     font-size: 2rem;
 }
 
-.italics {
-    font-style: italic;
-    font-weight: 700;
-}
-
 /* ---------- End Dictionary ---------- */
 
 /* ---------- Login ---------- */
-
-.logout {
-    text-transform: uppercase;
-}
 
 .form-container {
     position: relative;
@@ -263,7 +263,25 @@ form .card {
     background-color: var(--white);
     border-radius: 20px;
     padding: 40px;
-    margin: 10% 10% 20%;
+    margin: 40px 20px 100px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field i {
+    color: var(--blue);
+}
+
+.logout {
+    background-color: var(--pink-opacity);
+}
+
+.logout h4 {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 20px 0 10px;
 }
 
 /* ---------- End Login ---------- */
