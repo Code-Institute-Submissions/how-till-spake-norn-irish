@@ -74,6 +74,11 @@ nav i {
     font-size: 2.6rem;
 }
 
+.brand-logo img {
+    height: 5vh;
+    margin: 8px;
+}
+
 #nav-mobile a {
     color: var(--black);
     text-transform: uppercase;
@@ -94,6 +99,13 @@ nav i {
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+.title {
+    color: var(--white);
+    font-size: 3rem;
+    font-family: 'Permanent Marker', sans-serif;
+    padding: 20px 32px;
 }
 
 /* ---------- End Navigation Bar ---------- */
@@ -241,12 +253,12 @@ section div.row {
 
 /* ---------- Login/Sign Up ---------- */
 
-.account-description p {
+.signup-description p {
     font-size: 1.4rem;
     font-weight: 700;
 }
 
-.account-description ul li {
+.signup-description ul li {
     font-size: 1.2rem;
     list-style-type: disc;
     list-style-position: inside;

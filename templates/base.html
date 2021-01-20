@@ -34,10 +34,9 @@
     <header>
         <nav class="z-depth-0">
             <div class="nav-wrapper">
-                {# <a href="{{ url_for('home') }}">
-                    <img class="brand-logo left" src="{{ url_for('static', filename='images/open-mouth.png') }}"
-                        alt="Open Mouth Logo">
-                </a> #}
+                <a href="{{ url_for('home') }}" class="brand-logo left">
+                    <img src="{{ url_for('static', filename='images/open-mouth.png') }}" alt="Open Mouth Logo">
+                </a>
                 <a href="#" data-target="mobile-side-nav" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -55,6 +54,7 @@
         </nav>
         <!-- Mobile SideBar Navigation -->
         <ul id="mobile-side-nav" class="sidenav z-depth-0">
+            <li class="title">How Till Spake Norn Irish</li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('dictionary') }}">Our Wee Guide</a></li>
             {% if session.user %}
