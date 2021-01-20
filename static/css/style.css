@@ -108,7 +108,7 @@ nav i {
 
 .heading h1 {
     color: var(--pink);
-    margin: auto;
+    margin: 10px auto 40px;
 }
 
 .heading-bg-img {
@@ -182,11 +182,6 @@ nav i {
     font-size: 1.4rem;
 }
 
-.login,
-.signup {
-    padding: 10px 20px;
-    margin: 0;
-}
 
 /* ---------- End Home Page ---------- */
 
@@ -269,9 +264,23 @@ form .card {
     align-items: center;
 }
 
+.card .input-field {
+    margin: 30px auto;
+    width: 80%;
+}
+
 .input-field i {
     color: var(--blue);
 }
+
+.sign-up p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* ---------- End Login ---------- */
+
+/* ---------- Flash Messages ---------- */
 
 .logout {
     background-color: var(--pink-opacity);
@@ -284,7 +293,7 @@ form .card {
     padding: 20px 0 10px;
 }
 
-/* ---------- End Login ---------- */
+/* ---------- End Flash Messages --------- */
 
 /* ---------- Footer ---------- */
 
