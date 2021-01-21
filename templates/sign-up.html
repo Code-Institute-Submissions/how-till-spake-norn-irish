@@ -21,7 +21,7 @@
     <div class="row">
         <!-- Flash Messages -->
         <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
-        <div class="center-align signup">
+        <div class="center-align flash-message">
             <div class="row">
                 {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
@@ -33,7 +33,7 @@
                 {% endif %} #}
 
                 {% if category == "error" %}
-                <div class="error">
+                <div>
                     <h4>{{ message }}</h4>
                 </div>
                 {% endif %}
