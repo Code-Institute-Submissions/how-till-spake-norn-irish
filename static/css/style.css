@@ -224,8 +224,15 @@ nav i {
 /* ---------- End Buttons ---------- */
 
 /* ---------- Dictionary ---------- */
-.dictionary {
-    margin: 20px 0;
+
+.bg-img-dictionary {
+    background: url('../images/belfast-city-hall.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.dictionary .container {
+    padding: 20px;
 }
 
 section div.row {
@@ -245,20 +252,18 @@ section div.row {
     align-items: center;
 }
 
-.fa-caret-down {
-    font-size: 2rem;
-}
-
 /* ---------- End Dictionary ---------- */
 
 /* ---------- Login/Sign Up ---------- */
 
-.signup-description p {
+.signup-description p,
+.login-description p {
     font-size: 1.4rem;
     font-weight: 700;
 }
 
-.signup-description ul li {
+.signup-description ul li,
+.login-description ul li {
     font-size: 1.2rem;
     list-style-type: disc;
     list-style-position: inside;
