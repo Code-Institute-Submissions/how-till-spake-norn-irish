@@ -2,7 +2,6 @@
 
 /* Color Palette from coolors.co */
 /* Based on discovernorthernireland.com */
-
 :root {
     --white: #F2F2F2;
     /* Cultured */
@@ -24,6 +23,7 @@
 
 /* ---------- End Color Variables ---------- */
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -40,6 +40,7 @@ body {
     background-color: var(--white);
     font-family: 'Open Sans', sans-serif;
 }
+
 
 /* ---------- Fonts ---------- */
 h1,
@@ -60,11 +61,10 @@ h2 {
     font-weight: 700;
 }
 
-
 /* ---------- End Fonts ---------- */
 
-/* ---------- Navigation Bar ---------- */
 
+/* ---------- Navigation Bar ---------- */
 nav {
     background-color: var(--white);
 }
@@ -110,8 +110,8 @@ nav i {
 
 /* ---------- End Navigation Bar ---------- */
 
-/* ---------- Home Page ---------- */
 
+/* ---------- Home Page ---------- */
 .heading,
 .about,
 .login-signup {
@@ -123,56 +123,11 @@ nav i {
     margin: 10px auto 40px;
 }
 
-.heading-bg-img {
-    background: linear-gradient(var(--white-opacity), var(--white-opacity)), url('../images/open-mouth.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: auto;
-}
-
-.description {
+.site-description {
     color: var(--black);
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1.6rem;
-}
-
-.img-container {
-    position: relative;
-
-    width: 100%;
-    height: 60vh;
-}
-
-.bg-img-1 {
-    background: url('../images/giants-causeway.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-img-2 {
-    background: url('../images/dark-hedges.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Add text block to images from - https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
-.img-description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px 20px;
-    width: 100%;
-
-    background-color: var(--blue-opacity);
-    color: var(--white);
-    font-size: 1rem;
-    text-align: center;
-}
-
-.img-description span {
-    font-weight: 800;
 }
 
 .about h2 {
@@ -194,43 +149,10 @@ nav i {
     font-size: 1.4rem;
 }
 
-
 /* ---------- End Home Page ---------- */
 
 
-/* ---------- Buttons ---------- */
-
-.btn {
-    background-color: var(--pink);
-    /* border: 3px solid var(--pink); */
-    border-radius: 50px;
-
-    color: var(--white);
-    font-size: 1.2rem;
-    font-weight: 700;
-
-    padding: 10px 20px;
-    margin: 20px 0;
-    width: 80%;
-    height: auto;
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: var(--green);
-    color: var(--white);
-}
-
-/* ---------- End Buttons ---------- */
-
 /* ---------- Dictionary ---------- */
-
-.bg-img-dictionary {
-    background: url('../images/belfast-city-hall.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
 .dictionary .container {
     padding: 20px;
 }
@@ -254,16 +176,14 @@ section div.row {
 
 /* ---------- End Dictionary ---------- */
 
-/* ---------- Login/Sign Up ---------- */
 
-.signup-description p,
-.login-description p {
+/* ---------- Login/Sign Up ---------- */
+.page-description p {
     font-size: 1.4rem;
     font-weight: 700;
 }
 
-.signup-description ul li,
-.login-description ul li {
+.page-description ul li {
     font-size: 1.2rem;
     list-style-type: disc;
     list-style-position: inside;
@@ -274,18 +194,6 @@ section div.row {
 
     width: 100%;
     height: auto;
-}
-
-.bg-img-login {
-    background: url('../images/titanic-belfast.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.bg-img-signup {
-    background: url('../images/carrick-a-rede.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 form .card {
@@ -315,8 +223,103 @@ form .card {
 
 /* ---------- End Login/Sign Up ---------- */
 
-/* ---------- Flash Messages ---------- */
 
+/* ---------- Background Images --------- */
+.bg-img-heading {
+    background: linear-gradient(var(--white-opacity), var(--white-opacity)), url('../images/open-mouth.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: auto;
+}
+
+.img-container {
+    position: relative;
+
+    width: 100%;
+    height: 60vh;
+}
+
+/* Add text block to images from - https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
+.img-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    width: 100%;
+
+    background-color: var(--blue-opacity);
+    color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.img-description span {
+    font-weight: 800;
+}
+
+.bg-img-top {
+    background: url('../images/giants-causeway.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img-bottom {
+    background: url('../images/dark-hedges.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img-dictionary {
+    background: url('../images/belfast-city-hall.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img-login {
+    background: url('../images/titanic-belfast.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-img-signup {
+    background: url('../images/carrick-a-rede.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* ---------- End Background Images --------- */
+
+
+/* ---------- Buttons ---------- */
+.btn {
+    background-color: var(--pink);
+    /* border: 3px solid var(--pink); */
+    border-radius: 50px;
+
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    padding: 10px 20px;
+    margin: 20px 0;
+    width: 80%;
+    height: auto;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* ---------- End Buttons ---------- */
+
+
+/* ---------- Flash Messages ---------- */
 .logout {
     background-color: var(--pink-opacity);
 }
@@ -330,8 +333,8 @@ form .card {
 
 /* ---------- End Flash Messages --------- */
 
-/* ---------- Footer ---------- */
 
+/* ---------- Footer ---------- */
 .page-footer {
     background-color: var(--pink);
 }
@@ -357,6 +360,7 @@ footer h5 {
 }
 
 /* ---------- End Footer ---------- */
+
 
 /* ---------- Media Queries ---------- */
 

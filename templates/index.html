@@ -3,22 +3,22 @@
 
 <!-- Page Heading -->
 <section class="heading container center-align">
-    <div class="heading-bg-img valign-wrapper">
+    <div class="bg-img-heading valign-wrapper">
         <h1>How Till Spake<br>Norn Irish</h1>
     </div>
-    <div class="description">
+    <div class="site-description">
         <p>A Guide to Understanding<br>the Northern Irish</p>
     </div>
 </section>
 
 <!-- Image 1 -->
-<section class="img-container bg-img-1">
+<section class="img-container bg-img-top">
     <div class="img-description">
         <p><span>Giants Causeway</span> - Bushmills, Northern Ireland</p>
     </div>
 </section>
 
-<!-- About Section -->
+<!-- About -->
 <section class="about container center-align">
     <h2>About Us</h2>
     <div class="about-description">
@@ -39,28 +39,32 @@
 </section>
 
 <!-- Image 2 -->
-<section class="img-container bg-img-2">
+<section class="img-container bg-img-bottom">
     <div class="img-description">
         <p><span>The Dark Hedges</span> - Ballymoney, Northern Ireland</p>
     </div>
 </section>
 
-<!-- Login/Sign Up Section -->
+<!-- Login/Sign Up -->
 <section class="login-signup container center-align">
     <div class="row">
-        <div class="col s12 m6">
-            <p>
-                Have some words or phrases you'd like to add to our wee guide?
-                Why not sign up for an account?
-            </p>
-            <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
-        </div>
+
+        <!-- Login Button -->
         <div class="col s12 m6">
             <p>
                 Already have a wee account? Login to continue adding words
                 and rate words that have recently been added!
             </p>
             <a href="{{ url_for('login') }}" class="btn waves-effect waves-light z-depth-0">Login</a>
+        </div>
+
+        <!-- Sign Up Button -->
+        <div class="col s12 m6">
+            <p>
+                Have some words or phrases you'd like to add to our wee guide?
+                Why not sign up for an account?
+            </p>
+            <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
         </div>
     </div>
 </section>
