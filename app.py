@@ -56,7 +56,7 @@ def sign_up():
 
         # Display flash message if sign up is successful
         flash(
-            "Ach, well done! You've successfully created a wee account with us!", "success")
+            "You've successfully created a wee account with us! Welcome to your profile page!", "success")
 
         # Redirect user to their profile
         return redirect(url_for("profile", username=session["user"]))
@@ -80,8 +80,7 @@ def login():
                     existing_user["password"], request.form.get("password")):
 
                 # Put existing user into a 'session' cookie using first_name and username
-                session["name"] = existing_user["first_name"]
-                session["user"] = existing_user["username"]
+                session["user"] = request.form.get("username")
 
                 # Redirect user to their profile
                 return redirect(url_for("profile", username=session["user"]))
@@ -105,12 +104,10 @@ def login():
 def profile(username):
     # Grab the session users username from MongoDB user_profile collection
     username = mongo.db.user_profile.find_one(
-        {"username": session["user"]})["username"]
-    first_name = mongo.db.user_profile.find_one(
-        {"first_name": session["name"]})["first_name"]
+        {"username": session["user"]})["first_name"]
 
     if session["user"]:
-        return render_template("profile.html", username=username, first_name=first_name)
+        return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
 
@@ -124,7 +121,6 @@ def logout():
 
     # Remove user from session cookies
     session.pop("user")
-    session.pop("name")
     return redirect(url_for("login"))
 
 # Render Dictionary Page
