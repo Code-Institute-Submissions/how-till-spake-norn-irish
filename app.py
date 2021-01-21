@@ -88,12 +88,12 @@ def login():
 
             # Display flash message if password doesn't match input
             else:
-                flash("Incorrect Username and/or Password", "incorrect")
+                flash("That's the wrong username/password ya melter!", "incorrect")
                 return redirect(url_for("login"))
 
         # Display flash message if username doesn't exist
         else:
-            flash("Incorrect Username and/or Password", "incorrect")
+            flash("That's the wrong username/password ya melter!", "incorrect")
             return redirect(url_for("login"))
 
     return render_template("login.html")
