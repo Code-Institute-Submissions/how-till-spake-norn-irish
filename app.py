@@ -38,7 +38,7 @@ def sign_up():
 
         if existing_user:
             # Display flash message if username already exists
-            flash("Username already exists.", "error")
+            flash("Sorry! That wee username is already being used!", "error")
             return redirect(url_for("sign_up"))
 
         # Add new user details to collection
@@ -55,7 +55,8 @@ def sign_up():
         session["user"] = request.form.get("username")
 
         # Display flash message if sign up is successful
-        flash("You've successfully signed up!", "success")
+        flash(
+            "Ach, well done! You've successfully created a wee account with us!", "success")
 
         # Redirect user to their profile
         return redirect(url_for("profile", username=session["user"]))

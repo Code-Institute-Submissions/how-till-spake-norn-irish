@@ -320,11 +320,13 @@ form .card {
 
 
 /* ---------- Flash Messages ---------- */
-.logout {
+.logout,
+.signup {
     background-color: var(--pink-opacity);
 }
 
-.logout h4 {
+.logout h4,
+.signup h4 {
     color: var(--white);
     font-size: 1rem;
     font-weight: 700;
