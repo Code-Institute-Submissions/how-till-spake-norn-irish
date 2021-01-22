@@ -17,20 +17,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-# Render Home Page
-
 
 @app.route("/")
 @app.route("/how-till-spake-norn-irish")
+# Render Home Page
 def home():
     return render_template('index.html')
 
-# Render Sign Up Page
-
 
 @app.route("/sign-up", methods=["GET", "POST"])
+# Render Sign Up Page
 def sign_up():
-
     if request.method == "POST":
         # Check if the username already exists in MongoDB user_profile collection
         existing_user = mongo.db.user_profile.find_one(
@@ -63,12 +60,10 @@ def sign_up():
 
     return render_template("sign-up.html")
 
-# Render Login Page
-
 
 @app.route("/login", methods=["GET", "POST"])
+# Render Login Page
 def login():
-
     if request.method == "POST":
         # Check if username exists in MongoDB user_profile collection
         existing_user = mongo.db.user_profile.find_one(
@@ -97,12 +92,11 @@ def login():
 
     return render_template("login.html")
 
-# Render Profile Page
-
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
+# Render Profile Page
 def profile(username):
-    # Grab the session users username from MongoDB user_profile collection
+    # Grab the session users first_name from MongoDB user_profile collection
     username = mongo.db.user_profile.find_one(
         {"username": session["user"]})["first_name"]
 
@@ -111,10 +105,9 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-# Render Logout Functionality
-
 
 @app.route("/logout")
+# Render Logout Functionality
 def logout():
     # Display flash message if user has been logged out
     flash("Ach, you've logged out of your wee account! If you want to, you can log back in below:", "logout")
@@ -123,10 +116,9 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-# Render Dictionary Page
-
 
 @app.route("/our-wee-guide")
+# Render Dictionary Page
 def dictionary():
     dictionary = mongo.db.dictionary.find()
     return render_template("dictionary.html", dictionary=dictionary)

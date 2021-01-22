@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Page Heading -->
+<div class="heading container center-align">
+    <div>
+        <h1>Contact Us</h1>
+    </div>
+    <div class="page-description">
+
+    </div>
+</div>
+
+<!-- Sign Up Form -->
+<section class="form-container">
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="" action="">
+            <div class="card center-align">
+
+                <!-- Name -->
+                <div class="input-field">
+                    <i class="fas fa-user prefix"></i>
+                    <input placeholder="Enter Your First Name" id="first_name" name="first_name" type="text"
+                        class="validate" required>
+                    <label for="first_name">First Name</label>
+                </div>
+
+                <!-- Email -->
+                <div class="input-field">
+                    <i class="fas fa-user-tag prefix"></i>
+                    <input placeholder="Enter A Username" id="username" name="username" type="text" minlength="5"
+                        class="validate" required>
+                    <label for=" username">Username</label>
+                </div>
+
+                <!-- Message -->
+                <div class="input-field">
+                    <i class="fas fa-comment-dots"></i>
+                    <textarea id="textarea" class="materialize-textarea"></textarea>
+                    <label for="textarea">Textarea</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn waves-effect waves-light z-depth-0">
+                    Submit
+                </button>
+
+            </div>
+        </form>
+    </div>
+    <div class="img-description">
+        <p><span></span></p>
+    </div>
+</section>
+
+{% endblock %}
