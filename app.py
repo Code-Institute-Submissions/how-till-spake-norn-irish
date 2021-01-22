@@ -110,7 +110,7 @@ def profile(username):
 # Render Logout Functionality
 def logout():
     # Display flash message if user has been logged out
-    flash("Ach, you've logged out of your wee account! If you want to, you can log back in below:", "logout")
+    flash("Ach, you've logged out of your wee account!", "logout")
 
     # Remove user from session cookies
     session.pop("user")
@@ -122,6 +122,12 @@ def logout():
 def dictionary():
     dictionary = mongo.db.dictionary.find()
     return render_template("dictionary.html", dictionary=dictionary)
+
+
+@app.route("/add-word")
+# Render Add Word Page
+def add_word():
+    return render_template("add-word.html")
 
 
 @app.route("/contact-us")
