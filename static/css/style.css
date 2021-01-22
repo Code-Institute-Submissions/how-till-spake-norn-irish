@@ -14,11 +14,11 @@
     --pink: #A90F5E;
     /* Jazzberry Jam */
 
-    --white-opacity: rgba(242, 242, 242, 0.8);
-    --black-opacity: rgba(41, 40, 37, 0.8);
-    --blue-opacity: rgba(19, 123, 179, 0.8);
-    --green-opacity: rgba(11, 86, 80, 0.8);
-    --pink-opacity: rgba(169, 15, 94, 0.8);
+    --white-fade: rgba(242, 242, 242, 0.8);
+    --black-fade: rgba(41, 40, 37, 0.8);
+    --blue-fade: rgba(19, 123, 179, 0.8);
+    --green-fade: rgba(11, 86, 80, 0.8);
+    --pink-fade: rgba(169, 15, 94, 0.8);
 }
 
 /* ---------- End Color Variables ---------- */
@@ -196,8 +196,31 @@ section div.row {
     height: auto;
 }
 
+/* Code below is from Materialize Docs: https://materializecss.com/text-inputs.html */
+/* label color */
+.input-field label {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus+label {
+    color: var(--pink);
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: var(--pink);
+}
+
+::placeholder {
+    color: var(--black-fade);
+    font-size: 1rem;
+}
+
 form .card {
-    background-color: var(--white-opacity);
+    background-color: var(--white-fade);
     border-radius: 20px;
     padding: 40px;
     margin: 40px 20px 100px;
@@ -226,7 +249,7 @@ form .card {
 
 /* ---------- Background Images --------- */
 .bg-img-heading {
-    background: linear-gradient(var(--white-opacity), var(--white-opacity)), url('../images/open-mouth.png');
+    background: linear-gradient(var(--white-fade), var(--white-fade)), url('../images/open-mouth.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -248,7 +271,7 @@ form .card {
     padding: 10px 20px;
     width: 100%;
 
-    background-color: var(--blue-opacity);
+    background-color: var(--blue-fade);
     color: var(--white);
     font-size: 1rem;
     text-align: center;
@@ -321,7 +344,7 @@ form .card {
 
 /* ---------- Flash Messages ---------- */
 .flash-message {
-    background-color: var(--green-opacity);
+    background-color: var(--green-fade);
 }
 
 .flash-message h4 {
