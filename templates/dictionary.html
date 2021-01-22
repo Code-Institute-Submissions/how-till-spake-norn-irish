@@ -6,6 +6,11 @@
     <div>
         <h1>Our Wee Guide</h1>
     </div>
+    {% if session.user %}
+    <div>
+        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">Add Word</a>
+    </div>
+    {% endif %}
 </section>
 
 <!-- Dictionary -->
