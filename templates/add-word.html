@@ -12,9 +12,9 @@
 </div>
 
 <!-- Add Word Form -->
-<section class="form-container">
+<section class="form-container bg-img-add">
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="#">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_word') }}">
             <div class="card center-align">
 
                 <!-- Word -->
@@ -27,29 +27,29 @@
                 <!-- Definition -->
                 <div class="input-field">
                     <i class="fas fa-file-alt prefix"></i>
-                    <textarea placeholder="Add Word Definition Here" id="word-definition" name="word-definition"
-                        type="text" class="materialize-textarea validate" required></textarea>
-                    <label for="word-definition">Definition</label>
+                    <textarea placeholder="Add Word Definition Here" id="definition" name="definition" type="text"
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="definition">Definition</label>
                 </div>
 
                 <!-- Example -->
                 <div class="input-field">
                     <i class="fas fa-comment prefix"></i>
-                    <textarea placeholder="Add Word Example Here" id="word-example" name="word-example" type="text"
+                    <textarea placeholder="Add Word Example Here" id="example" name="example" type="text"
                         class="materialize-textarea validate" required></textarea>
-                    <label for="word-example">Examaple</label>
+                    <label for="example">Examaple</label>
                 </div>
 
                 <!-- Sign Up Button -->
                 <button type="submit" class="btn waves-effect waves-light z-depth-0">
-                    Add Word
+                    Add Word To Our Wee Guide
                 </button>
 
             </div>
         </form>
     </div>
     <div class="img-description">
-        <p><span></span></p>
+        <p><span>Dunluce Castle</span> - Bushmills, Northern Ireland</p>
     </div>
 </section>
 

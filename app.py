@@ -124,9 +124,19 @@ def dictionary():
     return render_template("dictionary.html", dictionary=dictionary)
 
 
-@app.route("/add-word")
+@app.route("/add-word", methods=["GET", "POST"])
 # Render Add Word Page
 def add_word():
+    if request.method == "POST":
+        word = {
+            "word": request.form.get("word"),
+            "definition": request.form.get("definition"),
+            "example": request.form.get("example"),
+            "added_by": session["user"]
+        }
+        mongo.db.dictionary.insert_one(word)
+
+        return redirect(url_for("dictionary"))
     return render_template("add-word.html")
 
 
