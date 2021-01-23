@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     height: 100vh;
 
-    background-color: var(--white);
+    background: var(--white);
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -300,43 +300,38 @@ form .card {
     left: 0;
 }
 
-.bg-img-top {
-    background: url('../images/giants-causeway.jpg');
+.bg-img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bg-img-top {
+    background-image: url('../images/giants-causeway.jpg');
 }
 
 .bg-img-bottom {
-    background: url('../images/dark-hedges.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../images/dark-hedges.jpg');
 }
 
 .bg-img-dictionary {
-    background: url('../images/belfast-city-hall.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../images/belfast-city-hall.jpg');
 }
 
 .bg-img-login {
-    background: url('../images/titanic-belfast.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('../images/titanic-belfast.jpg');
 }
 
 .bg-img-signup {
-    background: url('../images/carrick-a-rede.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('../images/carrick-a-rede.jpg');
 }
 
 .bg-img-add {
-    background: url('../images/dunluce-castle.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('../images/dunluce-castle.jpg');
+}
+
+.bg-img-contact {
+    background-image: url('../images/mussenden-temple.jpg');
 }
 
 /* ---------- End Background Images --------- */
