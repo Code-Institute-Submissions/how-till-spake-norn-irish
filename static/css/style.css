@@ -286,6 +286,8 @@ form .card {
     color: var(--white);
     font-size: 1rem;
     text-align: center;
+
+    z-index: 10;
 }
 
 .img-description span {
