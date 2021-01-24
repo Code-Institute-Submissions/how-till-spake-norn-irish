@@ -338,6 +338,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following CSS was used to add text blocks to images: [https://www.w3schools.com/howto/howto_css_image_text_blocks.asp](https://www.w3schools.com/howto/howto_css_image_text_blocks.asp)
 
+- The following code from stack overflow was used to help add active classes to the navigation bar: [https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)
+
 ### Content
 
 ### Media

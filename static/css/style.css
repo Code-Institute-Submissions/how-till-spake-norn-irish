@@ -108,6 +108,18 @@ nav i {
     padding: 20px 32px;
 }
 
+nav ul li.active {
+    background-color: var(--white);
+}
+
+#nav-mobile .active a {
+    color: var(--pink);
+}
+
+#nav-mobile .active a:hover {
+    color: var(--white);
+}
+
 /* ---------- End Navigation Bar ---------- */
 
 
@@ -153,7 +165,7 @@ nav i {
 
 
 /* ---------- Dictionary ---------- */
-/* https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Code below was used to hide the scrollbar within a div container: https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 .dictionary {
     height: 100vh;
     overflow: auto;
@@ -207,7 +219,9 @@ section div.row {
     height: auto;
 }
 
-/* Code below is from Materialize Docs: https://materializecss.com/text-inputs.html */
+/* Code below is from Materialize Docs to update form input styling: 
+https://materializecss.com/text-inputs.html */
+
 /* label color */
 .input-field label {
     color: var(--black);
@@ -274,7 +288,8 @@ form .card {
     height: 60vh;
 }
 
-/* Add text block to images from - https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
+/* Code below was used to add text blocks to images: 
+https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 .img-description {
     position: absolute;
     bottom: 0;
