@@ -28,7 +28,7 @@ A demo of the website can be found here: **Add Link to Deployed Site on Heroku**
   - Features that have been implemented
   - Features left to be implemented
 
-- [**Technologies**](#technologies)
+- [**Technologies Used**](#technologies-used)
   - Languages Used
   - Frameworks, Libraries and Programs Used
   - Dependencies
@@ -133,18 +133,19 @@ MongoDB Collections:
 | Key | Value |
 | :---: | :---: |
 | _id: | ObjectId("unique_id") |
-| word: | "dictionary_word" |
-| definition: | "dictionary_definition" |
-| example: | "dictionary_example" |
+| word: | "string" |
+| definition: | "string" |
+| example: | "string" |
+| added_by: | "string" |
 
 ### User Profile Collection
 
 | Key | Value |
 | :---: | :---: |
 | _id: | ObjectId("unique_id") |
-| first_name: | "first_name" |
-| username: | "username" |
-| password: | "password" |
+| first_name: | "string" |
+| username: | "string" |
+| password: | "string" |
 
 [Contents](#contents)
 
@@ -207,8 +208,8 @@ MongoDB Collections:
 
 ### Languages
 
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
 
@@ -217,9 +218,9 @@ MongoDB Collections:
 - [Balsamiq](https://balsamiq.com/)
   - Balsamiq was used to create the wireframes for desktop, tablet and mobile during the design process.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-  - Flask was used to...
+  - Flask was the microframework use to build the application.
 - [Font Awesome](https://fontawesome.com/)
-  - Font Awesome was used to add...
+  - Font Awesome was used to add various icons throughout the site.
 - [Google Fonts](https://fonts.google.com/)
   - Google Fonts was used to add...
 - [Git](https://git-scm.com/)
@@ -228,6 +229,8 @@ MongoDB Collections:
   - GitHub was used to store the project code that was pushed from VS Code.
 - [Heroku](https://www.heroku.com/)
   - Heroku is a cloud platform that was used to deploy and run the application from the GitHub repository.
+- [Materialize](https://materializecss.com/)
+  - Materialize is a modern responsive CSS framework that was used to give the website a simple, responsive layout.
 - [MongoDB](https://www.mongodb.com/)
   - MongoDB Atlas is a cloud database service used to create and store the database collections for the application.
 - [VS Code](https://code.visualstudio.com/)
@@ -235,17 +238,34 @@ MongoDB Collections:
 
 ### Dependencies
 
+- [autopep8](https://pypi.org/project/autopep8/)
+  - A tool that automatically formats Python code to conform to the PEP 8 style guide.
+- [click](https://palletsprojects.com/p/click/)
+  - Composable command line interface toolkit.
+- [dnspython](https://www.dnspython.org/)
+  - A DNS toolkit for Python.
+- [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
+  - PyMongo support for Flask applications.
+- [itsdangerous](https://palletsprojects.com/p/itsdangerous/)
+  - Various helpers to pass data to untrusted environments and back
+- [Jinja2](https://palletsprojects.com/p/jinja/)
+  - Templating language for Python.
+- [MarkupSafe](https://palletsprojects.com/p/markupsafe/)
+  - Safely add untrusted strings to HTML/XML markup.
+- [pymongo](https://pypi.org/project/pymongo/)
+  - Python driver for MongoDB.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+  - A comprehensive WSGI web applications library.
+
 [Contents](#contents)
+
+---
 
 ## Testing
 
 Further Testing information can be found in a separate document: [TESTING.md](TESTING.md)
 
 [Contents](#contents)
-
-## Version Control
-
-- **Branches Used**
 
 ## Deployment
 
@@ -258,7 +278,7 @@ This project was coded in VS Code and pushed to GitHub using the following steps
 - Open source control in VS Code and select **"Publish to GitHub"**
 - If prompted, sign into GitHub to connect your account to VS Code if you haven't done so already
 - In source control, select **"Publish to GitHub"**
-- Give your repository a name and select **"Publish to GitHub public repository"**
+- Give your repository a name and select **"Publish to GitHub Public Repository"**
 - After the repository is successfully published to GitHub, you can use git bash to add, commit and push any changes to the GitHub repository
 - To stage a file commit, use ```git add``` and the name of the file you want to commit
 - After adding a file to commit, use ```git commit -m "add commit message"``` to specify what changes you have made to that file
@@ -299,6 +319,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 - Change the current working directory to the location where you want the cloned directory to be saved
 - Type ```git clone```, and then paste the URL: [https://github.com/KirstChat/how-till-spake-norn-irish.git](https://github.com/KirstChat/how-till-spake-norn-irish.git)
 - Press Enter to create a local clone
+- To then run the repository locally, install the required dependencies from the **requirements.txt** file: ```pip3 install requirements.txt```
+- Run the app from your local IDE using the following command: ```python3 app.py```
 
 [Contents](#contents)
 
