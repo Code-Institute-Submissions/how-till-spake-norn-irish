@@ -19,16 +19,19 @@
     <div class="container valign-wrapper">
         <div class="row">
             {% for words in dictionary %}
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content center-align waves-effect waves-light waves activator">
-                        <span class="card-title activator">{{ words.word }}</span>
+                        <span class="card-title activator">"{{ words.word }}"</span>
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title">{{ words.word }}<i class="fas fa-times right"></i></span>
+                        <span class="card-title">"{{ words.word }}"<i class="fas fa-times right"></i></span>
                         <p><span class="italics">Definition: </span>{{ words.definition }}</p>
                         <p><span class="italics">Example: </span>"{{ words.example }}"</p>
                         <p><span class="italics">Added By: </span>{{ words.added_by}}</p>
+                        <!-- Edit and Delete Buttons -->
+                        <a href="" class="btn edit waves-effect waves-light z-depth-0">Edit</a>
+                        <a href="" class="btn delete waves-effect waves-light z-depth-0">delete</a>
                     </div>
                 </div>
             </div>
