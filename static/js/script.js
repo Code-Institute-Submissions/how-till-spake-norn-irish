@@ -5,4 +5,6 @@ $(document).ready(function () {
     });
     // Form Input Character Count
     $('input#first_name, input#username, input#password').characterCounter();
+    // Collapsible
+    $('.collapsible').collapsible();
 });

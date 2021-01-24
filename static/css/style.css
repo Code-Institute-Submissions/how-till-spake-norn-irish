@@ -184,7 +184,20 @@ section div.row {
     margin-bottom: 0;
 }
 
-.card {
+.collapsible-header {
+    background-color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    justify-content: center;
+}
+
+.collapsible-body {
+    background-color: var(--white-fade);
+    font-size: 1.2rem;
+    padding: 10px 20px 20px;
+}
+
+/* .card {
     color: var(--black);
     border-radius: 20px;
 }
@@ -208,7 +221,7 @@ section div.row {
 
 .card-reveal .card-title {
     font-weight: 700;
-}
+} */
 
 /* ---------- End Dictionary ---------- */
 
