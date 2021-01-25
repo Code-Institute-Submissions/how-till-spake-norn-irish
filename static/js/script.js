@@ -7,4 +7,6 @@ $(document).ready(function () {
     $('input#first_name, input#username, input#password').characterCounter();
     // Collapsible
     $('.collapsible').collapsible();
+    //Modal
+    $('.modal').modal();
 });
