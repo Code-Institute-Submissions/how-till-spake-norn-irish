@@ -114,7 +114,7 @@ def profile(username):
 
 
 @app.route("/logout")
-# Render Logout Functionality
+# Logout Functionality
 def logout():
     # Display flash message if user has been logged out
     flash("Ach, you've logged out of your wee account!", "logout")
@@ -161,6 +161,14 @@ def edit_word(word_id):
 
     word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
     return render_template("edit_word.html", word=word)
+
+
+@app.route("/delete_word/<word_id>")
+# Delete Functionality
+def delete_word(word_id):
+    mongo.db.dictionary.remove({"_id": ObjectId(word_id)})
+    flash("Your word has been deleted from Our Wee Guide!")
+    return redirect(url_for("dictionary"))
 
 
 @app.route("/contact-us")
