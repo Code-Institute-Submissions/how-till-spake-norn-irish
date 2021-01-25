@@ -155,22 +155,22 @@ MongoDB Collections:
 
 ### Features that have been implemented
 
-- Home Page
-  - About Section
-  - Button link to Sign Up Page
-  - Button link to Login Page
-  - Button link to Dictionary
+- Responsive on all devices:
+  - The site has a mobile-first design using the Materialize framework
+  - Media queries **will** be added for tablet, laptop and desktop devices
 
-- Footer with Social Links/Email Address (all pages):
-  - Facebook
-  - Twitter
-  - Instagram
-  - Email Address
+- Easy to use navigation bar that links to different pages:
+  - This is located at the top of all pages on the site
+  - There is a collapsible side navigation menu on mobile devices which can be accessed by clicking the menu bars icon located at the top right or by swiping from the right side of the screen
+  - When a user isn't logged in to their account, the following links will display on the navigation bar:
+    - Home, Dictionary, Login, Sign Up, Contact Us
+  - When a user is logged in to their account, the following links will display on the navigation bar:
+    - Home, Dictionary, Profile, Log Out, Contact Us
 
-### Features left to be implemented
-
-- Responsive Design
-
+- A Home Page made up of different sections:
+  - An about section with a link to the dictionary
+  - A section with button links to the login page and the sign up page
+  
 - Navigation Bar (all pages):
   - Dictionary
   - Login (With link to Sign Up Page)
@@ -180,25 +180,51 @@ MongoDB Collections:
   - Sign Up (With link to Login Page)
   - Contact Us
 
-- Dictionary
-  - Filter system
-    - Alphabetically
-    - Search for a word
-  - Voting System
+- Sign Up Page
+  - Button link to Login Page
 
 - Login Page
   - Button link to Sign Up Page
-  - Profile
-    - Submissions (with options to edit or delete)
-    - Favorites (add this later and replace with voting system?)
 
-- Sign Up Page
-  - Button link to Login Page
+- Footer with Social Links/Email Address (all pages):
+  - Facebook
+  - Twitter
+  - Instagram
+  - Email Address
+
+### Features left to be implemented
+
+- Media Queries for tablet, laptop and desktop devices
+
+- Dictionary
+  - Filter system
+    - Sort Alphabetically
+    - Search for a word
+  - Voting System
+
+- Profile Page
+  - Submissions (with options to edit or delete)
+  - Favorites (add this later and replace with voting system?)
 
 - Contact Page
   - Email Form
 
 - 404 Error Page
+
+[Contents](#contents)
+
+---
+
+## Branches
+
+Throughout the development process, different branches have been created to test different features and layouts which have been merged with the master branch.
+
+Dictionary Branch:
+
+- This branch was created to test a different layout for the dictionary template
+- I initially used a grid layout with each of the words in a materialize card container which when clicked, displayed the word definition and example
+- This layout caused overflow issues in some of the cards which meant that the cards couldn't have a fixed height
+- To fix this issue, I tested using the materialize collapsible accordion feature to display the dictionary which fixed the height sizing issue with the original card layout
 
 [Contents](#contents)
 
@@ -338,11 +364,23 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following CSS was used to add text blocks to images: [https://www.w3schools.com/howto/howto_css_image_text_blocks.asp](https://www.w3schools.com/howto/howto_css_image_text_blocks.asp)
 
-- The following code from stack overflow was used to help add active classes to the navigation bar: [https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)
+- The following code from stack overflow was used to help add active classes to the navigation bar using Jinja: [https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)
 
 ### Content
 
 ### Media
+
+#### Images
+
+As this project is for educational purposes, images have been used from a variety of sites as it was difficult to find the required images on free image sites. Links to these resources can be found below:
+
+- Belfast City Hall Image from [Visit Belfast](https://visitbelfast.com/partners/belfast-city-hall/)
+- Carrick-A-Rede Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/carrick-a-rede-rope-bridge-p675071)
+- Dark Hedges Image from [Pixabay](https://pixabay.com/photos/avenue-trees-the-dark-hedges-3464777/)
+- Dunluce Castle Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/dunluce-castle-medieval-irish-castle-on-the-antrim-coast-p675011)
+- Giants Causeway Image from [Visit Belfast](https://visitbelfast.com/partners/giants-causeway/#&gid=1&pid=6)
+- Open Mouth Vector Icon from [Flat Icon](https://www.flaticon.com/authors/smashicons)
+- Titanic Museum Belfast Image from [Visit Belfast](https://visitbelfast.com/partners/titanic-belfast/)
 
 ### Acknowledgements
 
