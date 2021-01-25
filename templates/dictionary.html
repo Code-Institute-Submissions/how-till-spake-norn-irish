@@ -18,13 +18,13 @@
 <section class="dictionary bg-img bg-img-dictionary">
     <div class="container">
         <ul class="collapsible popout center-align">
-            {% for words in dictionary %}
+            {% for word in dictionary %}
             <li>
-                <div class="collapsible-header">"{{ words.word }}"</div>
+                <div class="collapsible-header">"{{ word.word }}"</div>
                 <div class="collapsible-body">
-                    <p><span class="italics">Definition: </span>{{ words.definition }}</p>
-                    <p><span class="italics">Example: </span>"{{ words.example }}"</p>
-                    <p><span class="italics">Added By: </span>{{ words.added_by}}</p>
+                    <p><span class="italics">Definition: </span>{{ word.definition }}</p>
+                    <p><span class="italics">Example: </span>"{{ word.example }}"</p>
+                    <p><span class="italics">Added By: </span>{{ word.added_by}}</p>
                     <!-- Edit and Delete Buttons -->
                     <a href="{{ url_for('edit_word', word_id=word._id) }}"
                         class="btn edit waves-effect waves-light z-depth-0">Edit</a>
