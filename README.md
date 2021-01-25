@@ -385,6 +385,7 @@ As this project is for educational purposes, images have been used from a variet
 
 ### Acknowledgements
 
-- Huge thanks to Igor in Tutor Support for helping me spot an error in my code that wouldn't let me render the edit_word functionality...it's always the silly things that catch me out!
+- A huge thanks to Igor in Tutor Support for helping me spot an error in my code that wouldn't let me render the edit_word functionality. (It's always the silly things that catch me out!)
+- Thanks to the Code Institute Slack community for being an incredible bunch of people! Especially Ed B who helped someone in a thread in #data-centric-dev that was having similar issues with a delete confirmation modal deleting the first word in the collection rather than the targeted word.
 
 [Contents](#contents)
