@@ -160,37 +160,36 @@ MongoDB Collections:
   - Media queries **will** be added for tablet, laptop and desktop devices
 
 - Easy to use navigation bar that links to different pages:
-  - This is located at the top of all pages on the site
-  - There is a collapsible side navigation menu on mobile devices which can be accessed by clicking the menu bars icon located at the top right or by swiping from the right side of the screen
+  - This is located at the top of all pages in the site
+  - There is a collapsible side navigation menu on mobile devices which can be accessed by clicking the menu bar icon located at the top right or by swiping from the right side of the screen
   - When a user isn't logged in to their account, the following links will display on the navigation bar:
     - Home, Dictionary, Login, Sign Up, Contact Us
   - When a user is logged in to their account, the following links will display on the navigation bar:
     - Home, Dictionary, Profile, Log Out, Contact Us
 
-- A Home Page made up of different sections:
-  - An about section with a link to the dictionary
+- Home page with different sections:
+  - An about section explaining the purpose of the site with a link to the dictionary
   - A section with button links to the login page and the sign up page
-  
-- Navigation Bar (all pages):
-  - Dictionary
-  - Login (With link to Sign Up Page)
-    - Dictionary
-    - Profile
-    - Logout
-  - Sign Up (With link to Login Page)
-  - Contact Us
 
-- Sign Up Page
-  - Button link to Login Page
+- Dictionary page
+  - Features a collapsible Materialize accordion that displays all the words from the dictionary
+  - When a word in the accordion is clicked, the word definition and an example is displayed
 
-- Login Page
-  - Button link to Sign Up Page
+- Sign up page:
+  - Features an easy to use form that requires first time visitors to enter their name, a username and a password to create an account
+  - Also features a button link to the login page to allow users to sign in to their account if they already have one
 
-- Footer with Social Links/Email Address (all pages):
-  - Facebook
-  - Twitter
-  - Instagram
-  - Email Address
+- Login page:
+  - Features an easy to use form that requires the user to enter their username and password to login in to their account
+  - Also features a button link to the sign up page to allow first time visitors to create an account if they don't already have one
+
+- Contact us page:
+  - Features an easy to use form to allow first time visitors or users to contact the site owner to provide feedback or ask any questions
+
+- Footer with social links:
+  - This is located on all pages in the site
+  - Features links to Facebook, Instagram and Twitter
+  - Also features an email link to the contact us page
 
 ### Features left to be implemented
 
@@ -207,9 +206,11 @@ MongoDB Collections:
   - Favorites (add this later and replace with voting system?)
 
 - Contact Page
-  - Email Form
+  - Functioning Email Form
 
 - 404 Error Page
+
+- 500 Error Page (necessary?)
 
 [Contents](#contents)
 

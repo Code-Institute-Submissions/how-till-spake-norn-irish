@@ -19,13 +19,20 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/how-till-spake-norn-irish")
+@app.route("/how_till_spake_norn_irish")
 # Render Home Page
 def home():
     return render_template('index.html')
 
 
-@app.route("/sign-up", methods=["GET", "POST"])
+@app.route("/our_wee_guide")
+# Render Dictionary Page
+def dictionary():
+    dictionary = mongo.db.dictionary.find()
+    return render_template("dictionary.html", dictionary=dictionary)
+
+
+@app.route("/sign_up", methods=["GET", "POST"])
 # Render Sign Up Page
 def sign_up():
     if request.method == "POST":
@@ -58,7 +65,7 @@ def sign_up():
         # Redirect user to their profile
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("sign-up.html")
+    return render_template("sign_up.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -117,14 +124,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/our-wee-guide")
-# Render Dictionary Page
-def dictionary():
-    dictionary = mongo.db.dictionary.find()
-    return render_template("dictionary.html", dictionary=dictionary)
-
-
-@app.route("/add-word", methods=["GET", "POST"])
+@app.route("/add_word", methods=["GET", "POST"])
 # Render Add Word Page
 def add_word():
     if request.method == "POST":
@@ -137,7 +137,15 @@ def add_word():
         mongo.db.dictionary.insert_one(word)
 
         return redirect(url_for("dictionary"))
-    return render_template("add-word.html")
+    return render_template("add_word.html")
+
+
+@app.route("/edit_word/<word_id>", methods=["GET", "POST"])
+# Render Edit Word Page
+def edit_word(word_id):
+    word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
+    print(word=word)
+    return render_template("edit_word.html", word=word)
 
 
 @app.route("/contact-us")
