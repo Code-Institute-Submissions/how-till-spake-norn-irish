@@ -144,7 +144,7 @@ def add_word():
 # Render Edit Word Page
 def edit_word(word_id):
     word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
-    print(word=word)
+
     return render_template("edit_word.html", word=word)
 
 
