@@ -20,7 +20,8 @@
                 <!-- Word -->
                 <div class="input-field">
                     <i class="fas fa-font prefix"></i>
-                    <input placeholder="Add Word Here" id="word" name="word" type="text" class="validate" required>
+                    <input placeholder="Add Word Here" id="word" name="word" value="{{ word.word }}" type="text"
+                        class="validate" required>
                     <label for="word">Word</label>
                 </div>
 
@@ -28,7 +29,9 @@
                 <div class="input-field">
                     <i class="fas fa-file-alt prefix"></i>
                     <textarea placeholder="Add Word Definition Here" id="definition" name="definition" type="text"
-                        class="materialize-textarea validate" required></textarea>
+                        class="materialize-textarea validate" required>
+                        {{- word.definition -}}
+                        </textarea>
                     <label for="definition">Definition</label>
                 </div>
 
@@ -36,13 +39,18 @@
                 <div class="input-field">
                     <i class="fas fa-comment prefix"></i>
                     <textarea placeholder="Add Word Example Here" id="example" name="example" type="text"
-                        class="materialize-textarea validate" required></textarea>
+                        class="materialize-textarea validate" required>
+                        {{- word.example -}}
+                        </textarea>
                     <label for="example">Example</label>
                 </div>
 
+                <!-- Cancel Button -->
+                <a href="{{ url_for('dictionary') }}" class="btn edit waves-effect waves-light z-depth-0">Cancel</a>
+
                 <!-- Submit Button -->
                 <button type="submit" class="btn waves-effect waves-light z-depth-0">
-                    Update Word
+                    Save Changes
                 </button>
 
             </div>

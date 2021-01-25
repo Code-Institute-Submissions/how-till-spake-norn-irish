@@ -385,6 +385,6 @@ As this project is for educational purposes, images have been used from a variet
 
 ### Acknowledgements
 
-- Thanks to Igor in Tutor Support for helping me spot an error in my code that wouldn't let me render the edit_word functionality...it's always the silly things that catch me out!
+- Huge thanks to Igor in Tutor Support for helping me spot an error in my code that wouldn't let me render the edit_word functionality...it's always the silly things that catch me out!
 
 [Contents](#contents)

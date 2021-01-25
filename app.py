@@ -134,17 +134,32 @@ def add_word():
             "example": request.form.get("example"),
             "added_by": session["user"]
         }
+        # Add word to dictionary
         mongo.db.dictionary.insert_one(word)
-
+        # Display flash message if word has been added successfully
+        flash("Your word has been added to Our Wee Guide!", "add")
         return redirect(url_for("dictionary"))
+
     return render_template("add_word.html")
 
 
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
 # Render Edit Word Page
 def edit_word(word_id):
-    word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
+    if request.method == "POST":
+        submit = {
+            "word": request.form.get("word"),
+            "definition": request.form.get("definition"),
+            "example": request.form.get("example"),
+            "added_by": session["user"]
+        }
+        # Update word in dictionary
+        mongo.db.dictionary.update({"_id": ObjectId(word_id)}, submit)
+        # Display flash message if word has been successfully updated
+        flash("You've update a word in Our Wee Guide", "edit")
+        return redirect(url_for("dictionary"))
 
+    word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
     return render_template("edit_word.html", word=word)
 
 
