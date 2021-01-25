@@ -7,9 +7,15 @@
     <div>
         <h1>Our Wee Guide</h1>
     </div>
+    <div class="description">
+        <p>Click on the words below to find out what they mean</p>
+    </div>
     {% if session.user %}
     <div>
-        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">Add Word</a>
+        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
+            <i class="fas fa-plus"></i>
+            Add Word
+        </a>
     </div>
     {% endif %}
 </section>
@@ -30,9 +36,10 @@
                     <!-- Admin can delete and edit any of the words in the dictionary-->
                     {% if session.user == word.added_by or session.user == "admin" %}
                     <a href="{{ url_for('edit_word', word_id=word._id) }}"
-                        class="btn edit waves-effect waves-light z-depth-0">Edit</a>
+                        class="btn edit waves-effect waves-light z-depth-0"><i class="fas fa-edit"></i> Edit</a>
                     <button data-target="{{ word._id }}"
-                        class="btn delete modal-trigger waves-effect waves-light z-depth-0">Delete</button>
+                        class="btn delete modal-trigger waves-effect waves-light z-depth-0"><i
+                            class="fas fa-trash-alt"></i> Delete</button>
                     {% endif %}
                 </div>
             </li>
@@ -44,15 +51,16 @@
                     <h4>Are you sure you want to delete "{{ word.word }}"" from Our Wee Guide?</h4>
                 </div>
                 <div class="modal-footer center-align">
-                    <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">Cancel</a>
+                    <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0"><i
+                            class="fas fa-times"></i> Cancel</a>
                     <a href="{{ url_for('delete_word', word_id=word._id) }}"
-                        class="btn delete waves-effect waves-light z-depth-0">Delete</a>
+                        class="btn delete waves-effect waves-light z-depth-0"><i class="fas fa-trash-alt"></i>
+                        Delete</a>
                 </div>
             </div>
 
             {% endfor %}
         </ul>
-
     </div>
 
     <div class="img-description">

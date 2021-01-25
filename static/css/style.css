@@ -135,10 +135,10 @@ nav ul li.active {
     margin: 10px auto 40px;
 }
 
-.site-description {
+.description {
     color: var(--black);
     font-weight: 800;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
 }
 
@@ -167,7 +167,6 @@ nav ul li.active {
 /* ---------- Dictionary ---------- */
 /* Code below was used to hide the scrollbar within a div container: https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 .dictionary {
-    height: 100vh;
     overflow: auto;
     scrollbar-width: none;
 }
@@ -186,7 +185,7 @@ section div.row {
 
 .collapsible-header {
     background-color: var(--white);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     justify-content: center;
 }
@@ -318,8 +317,6 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
     color: var(--white);
     font-size: 1rem;
     text-align: center;
-
-    z-index: 10;
 }
 
 .img-description span {
@@ -461,6 +458,10 @@ footer h5 {
 @media only screen and (min-width: 425px) {
     .brand-logo img {
         width: 6vw;
+    }
+
+    .btn {
+        width: 50%;
     }
 }
 
