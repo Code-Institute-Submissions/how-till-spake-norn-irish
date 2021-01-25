@@ -423,26 +423,33 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 /* ---------- Footer ---------- */
 .page-footer {
     background-color: var(--pink);
+    padding-top: 0;
+}
+
+.page-footer .row {
+    margin-bottom: 30px;
 }
 
 footer h5 {
     font-size: 1.4rem;
     font-weight: 700;
+    margin-top: 30px;
 }
 
 .page-footer,
-.social-link {
+.footer-link {
     color: var(--white);
     font-size: 1.2rem;
 }
 
-.social-link i {
+.footer-link i {
     font-size: 1.2rem;
     padding: 0 10px;
 }
 
 .footer-copyright a {
     color: var(--white);
+    font-size: 1rem;
 }
 
 /* ---------- End Footer ---------- */

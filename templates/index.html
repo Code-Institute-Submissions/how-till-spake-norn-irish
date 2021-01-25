@@ -50,6 +50,25 @@
 <section class="login-signup container center-align">
     <div class="row">
 
+        {% if session.user %}
+        <!-- Profile -->
+        <div class="col s12 m6">
+            <p>
+                Click the button below to visit your profile to see what words you've added to Our Wee Guide.
+            </p>
+            <a href="{{ url_for('profile', username=session['user']) }}"
+                class="btn waves-effect waves-light z-depth-0">Profile</a>
+        </div>
+
+        <!-- Add Word -->
+        <div class="col s12 m6">
+            <p>
+                Click the button below to add some new words to Our Wee Guide.
+            </p>
+            <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">Add Word</a>
+        </div>
+
+        {% else %}
         <!-- Login Button -->
         <div class="col s12 m6">
             <p>
@@ -67,6 +86,7 @@
             </p>
             <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
         </div>
+        {% endif %}
     </div>
 </section>
 
