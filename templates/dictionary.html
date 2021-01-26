@@ -10,6 +10,8 @@
     <div class="description">
         <p>Click on the words below to find out what they mean</p>
     </div>
+
+    <!-- Add Word Button -->
     {% if session.user %}
     <div>
         <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
@@ -18,6 +20,29 @@
         </a>
     </div>
     {% endif %}
+
+    <!-- Search Function -->
+    <div class="row">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="input-field">
+                <i class="fas fa-search prefix"></i>
+                <input type="text" name="search" id="search">
+                <label for="search">Search for a Word or a Phrase</label>
+            </div>
+            <div class="valign-wrapper">
+                <!-- Search Button -->
+                <button type="submit" class="btn search waves-effect waves-light z-depth-0">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+                <!-- Reset Button -->
+                <a href="{{ url_for('dictionary') }}" class="btn reset waves-effect waves-light z-depth-0">
+                    <i class="fas fa-undo"></i>
+                    Reset
+                </a>
+            </div>
+        </form>
+    </div>
 </section>
 
 <!-- Dictionary -->
@@ -33,7 +58,7 @@
                     <p><span class="italics">Added By: </span>{{ word.added_by }}</p>
 
                     <!-- Edit and Delete Buttons -->
-                    <!-- Admin can delete and edit any of the words in the dictionary-->
+                    <!-- Admin can delete and edit any of the words in the dictionary -->
                     {% if session.user == word.added_by or session.user == "admin" %}
                     <a href="{{ url_for('edit_word', word_id=word._id) }}"
                         class="btn edit waves-effect waves-light z-depth-0"><i class="fas fa-edit"></i> Edit</a>

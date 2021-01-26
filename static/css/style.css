@@ -241,8 +241,7 @@ https://materializecss.com/text-inputs.html */
 /* label color */
 .input-field label {
     color: var(--black);
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 /* label focus color */
@@ -385,6 +384,11 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 .btn:focus {
     background-color: var(--green);
     color: var(--white);
+}
+
+.btn.search,
+.btn.reset {
+    margin: 0 10px;
 }
 
 .btn.edit,

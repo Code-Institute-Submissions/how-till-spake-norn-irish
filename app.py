@@ -32,6 +32,14 @@ def dictionary():
     return render_template("dictionary.html", dictionary=dictionary)
 
 
+@app.route("/search", methods=["GET", "POST"])
+# Search Functionality
+def search():
+    search = request.form.get("search")
+    dictionary = mongo.db.dictionary.find({"$text": {"$search": search}})
+    return render_template("dictionary.html", dictionary=dictionary)
+
+
 @app.route("/sign_up", methods=["GET", "POST"])
 # Render Sign Up Page
 def sign_up():
