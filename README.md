@@ -367,6 +367,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following code from stack overflow was used to help add active classes to the navigation bar using Jinja: [https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)
 
+- The following code was used to sort the MongoDB Dictionary collection in ascending and descending order: [https://www.w3schools.com/python/python_mongodb_sort.asp](https://www.w3schools.com/python/python_mongodb_sort.asp)
+
 ### Content
 
 ### Media

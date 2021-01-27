@@ -40,6 +40,22 @@ def search():
     return render_template("dictionary.html", dictionary=dictionary)
 
 
+# MongoDB sort function: https://www.w3schools.com/python/python_mongodb_sort.asp
+
+@app.route("/ascending")
+# Ascending Sort Functionality
+def ascending():
+    dictionary = mongo.db.dictionary.find().sort("word", 1)
+    return render_template("dictionary.html", dictionary=dictionary)
+
+
+@app.route("/descending")
+# Descending Sort Functionality
+def descending():
+    dictionary = mongo.db.dictionary.find().sort("word", -1)
+    return render_template("dictionary.html", dictionary=dictionary)
+
+
 @app.route("/sign_up", methods=["GET", "POST"])
 # Render Sign Up Page
 def sign_up():

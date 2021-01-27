@@ -9,4 +9,6 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
     //Modal
     $('.modal').modal();
+    //Dropdown
+    $('.dropdown-trigger').dropdown();
 });
