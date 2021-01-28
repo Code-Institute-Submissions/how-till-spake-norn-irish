@@ -200,11 +200,6 @@ section div.row {
 
 
 /* ---------- Profile ---------- */
-.profile {
-    position: relative;
-    height: auto;
-}
-
 .profile-card {
     background-color: var(--white-fade);
     border-radius: 20px;
