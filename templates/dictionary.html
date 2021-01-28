@@ -67,30 +67,44 @@
                     <p><span class="italics">Example: </span>"{{ word.example }}"</p>
                     <p><span class="italics">Added By: </span>{{ word.added_by }}</p>
 
-                    <!-- Edit and Delete Buttons -->
+                    <!-- Buttons -->
                     <!-- Admin can delete and edit any of the words in the dictionary -->
                     {% if session.user == word.added_by or session.user == "admin" %}
+                    <!-- Edit Button -->
                     <a href="{{ url_for('edit_word', word_id=word._id) }}"
-                        class="btn edit waves-effect waves-light z-depth-0"><i class="fas fa-edit"></i> Edit</a>
+                        class="btn edit waves-effect waves-light z-depth-0">
+                        <i class="fas fa-edit"></i>
+                        Edit
+                    </a>
+                    <!-- Delete Button -->
                     <button data-target="{{ word._id }}"
-                        class="btn delete modal-trigger waves-effect waves-light z-depth-0"><i
-                            class="fas fa-trash-alt"></i> Delete</button>
+                        class="btn delete modal-trigger waves-effect waves-light z-depth-0">
+                        <i class="fas fa-trash-alt"></i>
+                        Delete
+                    </button>
                     {% endif %}
                 </div>
             </li>
 
             <!-- Delete Confirmation Modal -->
-            <!-- Code below is from a slack thread in #data-centric-dev that helped fix the issue the first word in the collection being deleted instead of the targeted word -->
+            <!-- Code below is from a slack thread in #data-centric-dev | Credited in README -->
             <div id="{{ word._id }}" class="modal">
                 <div class="modal-content">
-                    <h4>Are you sure you want to delete "{{ word.word }}"" from Our Wee Guide?</h4>
+                    <h4>Are you sure you want to delete "{{ word.word }}" from Our Wee Guide?</h4>
                 </div>
                 <div class="modal-footer center-align">
-                    <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0"><i
-                            class="fas fa-times"></i> Cancel</a>
+                    <!-- Cancel Button -->
+                    <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </a>
+
+                    <!-- Delete Button -->
                     <a href="{{ url_for('delete_word', word_id=word._id) }}"
-                        class="btn delete waves-effect waves-light z-depth-0"><i class="fas fa-trash-alt"></i>
-                        Delete</a>
+                        class="btn delete waves-effect waves-light z-depth-0">
+                        <i class="fas fa-trash-alt"></i>
+                        Delete
+                    </a>
                 </div>
             </div>
 
@@ -98,6 +112,7 @@
         </ul>
     </div>
 
+    <!-- Image Description -->
     <div class="img-description">
         <p><span>Belfast City Hall</span> - Belfast, Northern Ireland</p>
     </div>

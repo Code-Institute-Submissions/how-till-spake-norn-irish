@@ -124,19 +124,6 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-# Render Profile Page
-def profile(username):
-    # Grab the session users first_name from MongoDB user_profile collection
-    username = mongo.db.user_profile.find_one(
-        {"username": session["user"]})["first_name"]
-
-    if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
-
-
 @app.route("/logout")
 # Logout Functionality
 def logout():
@@ -145,6 +132,23 @@ def logout():
 
     # Remove user from session cookies
     session.pop("user")
+    return redirect(url_for("login"))
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+# Render Profile Page
+def profile(username):
+    # Grab the session users first_name from MongoDB user_profile collection
+    username = mongo.db.user_profile.find_one(
+        {"username": session["user"]})["first_name"]
+
+    # Get dictionary to display words added by user
+    dictionary = mongo.db.dictionary.find(
+        {"added_by": session["user"]})
+
+    if session["user"]:
+        return render_template("profile.html", dictionary=dictionary, username=username)
+
     return redirect(url_for("login"))
 
 
