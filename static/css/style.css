@@ -471,6 +471,36 @@ footer h5 {
 /* ---------- End Footer ---------- */
 
 
+/* ---------- 404 ---------- */
+.error-bg {
+    background-color: var(--blue);
+    justify-content: center;
+}
+
+.error-img {
+    margin: 20px;
+}
+
+.error-bg h1 {
+    color: var(--pink);
+    margin: 0;
+}
+
+.error-bg .card {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+}
+
+.error-bg .error-description {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 40px;
+}
+
+/* ---------- End 404 ---------- */
+
 /* ---------- Media Queries ---------- */
 
 /* For devices bigger than mobile screen size 425px */
