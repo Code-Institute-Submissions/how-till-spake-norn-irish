@@ -369,6 +369,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following code was used to sort the MongoDB Dictionary collection in ascending and descending order: [https://www.w3schools.com/python/python_mongodb_sort.asp](https://www.w3schools.com/python/python_mongodb_sort.asp)
 
+- The following code was used to add custom error page: [https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
+
 ### Content
 
 ### Media
