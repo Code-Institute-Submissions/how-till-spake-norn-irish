@@ -7,7 +7,7 @@
     <div>
         <h1>Create a Wee Account</h1>
     </div>
-    
+
     <div class="page-description">
         <p>When you create an account with us, you can:</p>
         <ul>
@@ -59,7 +59,7 @@
                     <i class="fas fa-user-tag prefix"></i>
                     <input placeholder="Enter A Username" id="username" name="username" type="text" minlength="5"
                         maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label for=" username">Username</label>
+                    <label for="username">Username</label>
                 </div>
 
                 <!-- Password -->
@@ -67,7 +67,16 @@
                     <i class="fas fa-key prefix"></i>
                     <input placeholder="Enter a Password" id="password" name="password" type="password" minlength="5"
                         maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label for=" password">Password</label>
+                    <label for="password">Password</label>
+                </div>
+                
+                <!-- Confirm Password -->
+                <div class="input-field">
+                    <i class="fas fa-key prefix"></i>
+                    <input placeholder="Enter a Password" id="confirm_password" name="confirm_password" type="password" minlength="5"
+                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <span id="message"></span>
+                    <label for="confirm_password">Confirm Password</label>
                 </div>
 
                 <!-- Sign Up Button -->
