@@ -7,6 +7,7 @@
     <div>
         <h1>Our Wee Guide</h1>
     </div>
+
     <div class="description">
         <p>Click on the words below to find out what they mean</p>
     </div>
@@ -29,20 +30,26 @@
                 <input type="text" name="search" id="search">
                 <label for="search">Search for a Word or a Phrase</label>
             </div>
-            <div class="valign-wrapper">
+
+            <div class="col s12 m6">
                 <!-- Search Button -->
                 <button type="submit" class="btn search waves-effect waves-light z-depth-0">
                     <i class="fas fa-search"></i>
                     Search
                 </button>
+            </div>
+
+            <div class="col s12 m6">
                 <!-- Reset Button -->
                 <a href="{{ url_for('dictionary') }}" class="btn reset waves-effect waves-light z-depth-0">
                     <i class="fas fa-undo"></i>
                     Reset
                 </a>
+            </div>
+
+            <div class="col s12">
                 <!-- Sort By Dropdown -->
-                <a href="#" data-target="dropdown"
-                    class="btn dropdown-trigger reset waves-effect waves-light z-depth-0">
+                <a href="#" data-target="dropdown" class="btn dropdown-trigger reset waves-effect waves-light z-depth-0">
                     <i class="fas fa-sort"></i>
                     Sort By
                 </a>
@@ -60,54 +67,53 @@
     <div class="container">
         <ul class="collapsible popout center-align">
             {% for word in dictionary %}
-            <li>
-                <div class="collapsible-header">{{ word.word }}</div>
-                <div class="collapsible-body">
-                    <p><span class="italics">Definition: </span>{{ word.definition }}</p>
-                    <p><span class="italics">Example: </span>"{{ word.example }}"</p>
-                    <p><span class="italics">Added By: </span>{{ word.added_by }}</p>
+                <li>
+                    <div class="collapsible-header">{{ word.word }}</div>
+                    <div class="collapsible-body">
+                        <p><span class="italics">Definition: </span>{{ word.definition }}</p>
+                        <p><span class="italics">Example: </span>"{{ word.example }}"</p>
+                        <p><span class="italics">Added By: </span>{{ word.added_by }}</p>
 
-                    <!-- Buttons -->
-                    <!-- Admin can delete and edit any of the words in the dictionary -->
-                    {% if session.user == word.added_by or session.user == "admin" %}
-                    <!-- Edit Button -->
-                    <a href="{{ url_for('edit_word', word_id=word._id) }}"
-                        class="btn edit waves-effect waves-light z-depth-0">
-                        <i class="fas fa-edit"></i>
-                        Edit
-                    </a>
-                    <!-- Delete Button -->
-                    <button data-target="{{ word._id }}"
-                        class="btn delete modal-trigger waves-effect waves-light z-depth-0">
-                        <i class="fas fa-trash-alt"></i>
-                        Delete
-                    </button>
-                    {% endif %}
+                        <!-- Site admin can delete and edit any of the words in the dictionary -->
+                        {% if session.user == word.added_by or session.user == "site_admin" %}
+                            <!-- Edit Button -->
+                            <a href="{{ url_for('edit_word', word_id=word._id) }}"
+                                class="btn edit waves-effect waves-light z-depth-0">
+                                <i class="fas fa-edit"></i>
+                                Edit
+                            </a>
+                            <!-- Delete Button -->
+                            <button data-target="{{ word._id }}"
+                                class="btn delete modal-trigger waves-effect waves-light z-depth-0">
+                                <i class="fas fa-trash-alt"></i>
+                                Delete
+                            </button>
+                        {% endif %}
+
+                    </div>
+                </li>
+
+                <!-- Delete Confirmation Modal -->
+                <!-- Code from a slack thread in #data-centric-dev (credited in README.md) -->
+                <div id="{{ word._id }}" class="modal">
+                    <div class="modal-content">
+                        <h4>Are you sure you want to delete "{{ word.word }}" from Our Wee Guide?</h4>
+                    </div>
+                    <div class="modal-footer center-align">
+                        <!-- Cancel Button -->
+                        <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
+                            <i class="fas fa-times"></i>
+                            Cancel
+                        </a>
+
+                        <!-- Delete Button -->
+                        <a href="{{ url_for('delete_word', word_id=word._id) }}"
+                            class="btn delete waves-effect waves-light z-depth-0">
+                            <i class="fas fa-trash-alt"></i>
+                            Delete
+                        </a>
+                    </div>
                 </div>
-            </li>
-
-            <!-- Delete Confirmation Modal -->
-            <!-- Code below is from a slack thread in #data-centric-dev | Credited in README -->
-            <div id="{{ word._id }}" class="modal">
-                <div class="modal-content">
-                    <h4>Are you sure you want to delete "{{ word.word }}" from Our Wee Guide?</h4>
-                </div>
-                <div class="modal-footer center-align">
-                    <!-- Cancel Button -->
-                    <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
-                        <i class="fas fa-times"></i>
-                        Cancel
-                    </a>
-
-                    <!-- Delete Button -->
-                    <a href="{{ url_for('delete_word', word_id=word._id) }}"
-                        class="btn delete waves-effect waves-light z-depth-0">
-                        <i class="fas fa-trash-alt"></i>
-                        Delete
-                    </a>
-                </div>
-            </div>
-
             {% endfor %}
         </ul>
     </div>

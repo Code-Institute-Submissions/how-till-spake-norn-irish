@@ -7,6 +7,7 @@
     <div>
         <h1>Create a Wee Account</h1>
     </div>
+    
     <div class="page-description">
         <p>When you create an account with us, you can:</p>
         <ul>
@@ -20,26 +21,27 @@
 <!-- Sign Up Form -->
 <section class="form-container bg-img bg-img-signup">
     <div class="row">
+
         <!-- Flash Messages -->
-        <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+        <!-- Code from Pretty Printed on YouTube:
+        https://www.youtube.com/watch?v=lcVdZtVvnnk -->
         <div class="center-align flash-message">
             <div class="row">
                 {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
-                {% for category, message in messages %}
-
-                {% if category == "error" %}
-                <div>
-                    <h4>{{ message }}</h4>
-                </div>
-                {% endif %}
-
-                {% endfor %}
+                    {% for category, message in messages %}
+                        {% if category == "error" %}
+                            <div>
+                                <h4>{{ message }}</h4>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
                 {% endwith %}
             </div>
         </div>
 
+        <!-- Sign Up Form -->
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
             <div class="card center-align">
 
@@ -85,6 +87,7 @@
             </div>
         </form>
     </div>
+
     <div class="img-description">
         <p><span>Carrick-A-Rede Rope Bridge</span> - Ballintoy, Northern Ireland</p>
     </div>

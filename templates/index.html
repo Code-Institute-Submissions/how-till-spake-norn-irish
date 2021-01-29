@@ -28,7 +28,7 @@
             mingle with the locals?
         </p>
         <p>
-            Or have you already visited<br><span>Our Wee Country</span><br>but didn't
+            Or have you already visited 'Our Wee Country' but didn't
             understand what the locals were saying?
         </p>
         <p>
@@ -51,41 +51,40 @@
     <div class="row">
 
         {% if session.user %}
-        <!-- Profile -->
-        <div class="col s12 m6">
-            <p>
-                Visit your profile now to update or delete any words you've added.
-            </p>
-            <a href="{{ url_for('profile', username=session['user']) }}"
-                class="btn waves-effect waves-light z-depth-0">Profile</a>
-        </div>
+            <!-- Profile -->
+            <div class="col s12 m6">
+                <p>
+                    Visit your profile now to update or delete any words you've added.
+                </p>
+                <a href="{{ url_for('profile', username=session['user']) }}"
+                    class="btn waves-effect waves-light z-depth-0">Profile</a>
+            </div>
 
-        <!-- Add Word -->
-        <div class="col s12 m6">
-            <p>
-                Think there's a word missing from our guide? Why not add it and share it with others!
-            </p>
-            <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">Add Word</a>
-        </div>
+            <!-- Add Word -->
+            <div class="col s12 m6">
+                <p>
+                    Think there's a word missing from our guide? Why not add it and share it with others!
+                </p>
+                <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">Add Word</a>
+            </div>
+            {% else %}
+            <!-- Login Button -->
+            <div class="col s12 m6">
+                <p>
+                    Already have a wee account? Login to continue adding words
+                    and rate words that have recently been added!
+                </p>
+                <a href="{{ url_for('login') }}" class="btn waves-effect waves-light z-depth-0">Login</a>
+            </div>
 
-        {% else %}
-        <!-- Login Button -->
-        <div class="col s12 m6">
-            <p>
-                Already have a wee account? Login to continue adding words
-                and rate words that have recently been added!
-            </p>
-            <a href="{{ url_for('login') }}" class="btn waves-effect waves-light z-depth-0">Login</a>
-        </div>
-
-        <!-- Sign Up Button -->
-        <div class="col s12 m6">
-            <p>
-                Have some words or phrases you'd like to add to our wee guide?
-                Why not sign up for an account?
-            </p>
-            <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
-        </div>
+            <!-- Sign Up Button -->
+            <div class="col s12 m6">
+                <p>
+                    Have some words or phrases you'd like to add to our wee guide?
+                    Why not sign up for an account?
+                </p>
+                <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
+            </div>
         {% endif %}
     </div>
 </section>

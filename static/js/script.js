@@ -1,14 +1,21 @@
+// Code is from Materialize Documentation for initializing JavaScript components:
+// https://materializecss.com/
+
 $(document).ready(function () {
     // Initialise Sidenav Trigger
     $('.sidenav').sidenav({
         edge: "right"
     });
+
     // Form Input Character Count
     $('input#first_name, input#username, input#password').characterCounter();
-    // Collapsible
+
+    // Dictionary Collapsible
     $('.collapsible').collapsible();
-    //Modal
+
+    //Delete Confirmation Modal
     $('.modal').modal();
-    //Dropdown
+
+    //Sort By Dropdown
     $('.dropdown-trigger').dropdown();
 });

@@ -7,6 +7,7 @@
     <div>
         <h1>Login to your wee account</h1>
     </div>
+
     <div class="page-description">
         <p>Login into your wee account now to:</p>
         <ul>
@@ -20,32 +21,33 @@
 <!-- Login Form -->
 <section class="form-container bg-img bg-img-login">
     <div class="row">
+
         <!-- Flash Messages -->
-        <!-- Code for flash messages with categories from Pretty Printed on YouTube - https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+        <!-- Code from Pretty Printed on YouTube: 
+        https://www.youtube.com/watch?v=lcVdZtVvnnk -->
         <div class="center-align flash-message">
             <div class="row">
                 {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
-                {% for category, message in messages %}
+                    {% for category, message in messages %}
+                        {% if category == "logout" %}
+                            <div>
+                                <h4>{{ message }}</h4>
+                            </div>
+                        {% endif %}
 
-                {% if category == "logout" %}
-                <div>
-                    <h4>{{ message }}</h4>
-                </div>
-                {% endif %}
-
-                {% if category == "incorrect" %}
-                <div>
-                    <h4>{{ message }}</h4>
-                </div>
-                {% endif %}
-
-                {% endfor %}
+                        {% if category == "incorrect" %}
+                            <div>
+                                <h4>{{ message }}</h4>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
                 {% endwith %}
             </div>
         </div>
 
+        <!-- Login Form -->
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card center-align">
 

@@ -10,9 +10,7 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Permanent+Marker&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -31,7 +29,7 @@
 
 <body>
     <!-- Navigation Bar -->
-    <!-- Code below was used to add active classes to the navbar:
+    <!-- Code from Stack Overflow to add active classes to the navbar:
     https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621 -->
     <header>
         <nav class="z-depth-0">
@@ -42,36 +40,39 @@
                 <a href="#" data-target="mobile-side-nav" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li class="{{ 'active' if active_page == 'home' }}"><a href="{{ url_for('home') }}">Home</a></li>
-                    <li class="{{ 'active' if active_page == 'dictionary' }}"><a href="{{ url_for('dictionary') }}">Our
-                            Wee
-                            Guide</a></li>
+                    <li class="{{ 'active' if active_page == 'dictionary' }}">
+                        <a href="{{ url_for('dictionary') }}">Our Wee Guide</a>
+                    </li>
                     {% if session.user %}
-                    <li class="{{ 'active' if active_page == 'profile' }}"><a
-                            href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a>
-                    </li>
-                    {% else %}
-                    <li class="{{ 'active' if active_page == 'login' }}"><a href="{{ url_for('login') }}">Login</a></li>
-                    <li class="{{ 'active' if active_page == 'sign_up' }}"><a href="{{ url_for('sign_up') }}">Sign
-                            Up</a>
-                    </li>
+                        <li class="{{ 'active' if active_page == 'profile' }}">
+                            <a href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+                        </li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a>
+                        </li>
+                        {% else %}
+                        <li class="{{ 'active' if active_page == 'login' }}"><a href="{{ url_for('login') }}">Login</a></li>
+                        <li class="{{ 'active' if active_page == 'sign_up' }}">
+                            <a href="{{ url_for('sign_up') }}">Sign Up</a>
+                        </li>
                     {% endif %}
-                    <li class="{{ 'active' if active_page == 'contact' }}"><a href="{{ url_for('contact') }}">Contact
-                            Us</a></li>
+                    <li class="{{ 'active' if active_page == 'contact' }}">
+                        <a href="{{ url_for('contact') }}">Contact Us</a>
+                    </li>
                 </ul>
             </div>
         </nav>
+
         <!-- Mobile SideBar Navigation -->
         <ul id="mobile-side-nav" class="center-align sidenav z-depth-0">
             <li class="title">How Till Spake Norn Irish</li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('dictionary') }}">Our Wee Guide</a></li>
             {% if session.user %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-            {% else %}
-            <li><a href="{{ url_for('login') }}">Login</a></li>
-            <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
             {% endif %}
             <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
         </ul>
@@ -108,8 +109,9 @@
                     <h5>Plan Your Visit:</h5>
                     <div>
                         <i class="fas fa-globe-europe"></i>
-                        <a href="https://discovernorthernireland.com/" target="_blank" class="footer-link">Discover
-                            Northern Ireland</a>
+                        <a href="https://discovernorthernireland.com/" target="_blank" class="footer-link">
+                            Discover Northern Ireland
+                        </a>
                     </div>
                     <div>
                         <i class="fas fa-globe-europe"></i>
@@ -117,8 +119,9 @@
                     </div>
                     <div>
                         <i class="fas fa-globe-europe"></i>
-                        <a href="https://www.nationaltrust.org.uk/the-mournes" target="_blank"
-                            class="footer-link">National Trust - The Mournes</a>
+                        <a href="https://www.nationaltrust.org.uk/the-mournes" target="_blank" class="footer-link">
+                            National Trust - The Mournes
+                        </a>
                     </div>
                 </div>
             </div>

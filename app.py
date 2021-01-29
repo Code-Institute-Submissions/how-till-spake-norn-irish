@@ -40,7 +40,8 @@ def search():
     return render_template("dictionary.html", dictionary=dictionary)
 
 
-# MongoDB sort function: https://www.w3schools.com/python/python_mongodb_sort.asp
+# Code is from W3 Schools on using the MongoDB sort function:
+# https://www.w3schools.com/python/python_mongodb_sort.asp
 
 @app.route("/ascending")
 # Ascending Sort Functionality
@@ -206,6 +207,8 @@ def contact():
 
 
 # Error Handlers
+# Code is from Flask documentation for Error Handlers:
+# https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
 
 @app.errorhandler(404)
 # 404 Error Handler
