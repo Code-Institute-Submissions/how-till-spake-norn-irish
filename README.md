@@ -371,6 +371,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following code was used to add custom error page: [https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
 
+- Password Regex: [https://www.html5pattern.com/Passwords](https://www.html5pattern.com/Passwords)
+
 ### Content
 
 ### Media

@@ -72,22 +72,23 @@
                 <button type="submit" class="btn waves-effect waves-light z-depth-0">
                     Login
                 </button>
-
-                <!-- Sign Up Button -->
-                <div class="signup-btn">
-                    <p>
-                        Don't have a wee account yet?<br>
-                        Click the button below to sign up for an account with us!
-                    </p>
-                    <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
-                </div>
-
             </div>
         </form>
     </div>
 
     <div class="img-description">
         <p><span>Titanic Museum</span> - Belfast, Northern Ireland</p>
+    </div>
+</section>
+
+<!-- Sign Up Button -->
+<section class="container center-align login">
+    <div class="signup-btn">
+        <p>
+            Don't have an account yet?<br>
+            Click the button below to sign up for an account with us!
+        </p>
+        <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
     </div>
 </section>
 

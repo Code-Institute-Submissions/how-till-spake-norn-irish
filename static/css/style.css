@@ -122,9 +122,12 @@ nav ul li.active {
 
 /* ---------- Home Page ---------- */
 .heading,
-.about,
-.login-signup {
+.about {
     padding: 20px;
+}
+
+.login-signup {
+    padding: 20px 0;
 }
 
 .heading h1 {
@@ -187,6 +190,21 @@ section div.row {
     background-color: var(--white-fade);
     font-size: 1.2rem;
     padding: 10px 20px 20px;
+}
+
+.dropdown-content {
+    border-radius: 20px;
+}
+
+.dropdown-content li a {
+    color: var(--green);
+    font-weight: 700;
+    text-align: center;
+}
+
+.dropdown-content li a:hover {
+    color: var(--white);
+    background-color: var(--green);
 }
 /* ---------- End Dictionary ---------- */
 
@@ -269,11 +287,6 @@ https://materializecss.com/text-inputs.html */
     color: var(--black);
     font-size: 1.2rem;
     font-weight: 700;
-}
-
-/* label focus color */
-.input-field input[type=text]:focus+label {
-    color: var(--pink);
 }
 
 /* icon prefix focus color */
