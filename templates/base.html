@@ -65,16 +65,25 @@
         <!-- Mobile SideBar Navigation -->
         <ul id="mobile-side-nav" class="center-align sidenav z-depth-0">
             <li class="title">How Till Spake Norn Irish</li>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('dictionary') }}">Our Wee Guide</a></li>
+            <li class="{{ 'active' if active_page == 'home' }}"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="{{ 'active' if active_page == 'dictionary' }}">
+                <a href="{{ url_for('dictionary') }}">Our Wee Guide</a>
+            </li>
             {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li class="{{ 'active' if active_page == 'profile' }}">
+                    <a href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+                </li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a>
+                </li>
                 {% else %}
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                <li class="{{ 'active' if active_page == 'login' }}"><a href="{{ url_for('login') }}">Login</a></li>
+                <li class="{{ 'active' if active_page == 'sign_up' }}">
+                    <a href="{{ url_for('sign_up') }}">Sign Up</a>
+                </li>
             {% endif %}
-            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            <li class="{{ 'active' if active_page == 'contact' }}">
+                <a href="{{ url_for('contact') }}">Contact Us</a>
+            </li>
         </ul>
     </header>
 

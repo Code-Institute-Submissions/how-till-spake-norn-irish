@@ -8,12 +8,11 @@
         <h1>Create a Wee Account</h1>
     </div>
 
-    <div class="page-description">
+    <div class="form-description">
         <p>Creating an account with us allows you to:</p>
         <ul>
             <li>Add words to Our Wee Guide</li>
             <li>Edit or Delete words you've added to Our Wee Guide</li>
-            <li>Rate any of the words in Our Wee Guide</li>
         </ul>
     </div>
 </div>
@@ -68,7 +67,7 @@
                     <i class="fas fa-key prefix"></i>
                     <!-- Regex from: https://www.html5pattern.com/Passwords -->
                     <input placeholder="Enter a Password" id="password" name="password" type="password" 
-                        data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,15}$"
+                        data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$"
                         class="validate" required>
                     <label for="password">Password</label>
                     <span class="helper-text">Must contain at least one uppercase letter and a number</span>
@@ -79,7 +78,7 @@
                     <i class="fas fa-key prefix"></i>
                     <!-- Regex from: https://www.html5pattern.com/Passwords -->
                     <input placeholder="Enter a Password" id="confirm_password" name="confirm_password" type="password"
-                        data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,15}$"
+                        data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$"
                         class="validate" required>
                     <span id="message"></span>
                     <label for="confirm_password">Confirm Password</label>

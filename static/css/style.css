@@ -88,17 +88,6 @@ nav i {
     color: var(--white);
 }
 
-#mobile-side-nav {
-    background-color: var(--green);
-}
-
-#mobile-side-nav a {
-    color: var(--white);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
 .title {
     color: var(--white);
     font-size: 2rem;
@@ -116,6 +105,23 @@ nav ul li.active {
 
 #nav-mobile .active a:hover {
     color: var(--white);
+}
+
+#mobile-side-nav {
+    background-color: var(--green);
+}
+
+#mobile-side-nav a {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#mobile-side-nav .active a,
+#mobile-side-nav a:hover {
+    background-color: var(--white);
+    color: var(--green);
 }
 /* ---------- End Navigation Bar ---------- */
 
@@ -164,12 +170,12 @@ nav ul li.active {
 https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 .dictionary {
     overflow: auto;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 
-.dictionary::-webkit-scrollbar {
+/* .dictionary::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .dictionary .container {
     padding: 30px 0 20px;
@@ -213,7 +219,7 @@ section div.row {
 .profile-card {
     background-color: var(--white-fade);
     border-radius: 20px;
-    height: 20vh;
+    height: 40vh;
 
     justify-content: center;
 }
@@ -238,12 +244,12 @@ section div.row {
 
 
 /* ---------- Forms ---------- */
-.page-description p {
+.form-description p {
     font-size: 1.2rem;
     font-weight: 700;
 }
 
-.page-description ul li {
+.form-description ul li {
     font-size: 1.2rem;
     list-style-type: disc;
     list-style-position: inside;
@@ -354,6 +360,10 @@ https://materializecss.com/text-inputs.html */
 
 .bg-img-add {
     background-image: url('../images/dunluce-castle.jpg');
+}
+
+.bg-img-profile {
+    background-image: url('../images/peace-bridge.jpg');
 }
 
 .bg-img-contact {

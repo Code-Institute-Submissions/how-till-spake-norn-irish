@@ -227,6 +227,12 @@ Dictionary Branch:
 - This layout caused overflow issues in some of the cards which meant that the cards couldn't have a fixed height
 - To fix this issue, I tested using the materialize collapsible accordion feature to display the dictionary which fixed the height sizing issue with the original card layout
 
+Sort Branch:
+
+- This branch was created to test a sort function which would sort the words in the dictionary alphabetically from A-Z or Z-A
+- This was achieved by creating two new routes in app.py; one route for the ascending order and another route for the descending order
+- I then added a Materialize dropdown button to the dictionary template and linked each option in the dropdown the relevant route
+
 [Contents](#contents)
 
 ---
@@ -369,9 +375,9 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following code was used to sort the MongoDB Dictionary collection in ascending and descending order: [https://www.w3schools.com/python/python_mongodb_sort.asp](https://www.w3schools.com/python/python_mongodb_sort.asp)
 
-- The following code was used to add custom error page: [https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
+- The following code was used to add a custom error page: [https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
 
-- Password Regex: [https://www.html5pattern.com/Passwords](https://www.html5pattern.com/Passwords)
+- The following password regex was used for the sign up and login forms: [https://www.html5pattern.com/Passwords](https://www.html5pattern.com/Passwords)
 
 ### Content
 
@@ -386,7 +392,9 @@ As this project is for educational purposes, images have been used from a variet
 - Dark Hedges Image from [Pixabay](https://pixabay.com/photos/avenue-trees-the-dark-hedges-3464777/)
 - Dunluce Castle Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/dunluce-castle-medieval-irish-castle-on-the-antrim-coast-p675011)
 - Giants Causeway Image from [Visit Belfast](https://visitbelfast.com/partners/giants-causeway/#&gid=1&pid=6)
+- Mussenden Temple Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/mussenden-temple-and-downhill-demesne-p675701)
 - Open Mouth Vector Icon from [Flat Icon](https://www.flaticon.com/authors/smashicons)
+- Peace Bridge Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/peace-bridge-p701951)
 - Titanic Museum Belfast Image from [Visit Belfast](https://visitbelfast.com/partners/titanic-belfast/)
 
 ### Acknowledgements
