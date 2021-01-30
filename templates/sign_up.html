@@ -9,7 +9,7 @@
     </div>
 
     <div class="page-description">
-        <p>When you create an account with us, you can:</p>
+        <p>Creating an account with us allows you to:</p>
         <ul>
             <li>Add words to Our Wee Guide</li>
             <li>Edit or Delete words you've added to Our Wee Guide</li>
@@ -48,35 +48,42 @@
                 <!-- First Name -->
                 <div class="input-field">
                     <i class="fas fa-user prefix"></i>
-                    <input placeholder="Enter Your First Name" id="first_name" name="first_name" type="text"
-                        minlength="2" maxlength="15" data-length="15" pattern="^[a-zA-Z]{2,15}$" class="validate"
-                        required>
+                    <input placeholder="Enter Your First Name" id="first_name" name="first_name" 
+                        type="text" data-length="12" pattern="^[a-zA-Z]{2,12}$" class="validate" required>
                     <label for="first_name">First Name</label>
+                    <span class="helper-text">Minimum of two characters</span>
                 </div>
 
                 <!-- Username -->
                 <div class="input-field">
                     <i class="fas fa-user-tag prefix"></i>
-                    <input placeholder="Enter A Username" id="username" name="username" type="text" minlength="5"
-                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <input placeholder="Enter A Username" id="username" name="username" type="text"
+                        data-length="15" pattern="^[a-zA-Z0-9_]{5,15}$" class="validate" required>
                     <label for="username">Username</label>
+                    <span class="helper-text">Minimum of five characters</span>
                 </div>
 
                 <!-- Password -->
                 <div class="input-field">
                     <i class="fas fa-key prefix"></i>
-                    <input placeholder="Enter a Password" id="password" name="password" type="password" minlength="5"
-                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <!-- Regex from: https://www.html5pattern.com/Passwords -->
+                    <input placeholder="Enter a Password" id="password" name="password" type="password" 
+                        data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,15}$"
+                        class="validate" required>
                     <label for="password">Password</label>
+                    <span class="helper-text">Must contain at least one uppercase letter and a number</span>
                 </div>
                 
                 <!-- Confirm Password -->
                 <div class="input-field">
                     <i class="fas fa-key prefix"></i>
-                    <input placeholder="Enter a Password" id="confirm_password" name="confirm_password" type="password" minlength="5"
-                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <!-- Regex from: https://www.html5pattern.com/Passwords -->
+                    <input placeholder="Enter a Password" id="confirm_password" name="confirm_password" type="password"
+                        data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,15}$"
+                        class="validate" required>
                     <span id="message"></span>
                     <label for="confirm_password">Confirm Password</label>
+                    <span class="helper-text">Must contain at least one uppercase letter and a number</span>
                 </div>
 
                 <!-- Sign Up Button -->

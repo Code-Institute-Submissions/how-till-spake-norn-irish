@@ -54,17 +54,18 @@
                 <!-- Username -->
                 <div class="input-field">
                     <i class="fas fa-user-tag prefix"></i>
-                    <input placeholder="Enter Your Username" id="username" name="username" type="text" minlength="2"
-                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label for=" username">Username</label>
+                    <input placeholder="Enter A Username" id="username" name="username" type="text" data-length="15"
+                        pattern="^[a-zA-Z0-9_]{5,15}$" class="validate" required>
+                    <label for="username">Username</label>
                 </div>
 
                 <!-- Password -->
                 <div class="input-field">
                     <i class="fas fa-key prefix"></i>
-                    <input placeholder="Enter Your Password" id="password" name="password" type="password" minlength="5"
-                        maxlength="15" data-length="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label for=" password">Password</label>
+                    <!-- Regex from: https://www.html5pattern.com/Passwords -->
+                    <input placeholder="Enter a Password" id="password" name="password" type="password" data-length="15"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,15}$" class="validate" required>
+                    <label for="password">Password</label>
                 </div>
 
                 <!-- Login Button -->

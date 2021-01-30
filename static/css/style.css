@@ -20,7 +20,6 @@
     --green-fade: rgba(11, 86, 80, 0.8);
     --pink-fade: rgba(169, 15, 94, 0.8);
 }
-
 /* ---------- End Color Variables ---------- */
 
 
@@ -60,7 +59,6 @@ h2 {
     font-style: italic;
     font-weight: 700;
 }
-
 /* ---------- End Fonts ---------- */
 
 
@@ -119,7 +117,6 @@ nav ul li.active {
 #nav-mobile .active a:hover {
     color: var(--white);
 }
-
 /* ---------- End Navigation Bar ---------- */
 
 
@@ -156,7 +153,6 @@ nav ul li.active {
 .login-signup {
     font-size: 1.2rem;
 }
-
 /* ---------- End Home Page ---------- */
 
 
@@ -192,7 +188,6 @@ section div.row {
     font-size: 1.2rem;
     padding: 10px 20px 20px;
 }
-
 /* ---------- End Dictionary ---------- */
 
 
@@ -204,7 +199,6 @@ section div.row {
 
     justify-content: center;
 }
-
 /* ---------- End Profile ---------- */
 
 
@@ -222,7 +216,6 @@ section div.row {
 .modal .modal-footer {
     text-align: center;
 }
-
 /* ---------- End Delete Modal --------- */
 
 
@@ -275,6 +268,7 @@ https://materializecss.com/text-inputs.html */
 .input-field label {
     color: var(--black);
     font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* label focus color */
@@ -290,11 +284,15 @@ https://materializecss.com/text-inputs.html */
 .signup-btn p,
 .login-btn p {
     font-size: 1.2rem;
-    font-weight: 700;
 }
 
-.login {
+.login,
+.sign-up {
     padding: 20px;
+}
+
+.helper-text {
+    text-align: left;
 }
 /* ---------- End Forms ---------- */
 
@@ -348,7 +346,6 @@ https://materializecss.com/text-inputs.html */
 .bg-img-contact {
     background-image: url('../images/mussenden-temple.jpg');
 }
-
 /* ---------- End Background Images --------- */
 
 
@@ -378,7 +375,6 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
     bottom: 0;
     left: 0;
 }
-
 /* ---------- End Image Descriptions ---------- */
 
 
@@ -420,7 +416,6 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
     background-color: var(--green);
     margin-right: 10px;
 }
-
 /* ---------- End Buttons ---------- */
 
 
@@ -435,7 +430,6 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
     font-weight: 700;
     padding: 20px 20px 10px;
 }
-
 /* ---------- End Flash Messages --------- */
 
 
@@ -463,14 +457,21 @@ footer h5 {
 
 .footer-link i {
     font-size: 1.2rem;
-    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.fa-globe-europe {
+    margin-left: 20px;
+}
+
+i.fa-envelope {
+    margin-right: 0;
 }
 
 .footer-copyright a {
     color: var(--white);
     font-size: 1rem;
 }
-
 /* ---------- End Footer ---------- */
 
 
@@ -501,7 +502,6 @@ footer h5 {
     font-weight: 700;
     margin: 40px;
 }
-
 /* ---------- End Error Handler 404 ---------- */
 
 /* ---------- Media Queries ---------- */
