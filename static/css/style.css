@@ -127,7 +127,7 @@ nav ul li.active {
 .heading,
 .about,
 .login-signup {
-    padding: 20px 0 20px;
+    padding: 20px;
 }
 
 .heading h1 {
@@ -228,7 +228,7 @@ section div.row {
 
 /* ---------- Forms ---------- */
 .page-description p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -248,8 +248,8 @@ section div.row {
 form .card {
     background-color: var(--white-fade);
     border-radius: 20px;
-    padding: 40px;
-    margin: 40px 20px 100px;
+    padding: 20px;
+    margin: 20px 10px 100px;
 
     justify-content: center;
 }
@@ -293,6 +293,9 @@ https://materializecss.com/text-inputs.html */
     font-weight: 700;
 }
 
+.login {
+    padding: 20px;
+}
 /* ---------- End Forms ---------- */
 
 
