@@ -212,6 +212,11 @@ section div.row {
     color: var(--white);
     background-color: var(--green);
 }
+
+.add_word {
+    font-size: 1.2rem;
+    padding: 20px;
+}
 /* ---------- End Dictionary ---------- */
 
 
@@ -300,13 +305,9 @@ https://materializecss.com/text-inputs.html */
     color: var(--pink);
 }
 
-.signup-btn p,
-.login-btn p {
-    font-size: 1.2rem;
-}
-
 .login,
 .sign-up {
+    font-size: 1.2rem;
     padding: 20px;
 }
 

@@ -8,15 +8,9 @@
         <h1>Our Wee Guide</h1>
     </div>
 
-    <!-- Add Word Button -->
-    {% if session.user %}
-    <div>
-        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
-            <i class="fas fa-plus"></i>
-            Add Word
-        </a>
+    <div class="description">
+        <p>Click on the words below to find out what they mean or use the search bar to find a specific word</p>
     </div>
-    {% endif %}
 
     <!-- Search Function -->
     <div class="row">
@@ -119,5 +113,20 @@
         <p><span>Belfast City Hall</span> - Belfast, Northern Ireland</p>
     </div>
 </section>
+
+
+<!-- Add Word Button -->
+{% if session.user %}
+    <section class="container center-align">
+        <div class="add_word">
+            <p>Think there's a word missing? Why not add it to our wee guide?</p>
+            <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
+                <i class="fas fa-plus"></i>
+                Add Word
+            </a>
+        </div>
+    </section>
+{% endif %}
+
 
 {% endblock %}
