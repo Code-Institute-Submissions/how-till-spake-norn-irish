@@ -450,9 +450,10 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 
 .flash-message h4 {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    padding: 20px 20px 10px;
+    padding: 20px;
+    margin: 0;
 }
 /* ---------- End Flash Messages --------- */
 

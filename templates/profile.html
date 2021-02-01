@@ -22,6 +22,8 @@
 <section class="dictionary bg-img bg-img-profile">
 
     <!-- Flash Message -->
+    <!-- Code from Pretty Printed on YouTube:
+        https://www.youtube.com/watch?v=lcVdZtVvnnk -->
     <div class="center-align flash-message">
         <div class="row">
             {% with messages = get_flashed_messages(with_categories=true) %}
@@ -31,6 +33,12 @@
                         <div>
                             <h4>{{ message }}</h4>
                         </div>
+                    {% endif %}
+
+                    {% if category == "welcome" %}
+                    <div>
+                        <h4>{{ message }}</h4>
+                    </div>
                     {% endif %}
                 {% endfor %}
             {% endif %}

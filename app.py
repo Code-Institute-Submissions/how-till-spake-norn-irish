@@ -108,7 +108,7 @@ def login():
 
                 # Put existing user into a 'session' cookie using first_name and username
                 session["user"] = request.form.get("username")
-
+                flash("Welcome back to your wee profile!", "welcome")
                 # Redirect user to their profile
                 return redirect(url_for("profile", username=session["user"]))
 
@@ -196,7 +196,7 @@ def edit_word(word_id):
 # Delete Functionality
 def delete_word(word_id):
     mongo.db.dictionary.remove({"_id": ObjectId(word_id)})
-    flash("Your word has been deleted from Our Wee Guide!")
+    flash("Your word has been deleted from Our Wee Guide!", "delete")
     return redirect(url_for("dictionary"))
 
 
