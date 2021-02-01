@@ -234,16 +234,23 @@ section div.row {
 /* ---------- Delete Modal ---------- */
 
 .modal {
+    border-radius: 20px;
     height: auto;
-    padding: 40px;
+    padding: 20px;
 }
 
 .modal .modal-content {
     font-weight: 700;
+    padding: 10px;
 }
 
 .modal .modal-footer {
     text-align: center;
+}
+
+.modal .modal-footer .delete {
+    width: 100%;
+    margin: 10px 0;
 }
 /* ---------- End Delete Modal --------- */
 
@@ -437,8 +444,13 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 }
 
 .btn.edit {
-    background-color: var(--green);
     margin-right: 10px;
+}
+
+.btn.edit:hover,
+.btn.edit:focus {
+    background-color: var(--blue);
+    color: var(--white);
 }
 /* ---------- End Buttons ---------- */
 

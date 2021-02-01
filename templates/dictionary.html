@@ -116,19 +116,23 @@
                     <div class="modal-content">
                         <h4>Are you sure you want to delete "{{ word.word }}" from Our Wee Guide?</h4>
                     </div>
-                    <div class="modal-footer center-align">
+                    <div class="row modal-footer center-align">
                         <!-- Cancel Button -->
-                        <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
-                            <i class="fas fa-times"></i>
-                            Cancel
-                        </a>
+                        <div class="col s12 m6">
+                            <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
+                                <i class="fas fa-times"></i>
+                                Cancel
+                            </a>
+                        </div>
 
                         <!-- Delete Button -->
-                        <a href="{{ url_for('delete_word', word_id=word._id) }}"
-                            class="btn delete waves-effect waves-light z-depth-0">
-                            <i class="fas fa-trash-alt"></i>
-                            Delete
-                        </a>
+                        <div class="col s12 m6">
+                            <a href="{{ url_for('delete_word', word_id=word._id) }}"
+                                class="btn delete waves-effect waves-light z-depth-0">
+                                <i class="fas fa-trash-alt"></i>
+                                Delete
+                            </a>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
