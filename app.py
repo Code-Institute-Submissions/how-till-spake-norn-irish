@@ -157,12 +157,22 @@ def profile(username):
 # Render Add Word Page
 def add_word():
     if request.method == "POST":
+
+        existing_word = mongo.db.dictionary.find_one(
+            {"word": request.form.get("word")})
+
+        if existing_word:
+            # Display flash message if word already exists
+            flash("Sorry, that word is already in Our Wee Guide!", "word_exists")
+            return redirect(url_for("add_word"))
+
         word = {
             "word": request.form.get("word"),
             "definition": request.form.get("definition"),
             "example": request.form.get("example"),
             "added_by": session["user"]
         }
+
         # Add word to dictionary
         mongo.db.dictionary.insert_one(word)
         # Display flash message if word has been added successfully

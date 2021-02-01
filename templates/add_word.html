@@ -13,6 +13,26 @@
 
 <!-- Add Word Form -->
 <section class="form-container bg-img bg-img-add">
+
+    <!-- Flash Message -->
+    <!-- Code from Pretty Printed on YouTube:
+        https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+    <div class="center-align flash-message">
+        <div class="row">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == "word_exists" %}
+                        <div>
+                            <h4>{{ message }}</h4>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_word') }}">
             <div class="card center-align">
