@@ -169,13 +169,11 @@ nav ul li.active {
 /* Code from W3 Schools to hide the scrollbar within a div container: 
 https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 .dictionary {
-    overflow: auto;
-    /* scrollbar-width: none; */
+    position: relative;
+    height: auto;
+    
+    padding-bottom: 60px;
 }
-
-/* .dictionary::-webkit-scrollbar {
-    display: none;
-} */
 
 .dictionary .container {
     padding: 30px 0 20px;
@@ -398,13 +396,6 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 
 .img-description span {
     font-weight: 800;
-}
-
-.dictionary .img-description,
-.profile .img-description {
-    position: sticky;
-    bottom: 0;
-    left: 0;
 }
 /* ---------- End Image Descriptions ---------- */
 
