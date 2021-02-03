@@ -8,14 +8,9 @@
         <h1>Bout ye {{ username }}?</h1>
     </div>
 
-    {% if session.user %}
-    <div>
-        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
-            <i class="fas fa-plus"></i>
-            Add Word
-        </a>
+    <div class="description">
+        <p>Here's all the Norn Irish words you've added to Our Wee Guide:</p>
     </div>
-    {% endif %}
 </section>
 
 <!-- User Profile -->
@@ -100,8 +95,8 @@
 
             {% else %}
 
-            <!-- No Words Added Card -->
-                <div class="card profile-card valign-wrapper">
+                <!-- No Words Added Card -->
+                <div class="card error-card valign-wrapper">
                     <h4>You haven't added any words to Our Wee Guide</h4>
                 </div>
 
@@ -112,6 +107,17 @@
     <!-- Image Description -->
     <div class="img-description">
         <p><span>Belfast City Hall</span> - Belfast, Northern Ireland</p>
+    </div>
+</section>
+
+<!-- Add Word -->
+<section class="container center-align">
+    <div class="add-word-container">
+        <p>Recently learn a new Norn Irish word?<br>Add it to Our Wee Guide now!</p>
+        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
+            <i class="fas fa-plus"></i>
+            Add Word
+        </a>
     </div>
 </section>
 

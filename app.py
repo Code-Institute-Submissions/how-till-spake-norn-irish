@@ -37,10 +37,6 @@ def dictionary():
 def search():
     search = request.form.get("search")
     dictionary = mongo.db.dictionary.find({"$text": {"$search": search}})
-
-    if dictionary.count() == 0:
-        flash("You search didn't return any results", "search")
-        
     return render_template("dictionary.html", dictionary=dictionary)
 
 
