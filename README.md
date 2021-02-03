@@ -2,11 +2,11 @@
 
 How Till Spake Norn Irish (How to Speak Northern Irish) is an online guide to all the words and phrases you're likely to hear when visiting Northern Ireland.
 
-- **Insert Am I Responsive Screenshot**
+- **Insert Mockup Screenshot**
 
-The image above is a screenshot of the site displayed on different devices using [Am I Responsive](http://ami.responsivedesign.is/).
+The image above is a screenshot of the site displayed on different devices using [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/).
 
-A demo of the website can be found here: **Add Link to Deployed Site on Heroku**
+A demo of the website can be found here: [www.howtillspakenornirish.com](https://how-till-spake-norn-irish.herokuapp.com/)
 
 ## Contents
 
@@ -61,7 +61,7 @@ The site is aimed at:
 - Anyone who has visited and was lucky enough to learn some of the words and phrases used by locals during their visit, and wants to share this with other travellers
 - Anyone from Northern Ireland who wants to share some of the words and phrases they use to help anyone visiting the country
 
-First time visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing, as well as rate the words and phrases featured in the dictionary.
+First time visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing.
 
 ### User Stories
 
@@ -79,7 +79,6 @@ First time visitors to the site will be able to sign up for an account so they c
 - As a **registered user**, I want to be able to add words or phrases to the dictionary
 - As a **registered user**, I want to be able to edit any words or phrases I've added to the dictionary
 - As a **registered user**, I want to be able to delete any words or phrases I've added to the dictionary
-- As a **registered user**, I want to be able to rate any of the words or phrases featured in the dictionary
 
 #### Site Owner Goals
 
@@ -88,12 +87,11 @@ First time visitors to the site will be able to sign up for an account so they c
 - As a **site owner**, I want to provide the user with access to the dictionary without having to create an account
 - As a **site owner**, I want to allow the user to easily sign up for an account to allow them to add their own suggestions to the dictionary
 - As a **site owner**, I want to allow the user to easily edit and delete any words or phrases they've added to the dictionary
-- As a **site owner**, I want to allow the user to rate the words and phrases featured in the dictionary
 - As a **site owner**, I want all visitors and registered users to be able to easily contact me through email or social media platforms
 
 ### Design
 
-Design, Colours and Typography based on discovernorthernireland.com
+The overall design of the site is based on [Discover Northern Ireland](https://discovernorthernireland.com/) website.
 
 #### Colour Scheme
 
@@ -108,17 +106,20 @@ Google Fonts: Permanent Marker with suggested pairing of Open Sans
 
 #### Wireframes
 
-The wireframes for my site were created using [Balsamiq](https://balsamiq.com/). I created wireframe for mobile, tablet and desktop devices.
+The wireframes for my site were created using [Balsamiq](https://balsamiq.com/). I created wireframes for mobile, tablet and desktop devices.
 
 Links to the wireframes can be found below. Each link contains the wireframes for mobile, tablet and desktop devices:
 
-- [Site Map](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/site-map.pdf)
-- [Home](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/home.pdf)
-- [Dictionary](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/dictionary.pdf)
-- [Login](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/login.pdf)
-- [Profile](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/profile.pdf)
-- [Sign Up](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/sign-up.pdf)
-- [Contact](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/wireframes/contact-us.pdf)
+- [Site Map](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/site-map.pdf)
+- [Home](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/home.pdf)
+- [Dictionary](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/dictionary.pdf)
+- [Login](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/login.pdf)
+- [Profile](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/profile.pdf)
+- Add Word (Upload Missing Wireframe)
+- Edit Word (Upload Missing Wireframe)
+- [Sign Up](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/sign-up.pdf)
+- [Contact](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/contact-us.pdf)
+- [404](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/404.pdf)
 
 [Contents](#contents)
 
@@ -155,62 +156,38 @@ MongoDB Collections:
 
 ### Features that have been implemented
 
-- Responsive on all devices:
-  - The site has a mobile-first design using the Materialize framework
-  - Media queries **will** be added for tablet, laptop and desktop devices
+- Responsive on all devices with a mobile-first design using the Materialize framework
 
-- Easy to use navigation bar that links to different pages:
-  - This is located at the top of all pages in the site
-  - There is a collapsible side navigation menu on mobile devices which can be accessed by clicking the menu bar icon located at the top right or by swiping from the right side of the screen
-  - When a user isn't logged in to their account, the following links will display on the navigation bar:
-    - Home, Dictionary, Login, Sign Up, Contact Us
-  - When a user is logged in to their account, the following links will display on the navigation bar:
-    - Home, Dictionary, Profile, Log Out, Contact Us
+- Easy to use navigation bar located at the top of every page with a collapsible side navigation menu on mobile devices
 
-- Home page with different sections:
-  - An about section explaining the purpose of the site with a link to the dictionary
-  - A section with button links to the login page and the sign up page
+- Home page that explains the main purpose of the site
 
-- Dictionary page
-  - Features a collapsible Materialize accordion that displays all the words from the dictionary
-  - When a word in the accordion is clicked, the word definition and an example is displayed
+- Dictionary page with a material collapsible component, a search function and a sort function
 
-- Sign up page:
-  - Features an easy to use form that requires first time visitors to enter their name, a username and a password to create an account
-  - Also features a button link to the login page to allow users to sign in to their account if they already have one
+- Add, Edit and Delete word functionality
 
-- Login page:
-  - Features an easy to use form that requires the user to enter their username and password to login in to their account
-  - Also features a button link to the sign up page to allow first time visitors to create an account if they don't already have one
+- Login, Log Out and Sign Up functionality
 
-- Contact us page:
-  - Features an easy to use form to allow first time visitors or users to contact the site owner to provide feedback or ask any questions
+- Profile page that displays words the user has added to the dictionary
 
-- Footer with social links:
-  - This is located on all pages in the site
-  - Features links to Facebook, Instagram and Twitter
-  - Also features an email link to the contact us page
+- Contact us page with an easy to use form to contact the site owner
+
+- A footer located on every page with links to social media accounts, the contact us form and various Northern Ireland visitor websites
+
+- A custom 404 error page
+
+- Various images of popular landmarks and visitor attractions in Northern Ireland used throughout the site
 
 ### Features left to be implemented
 
-- Media Queries for tablet, laptop and desktop devices
+- Dictionary/Profile
+  - Voting/Rating Feature
+  - Add to Favorites Feature
 
-- Dictionary
-  - Filter system
-    - Sort Alphabetically
-    - Search for a word
-  - Voting System
-
-- Profile Page
-  - Submissions (with options to edit or delete)
-  - Favorites (add this later and replace with voting system?)
+- Videos or Audio clips on word pronunciation
 
 - Contact Page
-  - Functioning Email Form
-
-- 404 Error Page
-
-- 500 Error Page (necessary?)
+  - **Functioning Email Form with Flask Mail or EmailJS**
 
 [Contents](#contents)
 
@@ -231,7 +208,7 @@ Sort Branch:
 
 - This branch was created to test a sort function which would sort the words in the dictionary alphabetically from A-Z or Z-A
 - This was achieved by creating two new routes in app.py; one route for the ascending order and another route for the descending order
-- I then added a Materialize dropdown button to the dictionary template and linked each option in the dropdown the relevant route
+- I then added a Materialize dropdown button to the dictionary template and linked each option in the dropdown to the relevant route
 
 [Contents](#contents)
 
@@ -363,23 +340,23 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 ### Code
 
-- The following video by Corey Schafer provided some guidance on creating a virtual environment in VS Code on Mac: [https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s](https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s)
+- [Vs Code Virtual Environment Mac](https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s)
 
-- The following video by Pretty Printed explained how to use categories with flash messages in Flask to display messages to the user in specific places on each template: [https://www.youtube.com/watch?v=lcVdZtVvnnk](https://www.youtube.com/watch?v=lcVdZtVvnnk)
+- [Flash Message Categories](https://www.youtube.com/watch?v=lcVdZtVvnnk)
 
-- The following function was used to capitalise the users first name: [https://www.w3schools.com/python/ref_string_capitalize.asp](https://www.w3schools.com/python/ref_string_capitalize.asp)
+- [Capitalize first letter](https://www.w3schools.com/python/ref_string_capitalize.asp)
 
-- The following CSS was used to add text blocks to images: [https://www.w3schools.com/howto/howto_css_image_text_blocks.asp](https://www.w3schools.com/howto/howto_css_image_text_blocks.asp)
+- [Image Text Block](https://www.w3schools.com/howto/howto_css_image_text_blocks.asp)
 
-- The following code from stack overflow was used to help add active classes to the navigation bar using Jinja: [https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)
+- [Jinja Active Classes](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)
 
-- The following code was used to sort the MongoDB Dictionary collection in ascending and descending order: [https://www.w3schools.com/python/python_mongodb_sort.asp](https://www.w3schools.com/python/python_mongodb_sort.asp)
+- [Python sort()](https://www.w3schools.com/python/python_mongodb_sort.asp)
 
-- The following code was used to add a custom error page: [https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
+- [Custom 404 Error Page](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
 
-- The following password regex was used for the sign up and login forms: [https://www.html5pattern.com/Passwords](https://www.html5pattern.com/Passwords)
+- [Password Regex](https://www.html5pattern.com/Passwords)
 
-- MongoDB count(): [https://docs.mongodb.com/manual/reference/method/db.collection.count/](https://docs.mongodb.com/manual/reference/method/db.collection.count/)
+- [MongoDb count()](https://docs.mongodb.com/manual/reference/method/db.collection.count/)
 
 ### Content
 
