@@ -37,6 +37,10 @@ def dictionary():
 def search():
     search = request.form.get("search")
     dictionary = mongo.db.dictionary.find({"$text": {"$search": search}})
+
+    if dictionary.count() == 0:
+        flash("You search didn't return any results", "search")
+        
     return render_template("dictionary.html", dictionary=dictionary)
 
 
@@ -195,7 +199,7 @@ def edit_word(word_id):
         # Update word in dictionary
         mongo.db.dictionary.update({"_id": ObjectId(word_id)}, submit)
         # Display flash message if word has been successfully updated
-        flash("You've update a word in Our Wee Guide", "edit")
+        flash("You've successfully updated a word in Our Wee Guide", "edit")
         return redirect(url_for("dictionary"))
 
     word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})

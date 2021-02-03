@@ -1,7 +1,8 @@
-// Code is from Materialize Documentation for initializing JavaScript components:
-// https://materializecss.com/
-
 $(document).ready(function () {
+    
+    // Code is from Materialize Documentation for initializing JavaScript components:
+    // https://materializecss.com/
+
     // Initialise Sidenav Trigger
     $('.sidenav').sidenav({
         edge: "right"

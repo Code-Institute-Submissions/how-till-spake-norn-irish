@@ -379,6 +379,8 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - The following password regex was used for the sign up and login forms: [https://www.html5pattern.com/Passwords](https://www.html5pattern.com/Passwords)
 
+- MongoDB count(): [https://docs.mongodb.com/manual/reference/method/db.collection.count/](https://docs.mongodb.com/manual/reference/method/db.collection.count/)
+
 ### Content
 
 ### Media

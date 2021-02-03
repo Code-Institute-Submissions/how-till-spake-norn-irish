@@ -171,8 +171,8 @@ https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 .dictionary {
     position: relative;
     height: auto;
-    
-    padding-bottom: 60px;
+
+    padding-bottom: 70px;
 }
 
 .dictionary .container {
@@ -211,7 +211,7 @@ section div.row {
     background-color: var(--green);
 }
 
-.add_word {
+.add-word-container {
     font-size: 1.2rem;
     padding: 20px;
 }

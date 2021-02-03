@@ -9,16 +9,18 @@
     </div>
 
     <div class="description">
-        <p>Click on the words below to find out what they mean or use the search bar to find a specific word</p>
+        <p>Click on the words below to find out what they mean<br>Or search for a word in our wee guide</p>
     </div>
 
     <!-- Search Function -->
     <div class="row">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="input-field">
-                <i class="fas fa-search prefix"></i>
                 <input type="text" name="search" id="search">
-                <label for="search">Search for a Word</label>
+                <label for="search">
+                    <i class="fas fa-search"></i>
+                    Search for a Word
+                </label>
             </div>
 
             <div class="col s12 m6">
@@ -69,10 +71,22 @@
                         </div>
                     {% endif %}
 
+                    {% if category == "edit" %}
+                        <div>
+                            <h4>{{ message }}</h4>
+                        </div>
+                    {% endif %}
+
                     {% if category == "delete" %}
                     <div>
                         <h4>{{ message }}</h4>
                     </div>
+                    {% endif %}
+
+                    {% if category == "search" %}
+                        <div>
+                            <h4>{{ message }}</h4>
+                        </div>
                     {% endif %}
                 {% endfor %}
             {% endif %}
@@ -149,8 +163,8 @@
 <!-- Add Word Button -->
 {% if session.user %}
     <section class="container center-align">
-        <div class="add_word">
-            <p>Think there's a word missing? Why not add it to our wee guide?</p>
+        <div class="add-word-container">
+            <p>Think there's a word missing?<br>Add it to Our Wee Guide now!</p>
             <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
                 <i class="fas fa-plus"></i>
                 Add Word

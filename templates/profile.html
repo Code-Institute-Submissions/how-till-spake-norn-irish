@@ -58,7 +58,7 @@
                         <p><span class="italics">Added By: </span>{{ word.added_by }}</p>
 
                         <!-- Admin can delete and edit any of the words in the dictionary -->
-                        {% if session.user == word.added_by or session.user == "admin" %}
+                        {% if session.user == word.added_by or session.user == "site_admin" %}
                             <!-- Edit Button -->
                             <a href="{{ url_for('edit_word', word_id=word._id) }}"
                                 class="btn edit waves-effect waves-light z-depth-0">
