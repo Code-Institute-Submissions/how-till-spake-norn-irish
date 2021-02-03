@@ -344,8 +344,6 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 - [Flash Message Categories](https://www.youtube.com/watch?v=lcVdZtVvnnk)
 
-- [Capitalize first letter](https://www.w3schools.com/python/ref_string_capitalize.asp)
-
 - [Image Text Block](https://www.w3schools.com/howto/howto_css_image_text_blocks.asp)
 
 - [Jinja Active Classes](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)

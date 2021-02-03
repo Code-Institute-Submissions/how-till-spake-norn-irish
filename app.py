@@ -72,7 +72,7 @@ def sign_up():
 
         # Add new user details to collection
         new_user = {
-            "first_name": request.form.get("first_name"),
+            "first_name": request.form.get("first_name").capitalize(),
             "username": request.form.get("username"),
             "password": generate_password_hash(request.form.get("password"))
         }
@@ -167,9 +167,9 @@ def add_word():
             return redirect(url_for("add_word"))
 
         word = {
-            "word": request.form.get("word"),
-            "definition": request.form.get("definition"),
-            "example": request.form.get("example"),
+            "word": request.form.get("word").capitalize(),
+            "definition": request.form.get("definition").capitalize(),
+            "example": request.form.get("example").capitalize(),
             "added_by": session["user"]
         }
 

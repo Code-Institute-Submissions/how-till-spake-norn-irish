@@ -316,6 +316,11 @@ https://materializecss.com/text-inputs.html */
 .helper-text {
     text-align: left;
 }
+
+#message-status {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 /* ---------- End Forms ---------- */
 
 
