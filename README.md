@@ -91,18 +91,22 @@ First time visitors to the site will be able to sign up for an account so they c
 
 ### Design
 
-The overall design of the site is based on [Discover Northern Ireland](https://discovernorthernireland.com/) website.
+The overall design of this project is based on the theme of the Northern Ireland tourism sites. The site features a simple and easy to follow layout for visitors of site, with a navigation bar at the top, the main content in the middle and a footer containing external links at the bottom.
 
 #### Colour Scheme
 
 ![Colour palette generated using coolors.co](static/images/spake-norn-irish-palette.png)
 _Colour palette generated using [coolors.co](https://coolors.co)_
 
+The colour scheme of this project is based on both the [Discover Northern Ireland](https://discovernorthernireland.com/) website and the [Visit Belfast](https://visitbelfast.com) website.
+
 #### Typography
 
 Google Fonts: Permanent Marker with suggested pairing of Open Sans
 
 #### Imagery
+
+The images featured on the site are popular landmarks and visitor attractions within Northern Ireland. The images are used as background images of different These images are from various different Northern Ireland tourism sites. Links to these sites can be found in the [credits](#credits) section at the end of this document.
 
 #### Wireframes
 
@@ -158,36 +162,36 @@ MongoDB Collections:
 
 - Responsive on all devices with a mobile-first design using the Materialize framework
 
-- Easy to use navigation bar located at the top of every page with a collapsible side navigation menu on mobile devices
+- An easy to use navigation bar located at the top of every page with a collapsible side navigation menu on mobile devices
 
-- Home page that explains the main purpose of the site
+- A home page with an about section that explains the purpose of the site
 
-- Dictionary page with a material collapsible component, a search function and a sort function
+- A dictionary page with a materialize collapsible component, search functionality and a sort button
 
 - Add, Edit and Delete word functionality
 
 - Login, Log Out and Sign Up functionality
 
-- Profile page that displays words the user has added to the dictionary
+- A profile page that displays words the user has added to the dictionary
 
-- Contact us page with an easy to use form to contact the site owner
+- A contact page with an easy to use form connected to EmailJS to allow anyone to contact the site owner
 
-- A footer located on every page with links to social media accounts, the contact us form and various Northern Ireland visitor websites
+- A footer located on every page with links to social media accounts, the contact us form and various different Northern Ireland visitor websites
 
 - A custom 404 error page
 
-- Various images of popular landmarks and visitor attractions in Northern Ireland used throughout the site
-
 ### Features left to be implemented
 
-- Dictionary/Profile
-  - Voting/Rating Feature
-  - Add to Favorites Feature
+- Rating/Voting System:
 
-- Videos or Audio clips on word pronunciation
+- Favourites Section:
+  - This feature would allow users to add any of the words in the dictionary to a favourites section that would be located in their profile
+  - This will allow users to easily view some of their favourite words without having to search or scroll through the dictionary
 
-- Contact Page
-  - **Functioning Email Form with Flask Mail or EmailJS**
+- County Categories:
+
+- Pronunciation Feature:
+  - This feature would allow users to hear how each of the words featured in the dictionary are pronounced
 
 [Contents](#contents)
 
@@ -226,46 +230,50 @@ Sort Branch:
 ### Frameworks, Libraries and Programs
 
 - [Balsamiq](https://balsamiq.com/)
-  - Balsamiq was used to create the wireframes for desktop, tablet and mobile during the design process.
+  - Balsamiq was used to create the wireframes for desktop, tablet and mobile during the design process
+- [EmailJS](https://www.emailjs.com/)
+  - EmailJS was used to add an email service to the form in the contact.html template
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-  - Flask was the microframework use to build the application.
+  - Flask was the microframework use to build the application
 - [Font Awesome](https://fontawesome.com/)
-  - Font Awesome was used to add various icons throughout the site.
+  - Font Awesome was used to add various icons throughout the site
 - [Google Fonts](https://fonts.google.com/)
-  - Google Fonts was used to add...
+  - Google Fonts was used to add the Permanent Marker and Open Sans fonts to the site
 - [Git](https://git-scm.com/)
-  - Git was used for version control by utilising the terminal in VS Code to commit to Git and push to GitHub. Git was also used to create branches to test new features before merging with the master branch.
+  - Git was used for version control by utilising the terminal in VS Code to commit to Git and push to GitHub. Git was also used to create branches to test new features before merging with the master branch
 - [GitHub](https://github.com/)
-  - GitHub was used to store the project code that was pushed from VS Code.
+  - GitHub was used to store the project code that was pushed from VS Code
 - [Heroku](https://www.heroku.com/)
-  - Heroku is a cloud platform that was used to deploy and run the application from the GitHub repository.
+  - Heroku is a cloud platform that was used to deploy and run the application from the GitHub repository
+- [jQuery](https://jquery.com/)
+  - jQuery is the JavaScript library that was used to activate Materialize components and to add additional password validation to forms
 - [Materialize](https://materializecss.com/)
-  - Materialize is a modern responsive CSS framework that was used to give the website a simple, responsive layout.
+  - Materialize is a modern responsive CSS framework that was used to give the website a simple, responsive layout
 - [MongoDB](https://www.mongodb.com/)
-  - MongoDB Atlas is a cloud database service used to create and store the database collections for the application.
+  - MongoDB Atlas is a cloud database service used to create and store the database collections for the application
 - [VS Code](https://code.visualstudio.com/)
-  - Visual Studio Code was the IDE used to code the project.
+  - Visual Studio Code was the IDE used to code the project
 
 ### Dependencies
 
 - [autopep8](https://pypi.org/project/autopep8/)
-  - A tool that automatically formats Python code to conform to the PEP 8 style guide.
+  - A tool that automatically formats Python code to conform to the PEP 8 style guide
 - [click](https://palletsprojects.com/p/click/)
-  - Composable command line interface toolkit.
+  - Composable command line interface toolkit
 - [dnspython](https://www.dnspython.org/)
-  - A DNS toolkit for Python.
+  - A DNS toolkit for Python
 - [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
-  - PyMongo support for Flask applications.
+  - PyMongo support for Flask applications
 - [itsdangerous](https://palletsprojects.com/p/itsdangerous/)
   - Various helpers to pass data to untrusted environments and back
 - [Jinja2](https://palletsprojects.com/p/jinja/)
-  - Templating language for Python.
+  - Templating language for Python
 - [MarkupSafe](https://palletsprojects.com/p/markupsafe/)
-  - Safely add untrusted strings to HTML/XML markup.
+  - Safely add untrusted strings to HTML/XML markup
 - [pymongo](https://pypi.org/project/pymongo/)
-  - Python driver for MongoDB.
+  - Python driver for MongoDB
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
-  - A comprehensive WSGI web applications library.
+  - A comprehensive WSGI web applications library
 
 [Contents](#contents)
 
@@ -341,22 +349,35 @@ To clone the repository and make a local copy on your computer, follow these ste
 ### Code
 
 - [Vs Code Virtual Environment Mac](https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s)
+  - This video by Corey Schafer helped with setting up a virtual environment in VS Code on Mac as this is currently my preferred IDE
 
 - [Flash Message Categories](https://www.youtube.com/watch?v=lcVdZtVvnnk)
+  - This video by Pretty Printed helped with displaying flash messages on relevant pages within the main content by adding categories
 
 - [Image Text Block](https://www.w3schools.com/howto/howto_css_image_text_blocks.asp)
+  - This code was used to add image descriptions to each of the sections containing a background image of landmarks/visitor attractions in Northern Ireland
 
 - [Jinja Active Classes](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621)
+  - This code was used to help add active classes to the navigation bar to show the user which page they are currently viewing
 
-- [Python sort()](https://www.w3schools.com/python/python_mongodb_sort.asp)
+- [Python sort() function](https://www.w3schools.com/python/python_mongodb_sort.asp)
+  - This function was used to sort the MongoDB dictionary collection in ascending and descending order for the Sort By button in the dictionary.html template
 
 - [Custom 404 Error Page](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
+  - The Flask documentation was used to help add a custom 404 error page within the Flask app
 
 - [Password Regex](https://www.html5pattern.com/Passwords)
+  - The password regex used in the forms featured on the login.html and sign_up.html templates was taken from this site
 
-- [MongoDb count()](https://docs.mongodb.com/manual/reference/method/db.collection.count/)
+- [MongoDb count() function](https://docs.mongodb.com/manual/reference/method/db.collection.count/)
+  - This function was used to check if zero entries were returned by the search function in the dictionary.html template
 
 ### Content
+
+- Most of the content on this site was written by the developer, with some guidance from the following sites on how to define some of the Northern Irish words _(as a Northern Irish, I already knew most of the words but trying to explain what they all mean is pretty difficult!)_:
+
+  - [16 Slang Phrases You'll Need to Know in Northern Ireland](https://matadornetwork.com/life/16-slang-phrases-youll-need-know-northern-ireland/)
+  - [Top 20 Mad Northern Irish Phrases That Only Make Sense to Locals](https://www.irelandbeforeyoudie.com/20-mad-northern-irish-phrases-that-only-make-sense-to-locals-2/)
 
 ### Media
 
