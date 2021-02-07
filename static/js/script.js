@@ -14,14 +14,14 @@ $(document).ready(function () {
     // Dictionary Collapsible
     $('.collapsible').collapsible();
 
-    //Delete Confirmation Modal
+    // Delete Confirmation Modal
     $('.modal').modal();
 
-    //Sort By Dropdown
+    // Sort By Dropdown
     $('.dropdown-trigger').dropdown();
 
-    //Code is from Stack Overflow for confirm Password:
-    //https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page
+    // Code is from Stack Overflow for confirm Password:
+    // https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page
     $('#password, #confirm_password').on('keyup', function () {
         if ($('#password').val() == $('#confirm_password').val()) {
             $('#message').html('Passwords Match').css('color', 'green');

@@ -6,37 +6,37 @@
     <div>
         <h1>Add A Word To Our Wee Guide</h1>
     </div>
-    <div class="page-description">
 
+    <div class="description">
+        <p>Don't forget to add a description and an example of how the word is used by locals</p>
     </div>
 </div>
 
 <!-- Add Word Form -->
 <section class="form-container bg-img bg-img-add">
-
-    <!-- Flash Message -->
-    <!-- Code from Pretty Printed on YouTube:
-        https://www.youtube.com/watch?v=lcVdZtVvnnk -->
-    <div class="center-align flash-message">
-        <div class="row">
-            {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    {% if category == "word_exists" %}
-                        <div>
-                            <h4>{{ message }}</h4>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-            {% endwith %}
-        </div>
-    </div>
-
     <div class="row">
+
+        <!-- Flash Message -->
+        <!-- Code from Pretty Printed on YouTube:
+        https://www.youtube.com/watch?v=lcVdZtVvnnk -->
+        <div class="center-align flash-message">
+            <div class="row">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == "word_exists" %}
+                                <div>
+                                    <h4>{{ message }}</h4>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_word') }}">
             <div class="card center-align">
-
                 <!-- Word -->
                 <div class="input-field">
                     <i class="fas fa-font prefix"></i>
@@ -60,14 +60,29 @@
                     <label for="example">Example</label>
                 </div>
 
-                <!-- Submit Button -->
-                <button type="submit" class="btn waves-effect waves-light z-depth-0">
-                    Add Word To Our Wee Guide
-                </button>
+                <!-- Buttons -->
+                <div class="row">
+                    <!-- Cancel Button -->
+                    <div class="col s12 m6">
+                        <a href="{{ url_for('dictionary') }}" class="btn cancel waves-effect waves-light z-depth-0">
+                            <i class="fas fa-times"></i>
+                            Cancel
+                        </a>
+                    </div>
 
+                    <!-- Add Word Button -->
+                    <div class="col s12 m6">
+                        <button type="submit" class="btn save waves-effect waves-light z-depth-0">
+                            <i class="fas fa-plus"></i>
+                            Add Word
+                        </button>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
+
+    <!-- Image Description -->
     <div class="img-description">
         <p><span>Dunluce Castle</span> - Bushmills, Northern Ireland</p>
     </div>

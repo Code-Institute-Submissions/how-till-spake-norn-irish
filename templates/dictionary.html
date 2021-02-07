@@ -23,24 +23,24 @@
                 </label>
             </div>
 
+            <!-- Search Button -->
             <div class="col s12 m6">
-                <!-- Search Button -->
                 <button type="submit" class="btn search waves-effect waves-light z-depth-0">
                     <i class="fas fa-search"></i>
                     Search
                 </button>
             </div>
 
+            <!-- Reset Button -->
             <div class="col s12 m6">
-                <!-- Reset Button -->
                 <a href="{{ url_for('dictionary') }}" class="btn reset waves-effect waves-light z-depth-0">
                     <i class="fas fa-undo"></i>
                     Reset
                 </a>
             </div>
 
+            <!-- Sort By Dropdown -->
             <div class="col s12">
-                <!-- Sort By Dropdown -->
                 <a href="#" data-target="dropdown" class="btn dropdown-trigger reset waves-effect waves-light z-depth-0">
                     <i class="fas fa-sort"></i>
                     Sort By
@@ -63,40 +63,40 @@
     <div class="center-align flash-message">
         <div class="row">
             {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category == "add" %}
+                            <div>
+                                <h4>{{ message }}</h4>
+                            </div>
+                        {% endif %}
 
-                    {% if category == "add" %}
-                        <div>
-                            <h4>{{ message }}</h4>
-                        </div>
-                    {% endif %}
+                        {% if category == "edit" %}
+                            <div>
+                                <h4>{{ message }}</h4>
+                            </div>
+                        {% endif %}
 
-                    {% if category == "edit" %}
-                        <div>
-                            <h4>{{ message }}</h4>
-                        </div>
-                    {% endif %}
-
-                    {% if category == "delete" %}
-                    <div>
-                        <h4>{{ message }}</h4>
-                    </div>
-                    {% endif %}
-
-                {% endfor %}
-            {% endif %}
+                        {% if category == "delete" %}
+                            <div>
+                                <h4>{{ message }}</h4>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             {% endwith %}
         </div>
     </div>
 
     <!-- Collapsible -->
     <div class="container">
-
         <!-- If search result returns null -->
         {% if dictionary.count() == 0 %}
             <div class="card error-card valign-wrapper">
-                <h4 class="center-align">Sorry, we couldn't find anything related to that word in Our Wee Guide</h4>
+                <h4 class="center-align">
+                    Sorry, we couldn't find anything related to that word in Our Wee Guide.<br>
+                    Why don't you try searching for another word?
+                </h4>
             </div>
         {% endif %}
 
@@ -117,6 +117,7 @@
                                 <i class="fas fa-edit"></i>
                                 Edit
                             </a>
+
                             <!-- Delete Button -->
                             <button data-target="{{ word._id }}"
                                 class="btn delete modal-trigger waves-effect waves-light z-depth-0">
@@ -124,6 +125,7 @@
                                 Delete
                             </button>
                         {% endif %}
+
                     </div>
                 </li>
 
@@ -131,7 +133,11 @@
                 <!-- Code from a slack thread in #data-centric-dev (credited in README.md) -->
                 <div id="{{ word._id }}" class="modal">
                     <div class="modal-content">
-                        <h4>Are you sure you want to delete "{{ word.word }}" from Our Wee Guide?</h4>
+                        <h4>
+                            Are you sure you want to delete<br>
+                            "{{ word.word }}"<br>
+                            from Our Wee Guide?
+                        </h4>
                     </div>
                     <div class="row modal-footer center-align">
                         <!-- Cancel Button -->
@@ -161,7 +167,6 @@
         <p><span>Belfast City Hall</span> - Belfast, Northern Ireland</p>
     </div>
 </section>
-
 
 <!-- Add Word Button -->
 {% if session.user %}

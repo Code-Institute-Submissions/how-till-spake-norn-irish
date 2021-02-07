@@ -14,10 +14,6 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Permanent+Marker&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -27,19 +23,13 @@
     <title>How Till Spake Norn Irish</title>
 </head>
 
-<body class="error-bg">
+<body class="error-404">
 
     <section class="container center-align">
-        <div class="error-img">
-            <a href="{{ url_for('home') }}">
-                <img src="../static/images/open-mouth.png" alt="">
-            </a>
-        </div>
         <div class="card">
             <h1>Ach, ya eejit!</h1>
             <div class="error-description">
-                <p>You tried to find a page that doesn't exist.</p>
-                <p>But it could also be our fault.</p>
+                <p>Looks like you tried to find a page that doesn't exist</p>
                 <p>Click the button below to go back to Our Wee Guide to learn more Norn Irish!</p>
             </div>
             <a href="{{ url_for('dictionary') }}" class="btn waves-effect waves-light z-depth-0">Our Wee Guide</a>

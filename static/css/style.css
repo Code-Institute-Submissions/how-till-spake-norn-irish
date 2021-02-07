@@ -20,12 +20,8 @@
     --green-fade: rgba(11, 86, 80, 0.8);
     --pink-fade: rgba(169, 15, 94, 0.8);
 }
+
 /* ---------- End Color Variables ---------- */
-
-
-html {
-    scroll-behavior: smooth;
-}
 
 body {
     margin: 0;
@@ -40,8 +36,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+section .row {
+    margin-bottom: 0;
+}
 
 /* ---------- Fonts ---------- */
+
 h1,
 h2 {
     font-family: 'Permanent Marker', sans-serif;
@@ -59,12 +59,39 @@ h2 {
     font-style: italic;
     font-weight: 700;
 }
+
 /* ---------- End Fonts ---------- */
 
 
 /* ---------- Navigation Bar ---------- */
+
 nav {
     background-color: var(--white);
+}
+
+.brand-logo img {
+    width: 10vw;
+    margin: 8px 4px;
+}
+
+#nav-bar a {
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+nav ul li.active {
+    background-color: var(--white);
+}
+
+#nav-bar .active a {
+    color: var(--pink);
+}
+
+#nav-bar a:hover,
+#nav-bar .active a:hover {
+    background-color: var(--green);
+    color: var(--white);
 }
 
 nav i {
@@ -72,39 +99,11 @@ nav i {
     font-size: 2.6rem;
 }
 
-.brand-logo img {
-    width: 10vw;
-    margin: 8px;
-}
-
-#nav-mobile a {
-    color: var(--black);
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-#nav-mobile a:hover {
-    background-color: var(--green);
-    color: var(--white);
-}
-
-.title {
+.mobile-title {
     color: var(--white);
     font-size: 2rem;
     font-family: 'Permanent Marker', sans-serif;
     padding: 20px 32px;
-}
-
-nav ul li.active {
-    background-color: var(--white);
-}
-
-#nav-mobile .active a {
-    color: var(--pink);
-}
-
-#nav-mobile .active a:hover {
-    color: var(--white);
 }
 
 #mobile-side-nav {
@@ -123,51 +122,145 @@ nav ul li.active {
     background-color: var(--white);
     color: var(--green);
 }
+
 /* ---------- End Navigation Bar ---------- */
 
 
-/* ---------- Home Page ---------- */
-.heading,
-.about {
-    padding: 20px;
+/* ---------- Background Images --------- */
+
+.img-container {
+    position: relative;
+
+    width: 100%;
+    height: 60vh;
 }
 
+.bg-img {
+    background-color: var(--white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Open Mouth Logo */
+.bg-img-heading {
+    background: linear-gradient(var(--white-fade), var(--white-fade)), url('../images/open-mouth.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: auto;
+}
+
+/* Giants Causeway */
+.bg-img-top {
+    background-image: url('../images/giants-causeway.jpg');
+}
+
+/* Dark Hedges */
+.bg-img-bottom {
+    background-image: url('../images/dark-hedges.jpg');
+}
+
+/* Belfast City Hall */
+.bg-img-dictionary {
+    background-image: url('../images/belfast-city-hall.jpg');
+}
+
+/* Titanic Museum */
+.bg-img-login {
+    background-image: url('../images/titanic-belfast.jpg');
+}
+
+/* Carrick-A-Rede */
+.bg-img-signup {
+    background-image: url('../images/carrick-a-rede.jpg');
+}
+
+/* Dunluce Castle */
+.bg-img-add {
+    background-image: url('../images/dunluce-castle.jpg');
+}
+
+/* Peace Bridge */
+.bg-img-profile {
+    background-image: url('../images/peace-bridge.jpg');
+}
+
+/* Mussenden Temple */
+.bg-img-contact {
+    background-image: url('../images/mussenden-temple.jpg');
+}
+
+/* ---------- End Background Images --------- */
+
+
+/* ---------- Background Image Descriptions ---------- */
+
+/* Code from W3 Schools to add text blocks to images: 
+https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
+.img-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    width: 100%;
+
+    background-color: var(--blue-fade);
+    color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.img-description span {
+    font-weight: 900;
+}
+
+/* ---------- End Background Image Descriptions ---------- */
+
+
+/* ---------- Home Page ---------- */
+
+.heading,
+.about,
 .login-signup {
     padding: 20px 0;
 }
 
 .heading h1 {
     color: var(--pink);
-    margin: 10px auto 40px;
+    margin: auto;
 }
 
 .description {
     color: var(--black);
-    font-weight: 800;
     font-size: 1.2rem;
+    font-weight: 700;
     text-transform: uppercase;
+    margin-top: 40px;
 }
 
 .about h2 {
-    color: var(--blue);
+    color: var(--green);
     margin: 0;
 }
 
 .about-description {
     font-size: 1.2rem;
+    font-weight: 600;
     padding: 10px 20px;
     margin: 0;
 }
 
 .login-signup {
     font-size: 1.2rem;
+    font-weight: 600;
 }
+
 /* ---------- End Home Page ---------- */
 
 
 /* ---------- Dictionary ---------- */
-/* Code from W3 Schools to hide the scrollbar within a div container: 
-https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+
 .dictionary {
     position: relative;
     height: auto;
@@ -176,11 +269,7 @@ https: //www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 }
 
 .dictionary .container {
-    padding: 30px 0 20px;
-}
-
-section div.row {
-    margin-bottom: 0;
+    margin: 30px auto;
 }
 
 .collapsible-header {
@@ -213,18 +302,22 @@ section div.row {
 
 .add-word-container {
     font-size: 1.2rem;
+    font-weight: 600;
     padding: 20px;
 }
 
 .error-card {
     background-color: var(--white-fade);
     border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
     height: 40vh;
-    padding: 40px;
-
     justify-content: center;
+    padding: 40px;
 }
+
 /* ---------- End Dictionary ---------- */
+
 
 /* ---------- Delete Modal ---------- */
 
@@ -247,10 +340,12 @@ section div.row {
     width: 100%;
     margin: 10px 0;
 }
+
 /* ---------- End Delete Modal --------- */
 
 
 /* ---------- Forms ---------- */
+
 .form-description p {
     font-size: 1.2rem;
     font-weight: 700;
@@ -258,8 +353,6 @@ section div.row {
 
 .form-description ul li {
     font-size: 1.2rem;
-    list-style-type: disc;
-    list-style-position: inside;
 }
 
 .form-container {
@@ -273,7 +366,7 @@ form .card {
     background-color: var(--white-fade);
     border-radius: 20px;
     padding: 20px;
-    margin: 20px 10px 100px;
+    margin: 20px 10px 90px;
 
     justify-content: center;
 }
@@ -287,29 +380,25 @@ form .card {
     color: var(--blue);
 }
 
-::placeholder {
-    color: var(--black-fade);
-    font-size: 1rem;
-}
-
-/* Code from Materialize Documentation to update form input styling: 
-https://materializecss.com/text-inputs.html */
-
-/* label color */
 .input-field label {
     color: var(--black);
     font-size: 1.2rem;
     font-weight: 700;
 }
 
-/* icon prefix focus color */
 .input-field .prefix.active {
     color: var(--pink);
+}
+
+::placeholder {
+    color: var(--black-fade);
+    font-size: 1rem;
 }
 
 .login,
 .sign-up {
     font-size: 1.2rem;
+    font-weight: 600;
     padding: 20px;
 }
 
@@ -321,88 +410,11 @@ https://materializecss.com/text-inputs.html */
     font-size: 1.2rem;
     font-weight: 700;
 }
+
 /* ---------- End Forms ---------- */
 
-
-/* ---------- Background Images --------- */
-.bg-img-heading {
-    background: linear-gradient(var(--white-fade), var(--white-fade)), url('../images/open-mouth.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: auto;
-}
-
-.img-container {
-    position: relative;
-
-    width: 100%;
-    height: 60vh;
-}
-
-.bg-img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.bg-img-top {
-    background-image: url('../images/giants-causeway.jpg');
-}
-
-.bg-img-bottom {
-    background-image: url('../images/dark-hedges.jpg');
-}
-
-.bg-img-dictionary {
-    background-image: url('../images/belfast-city-hall.jpg');
-}
-
-.bg-img-login {
-    background-image: url('../images/titanic-belfast.jpg');
-}
-
-.bg-img-signup {
-    background-image: url('../images/carrick-a-rede.jpg');
-}
-
-.bg-img-add {
-    background-image: url('../images/dunluce-castle.jpg');
-}
-
-.bg-img-profile {
-    background-image: url('../images/peace-bridge.jpg');
-}
-
-.bg-img-contact {
-    background-image: url('../images/mussenden-temple.jpg');
-}
-/* ---------- End Background Images --------- */
-
-
-/* ---------- Image Descriptions ---------- */
-/* Code from W3 Schools to add text blocks to images: 
-https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
-.img-description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px 20px;
-    width: 100%;
-
-    background-color: var(--blue-fade);
-    color: var(--white);
-    font-size: 1rem;
-    text-align: center;
-}
-
-.img-description span {
-    font-weight: 800;
-}
-/* ---------- End Image Descriptions ---------- */
-
-
 /* ---------- Buttons ---------- */
+
 .btn {
     background-color: var(--pink);
     border-radius: 50px;
@@ -440,11 +452,19 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
     margin-right: 10px;
 }
 
+.btn.save,
+.btn.cancel {
+    width: 80%;
+} 
+
 .btn.edit:hover,
-.btn.edit:focus {
+.btn.edit:focus,
+.btn.save:hover,
+.btn.save:focus {
     background-color: var(--blue);
     color: var(--white);
 }
+
 /* ---------- End Buttons ---------- */
 
 
@@ -456,7 +476,7 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
 .flash-message h4 {
     color: var(--white);
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     padding: 20px;
     margin: 0;
 }
@@ -469,11 +489,7 @@ https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
     padding-top: 0;
 }
 
-.page-footer .row {
-    margin-bottom: 30px;
-}
-
-footer h5 {
+.page-footer h5 {
     font-size: 1.2rem;
     font-weight: 700;
     margin-top: 30px;
@@ -486,12 +502,7 @@ footer h5 {
 }
 
 .footer-link i {
-    font-size: 1.2rem;
     margin: 0 10px;
-}
-
-.fa-globe-europe {
-    margin-left: 20px;
 }
 
 i.fa-envelope {
@@ -501,33 +512,42 @@ i.fa-envelope {
 .footer-copyright a {
     color: var(--white);
     font-size: 1rem;
+    font-weight: 500;
 }
+
+.footer-link:hover,
+.footer-link i:hover,
+.footer-copyright a:hover {
+    color: var(--black);
+}
+
 /* ---------- End Footer ---------- */
 
 
 /* ---------- Error Handler 404 ---------- */
-.error-bg {
-    background-color: var(--blue);
+.error-404 {
+    background-color: var(--green);
     justify-content: center;
 }
 
-.error-img {
-    margin: 20px;
-}
-
-.error-bg h1 {
+.error-404 h1 {
     color: var(--pink);
     margin: 0;
 }
 
-.error-bg .card {
+.error-404 .card {
+    background: linear-gradient(var(--white-fade), var(--white-fade)),
+    url('../images/open-mouth.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40vh;
     background-color: var(--white);
+
     border-radius: 20px;
-    padding: 40px;
-    margin: 20px;
+    padding: 40px 20px;
 }
 
-.error-bg .error-description {
+.error-404 .error-description {
     font-size: 1.2rem;
     font-weight: 700;
     margin: 40px;

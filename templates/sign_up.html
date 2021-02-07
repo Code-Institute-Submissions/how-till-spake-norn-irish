@@ -27,15 +27,15 @@
         <div class="center-align flash-message">
             <div class="row">
                 {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        {% if category == "error" %}
-                            <div>
-                                <h4>{{ message }}</h4>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == "error" %}
+                                <div>
+                                    <h4>{{ message }}</h4>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
                 {% endwith %}
             </div>
         </div>
@@ -70,19 +70,19 @@
                         data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$"
                         class="validate" required>
                     <label for="password">Password</label>
-                    <span class="helper-text">Must contain at least one uppercase letter and a number</span>
+                    <span class="helper-text">Must be longer than six characters and contain at least one uppercase letter
+                        and a number</span>
                 </div>
                 
                 <!-- Confirm Password -->
                 <div class="input-field">
                     <i class="fas fa-key prefix"></i>
                     <!-- Regex from: https://www.html5pattern.com/Passwords -->
-                    <input placeholder="Enter a Password" id="confirm_password" name="confirm_password" type="password"
+                    <input placeholder="Confirm Password" id="confirm_password" name="confirm_password" type="password"
                         data-length="15" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$"
                         class="validate" required>
                     <span id="message"></span>
                     <label for="confirm_password">Confirm Password</label>
-                    <span class="helper-text">Must contain at least one uppercase letter and a number</span>
                 </div>
 
                 <!-- Sign Up Button -->

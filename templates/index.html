@@ -8,7 +8,7 @@
         <h1>How Till Spake<br>Norn Irish</h1>
     </div>
     <div class="description">
-        <p>A Guide to Understanding<br>the Northern Irish</p>
+        <p>A Guide to Understanding the Northern Irish</p>
     </div>
 </section>
 
@@ -49,12 +49,11 @@
 <!-- Login/Sign Up -->
 <section class="login-signup container center-align">
     <div class="row">
-
         {% if session.user %}
             <!-- Profile -->
             <div class="col s12 m6">
                 <p>
-                    Visit your profile now to update or delete any words you've added.
+                    Visit your profile now to update or delete any words you've added to Our Wee Guide.
                 </p>
                 <a href="{{ url_for('profile', username=session['user']) }}"
                     class="btn waves-effect waves-light z-depth-0">Profile</a>
@@ -63,16 +62,17 @@
             <!-- Add Word -->
             <div class="col s12 m6">
                 <p>
-                    Think there's a word missing from our guide? Why not add it and share it with others!
+                    Think there's a word missing from our guide?<br>
+                    Why not add it to Our Wee Guide and share it with others!
                 </p>
                 <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">Add Word</a>
             </div>
-            {% else %}
+        {% else %}
             <!-- Login Button -->
             <div class="col s12 m6">
                 <p>
-                    Already have a wee account? Login to continue adding words
-                    to Our Wee Guide!
+                    Already have a wee account?<br>
+                    Login now to continue adding words to Our Wee Guide!
                 </p>
                 <a href="{{ url_for('login') }}" class="btn waves-effect waves-light z-depth-0">Login</a>
             </div>
@@ -80,8 +80,8 @@
             <!-- Sign Up Button -->
             <div class="col s12 m6">
                 <p>
-                    Have some words or phrases you'd like to add to Our Wee Guide?
-                    Why not sign up for an account?
+                    Have some words or phrases you'd like to add to Our Wee Guide?<br>
+                    Sign up for an account with us now!
                 </p>
                 <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
             </div>
