@@ -525,17 +525,23 @@ i.fa-envelope {
 
 
 /* ---------- Error Handler 404 ---------- */
+
 .error-404 {
     background-color: var(--green);
     justify-content: center;
 }
 
-.error-404 h1 {
+.error-500 {
+    background-color: var(--blue);
+    justify-content: center;
+}
+
+.error h1 {
     color: var(--pink);
     margin: 0;
 }
 
-.error-404 .card {
+.error .card {
     background: linear-gradient(var(--white-fade), var(--white-fade)),
     url('../images/open-mouth.png');
     background-repeat: no-repeat;
@@ -547,12 +553,14 @@ i.fa-envelope {
     padding: 40px 20px;
 }
 
-.error-404 .error-description {
+.error .error-description {
     font-size: 1.2rem;
     font-weight: 700;
     margin: 40px;
 }
+
 /* ---------- End Error Handler 404 ---------- */
+
 
 /* ---------- Media Queries ---------- */
 

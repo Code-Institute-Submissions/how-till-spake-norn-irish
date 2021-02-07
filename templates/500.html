@@ -20,16 +20,16 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <title>404 Error</title>
+    <title>500 Error</title>
 </head>
 
-<body class="error error-404">
+<body class="error error-500">
 
     <section class="container center-align">
         <div class="card">
-            <h1>Ach, ya eejit!</h1>
+            <h1>Whoops!</h1>
             <div class="error-description">
-                <p>Looks like you tried to find a page that doesn't exist</p>
+                <p>Something's went wrong.</p>
                 <p>Click the button below to go back to Our Wee Guide to learn more Norn Irish!</p>
             </div>
             <a href="{{ url_for('dictionary') }}" class="btn waves-effect waves-light z-depth-0">Our Wee Guide</a>
