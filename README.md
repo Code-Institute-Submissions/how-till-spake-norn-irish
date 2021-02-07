@@ -15,7 +15,7 @@ A demo of the website can be found here: [www.howtillspakenornirish.com](https:/
   - User Stories
     - First Time Visitor Goals
     - Registered User Goals
-  - Site Owner Goals
+    - Site Owner Goals
   - Design
     - Colour Scheme
     - Typography
@@ -27,6 +27,8 @@ A demo of the website can be found here: [www.howtillspakenornirish.com](https:/
 - [**Features**](#features)
   - Features that have been implemented
   - Features left to be implemented
+
+- [**Branches**](#branches)
 
 - [**Technologies Used**](#technologies-used)
   - Languages Used
@@ -52,16 +54,16 @@ A demo of the website can be found here: [www.howtillspakenornirish.com](https:/
 
 ### Project Goals
 
-The goal of this project is to create an online dictionary of all the different words and phrases used in Northern Ireland. Each word or phrase in the dictionary will have a definition along with an example of how the word or phrase might typically be used in conversation by locals.
+The goal of this project is to create an online dictionary of the different words and phrases used in Northern Ireland. Each word or phrase in the dictionary will have a definition along with an example of how the word or phrase might typically be used in conversation by locals.
 
 The site is aimed at:
 
 - Anyone visiting Northern Ireland for the first time
 - Anyone who has visited but struggled to understand some of the words and phrases used by locals
-- Anyone who has visited and was lucky enough to learn some of the words and phrases used by locals during their visit, and wants to share this with other travellers
-- Anyone from Northern Ireland who wants to share some of the words and phrases they use to help anyone visiting the country
+- Anyone who has visited and was lucky enough to learn some of the words and phrases used by locals during their visit, and wants to share this with other tourists
+- Anyone from Northern Ireland who wants to share some of the words and phrases they use to help tourists
 
-First time visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing.
+Visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing.
 
 ### User Stories
 
@@ -91,22 +93,45 @@ First time visitors to the site will be able to sign up for an account so they c
 
 ### Design
 
-The overall design of this project is based on the theme of the Northern Ireland tourism sites. The site features a simple and easy to follow layout for visitors of site, with a navigation bar at the top, the main content in the middle and a footer containing external links at the bottom.
+The overall design of this project is based on the design of various Northern Ireland tourism sites. I based the design on these sites to keep with the tourism theme as this site is mainly aimed at tourists.
+
+The site features a simple and easy to follow layout with a navigation bar at the top, the main content in the middle and a footer containing external links at the bottom.
 
 #### Colour Scheme
 
 ![Colour palette generated using coolors.co](static/images/spake-norn-irish-palette.png)
 _Colour palette generated using [coolors.co](https://coolors.co)_
 
-The colour scheme of this project is based on both the [Discover Northern Ireland](https://discovernorthernireland.com/) website and the [Visit Belfast](https://visitbelfast.com) website.
+The colour scheme of this project is based on both the [Discover Northern Ireland](https://discovernorthernireland.com/) website and the [Visit Belfast](https://visitbelfast.com) website. Both of these websites feature a white background with the colours blue, green and pink being used for headings and buttons on the site.
+
+- ![#A90F5E](https://via.placeholder.com/15/a90f5e/000000?text=+) `#A90F5E`:
+  - This was used as the background colour for the footer section, the colour for all the main page headings and all the buttons on the site
+
+- ![#0B5650](https://via.placeholder.com/15/0b5650/000000?text=+) `#0B5650`:
+  - This was used as the background colour for all the flash messages, the background colour on the mobile side navigation menu and for the button hover state colour
+
+- ![#137BB3](https://via.placeholder.com/15/137bb3/000000?text=+) `#137BB3`:
+  - This was used as the background colour for the image descriptions and the sub heading featured on the home page
+
+- ![#292825](https://via.placeholder.com/15/292825/000000?text=+) `#292825`:
+  - This was used as the main font colour throughout the site
+
+- ![#F2F2F2](https://via.placeholder.com/15/f2f2f2/000000?text=+) `#F2F2F2`:
+  - This was used as the background colour of the website and as the button font colour
 
 #### Typography
 
-Google Fonts: Permanent Marker with suggested pairing of Open Sans
+Throughout the site, I used two different fonts from Google Fonts - [Permanent Marker](https://fonts.google.com/specimen/Permanent+Marker?query=perman&preview.text_type=custom) with the suggested pairing of [Open Sans](https://fonts.google.com/specimen/Open+Sans?preview.text_type=custom&query=open+sans).
+
+I chose the Permanent Marker font as this was this font was similar to the font used for headings on the [Discover Northern Ireland](https://discovernorthernireland.com/) website and I wanted to keep the design similar to this site to keep with the tourism site theme. This font was used on all headings throughout the site.
+
+I then paired this with the suggested font of Open Sans to use as the main font throughout the site, as this is an easy to read font.
 
 #### Imagery
 
-The images featured on the site are popular landmarks and visitor attractions within Northern Ireland. The images are used as background images of different These images are from various different Northern Ireland tourism sites. Links to these sites can be found in the [credits](#credits) section at the end of this document.
+The images featured on this site are of popular landmarks and visitor attractions within Northern Ireland. These images are from various different Northern Ireland tourism sites. Links to these sites can be found in the [credits](#credits) section at the end of this document. These images have been used as background images for the main content section on each page. Each page/section features a different image.
+
+I've also included a site logo and favicon which is a vector image of an open mouth
 
 #### Wireframes
 
@@ -119,8 +144,7 @@ Links to the wireframes can be found below. Each link contains the wireframes fo
 - [Dictionary](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/dictionary.pdf)
 - [Login](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/login.pdf)
 - [Profile](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/profile.pdf)
-- Add Word (Upload Missing Wireframe)
-- Edit Word (Upload Missing Wireframe)
+- Add Word/Edit Word (Upload Missing Wireframe)
 - [Sign Up](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/sign-up.pdf)
 - [Contact](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/contact-us.pdf)
 - [404](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/404.pdf)
@@ -182,16 +206,20 @@ MongoDB Collections:
 
 ### Features left to be implemented
 
-- Rating/Voting System:
+In future releases of this project and as I learn more about the languages used in this project, I would like to add some additional features to improve user experience:
 
-- Favourites Section:
+- Rating/Voting System
+  - This feature would allow users to rate the words within the dictionary either through a star based rating system or an up-vote/down-vote based system
+  - This type of feature will let visitors and other users know how accurate a word or word description is within the dictionary
+
+- Favourites Section
   - This feature would allow users to add any of the words in the dictionary to a favourites section that would be located in their profile
-  - This will allow users to easily view some of their favourite words without having to search or scroll through the dictionary
+  - This would allow users to easily view some of their favourite words without having to search or scroll through the dictionary
 
-- County Categories:
-
-- Pronunciation Feature:
+- Pronunciation Feature
   - This feature would allow users to hear how each of the words featured in the dictionary are pronounced
+  - When a user clicks on a word to view the definition and example, they will also be presented with an audio button to hear the pronunciation of that word
+  - When a user is adding a word to the dictionary, they will have the option to upload an audio file of the word pronunciation
 
 [Contents](#contents)
 
@@ -204,13 +232,13 @@ Throughout the development process, different branches have been created to test
 Dictionary Branch:
 
 - This branch was created to test a different layout for the dictionary template
-- I initially used a grid layout with each of the words in a materialize card container which when clicked, displayed the word definition and example
+- I originally used a grid layout with each of the words in a materialize card container and when clicked, this displayed the word definition and example
 - This layout caused overflow issues in some of the cards which meant that the cards couldn't have a fixed height
-- To fix this issue, I tested using the materialize collapsible accordion feature to display the dictionary which fixed the height sizing issue with the original card layout
+- To fix this issue, I tried using the materialize collapsible accordion feature instead to display the dictionary and this helped fix the sizing issues with the original card layout
 
 Sort Branch:
 
-- This branch was created to test a sort function which would sort the words in the dictionary alphabetically from A-Z or Z-A
+- This branch was created to test a sort function that sorts the words in the dictionary alphabetically from A-Z or Z-A
 - This was achieved by creating two new routes in app.py; one route for the ascending order and another route for the descending order
 - I then added a Materialize dropdown button to the dictionary template and linked each option in the dropdown to the relevant route
 
@@ -232,7 +260,7 @@ Sort Branch:
 - [Balsamiq](https://balsamiq.com/)
   - Balsamiq was used to create the wireframes for desktop, tablet and mobile during the design process
 - [EmailJS](https://www.emailjs.com/)
-  - EmailJS was used to add an email service to the form in the contact.html template
+  - EmailJS was used to add an email service to the form in the contact template
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
   - Flask was the microframework use to build the application
 - [Font Awesome](https://fontawesome.com/)
@@ -249,6 +277,7 @@ Sort Branch:
   - jQuery is the JavaScript library that was used to activate Materialize components and to add additional password validation to forms
 - [Materialize](https://materializecss.com/)
   - Materialize is a modern responsive CSS framework that was used to give the website a simple, responsive layout
+  - Also used to add different components including a navigation bar, a collapsible accordion and form elements
 - [MongoDB](https://www.mongodb.com/)
   - MongoDB Atlas is a cloud database service used to create and store the database collections for the application
 - [VS Code](https://code.visualstudio.com/)
@@ -298,7 +327,7 @@ This project was coded in VS Code and pushed to GitHub using the following steps
 - In source control, select **"Publish to GitHub"**
 - Give your repository a name and select **"Publish to GitHub Public Repository"**
 - After the repository is successfully published to GitHub, you can use git bash to add, commit and push any changes to the GitHub repository
-- To stage a file commit, use ```git add``` and the name of the file you want to commit
+- To stage a file to commit, use ```git add``` and the name of the file you want to commit
 - After adding a file to commit, use ```git commit -m "add commit message"``` to specify what changes you have made to that file
 - After committing a file, use ```git push``` to push all staged changes to the GitHub repository
 - Before installing any additional packages, create a virtual environment - this will ensure that packages installed are only installed in the virtual environment folder: ```python3 -m venv venv```
@@ -312,16 +341,16 @@ This project is hosted on Heroku - A cloud platform service that enables develop
 
 - Before creating a Heroku app, open the repository in VS Code and create a requirements file that lists all the applications and dependencies required to run the application: ```pip3 freeze --local > requirements.txt```
 - Create a Heroku specific file called a Procfile - this is what Heroku looks for to know which file runs the app and how to run it: ```echo web: python run.py > Procfile```
-- Open [Heroku](www.heroku.com) and login to your account - or sign up for an account if you don't already have one
+- Open [Heroku](www.heroku.com) and login to your account or sign up for an account if you don't already have one
 - Open the dashboard and select **"New"** to create a new app
 - Name the app and set the region to Europe
 - Open the settings tab and open **"Reveal Config Vars"**
 - Add the environment variables from the **env.py** file:
   - **KEY:** IP | **VALUE:** 0.0.0.0
   - **KEY:** PORT | **VALUE:** 5000
-  - **KEY:** SECRET_KEY | **VALUE:** SECRET_KEY
-  - **KEY:** MONGO_URI | **VALUE:** MONGO_URI
-  - **KEY:** MONGO_DBNAME | **VALUE:** MONGO_DBNAME
+  - **KEY:** SECRET_KEY | **VALUE:** YOUR_SECRET_KEY
+  - **KEY:** MONGO_URI | **VALUE:** YOUR_MONGO_URI
+  - **KEY:** MONGO_DBNAME | **VALUE:** YOUR_MONGO_DBNAME
 - To deploy the app from GitHub, open the deploy tab and change the deployment method to GitHub
 - Connect to your GitHub account and search for the name of the repository to connect to
 - Once connected, **"Enable Automatic Deployments"** and select the **"Master"** or **"Main"** branch to deploy
@@ -348,7 +377,7 @@ To clone the repository and make a local copy on your computer, follow these ste
 
 ### Code
 
-- [Vs Code Virtual Environment Mac](https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s)
+- [Vs Code Virtual Environment on Mac OS](https://www.youtube.com/watch?v=06I63_p-2A4&t=1571s)
   - This video by Corey Schafer helped with setting up a virtual environment in VS Code on Mac as this is currently my preferred IDE
 
 - [Flash Message Categories](https://www.youtube.com/watch?v=lcVdZtVvnnk)
@@ -369,15 +398,20 @@ To clone the repository and make a local copy on your computer, follow these ste
 - [Password Regex](https://www.html5pattern.com/Passwords)
   - The password regex used in the forms featured on the login.html and sign_up.html templates was taken from this site
 
-- [MongoDb count() function](https://docs.mongodb.com/manual/reference/method/db.collection.count/)
+- [Python count() function](https://www.w3schools.com/python/ref_list_count.asp)
   - This function was used to check if zero entries were returned by the search function in the dictionary.html template
+
+- [Markdown Colour Flag](https://stackoverflow.com/questions/11509830/how-to-add-color-to-githubs-readme-md-file)
+  - This was used to add colour flags to the design section of this README.md file
 
 ### Content
 
-- Most of the content on this site was written by the developer, with some guidance from the following sites on how to define some of the Northern Irish words _(as a Northern Irish, I already knew most of the words but trying to explain what they all mean is pretty difficult!)_:
+Most of the content on this site was written by the developer, with some guidance from the following sites on how to define some of the Northern Irish words:
 
-  - [16 Slang Phrases You'll Need to Know in Northern Ireland](https://matadornetwork.com/life/16-slang-phrases-youll-need-know-northern-ireland/)
-  - [Top 20 Mad Northern Irish Phrases That Only Make Sense to Locals](https://www.irelandbeforeyoudie.com/20-mad-northern-irish-phrases-that-only-make-sense-to-locals-2/)
+- [16 Slang Phrases You'll Need to Know in Northern Ireland](https://matadornetwork.com/life/16-slang-phrases-youll-need-know-northern-ireland/)
+- [Top 20 Mad Northern Irish Phrases That Only Make Sense to Locals](https://www.irelandbeforeyoudie.com/20-mad-northern-irish-phrases-that-only-make-sense-to-locals-2/)
+
+As a Northern Irish, I already knew most of the words so trying to explain what they all meant was a challenge!
 
 ### Media
 
@@ -391,13 +425,19 @@ As this project is for educational purposes, images have been used from a variet
 - Dunluce Castle Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/dunluce-castle-medieval-irish-castle-on-the-antrim-coast-p675011)
 - Giants Causeway Image from [Visit Belfast](https://visitbelfast.com/partners/giants-causeway/#&gid=1&pid=6)
 - Mussenden Temple Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/mussenden-temple-and-downhill-demesne-p675701)
-- Open Mouth Vector Icon from [Flat Icon](https://www.flaticon.com/authors/smashicons)
 - Peace Bridge Image from [Discover Northern Ireland](https://discovernorthernireland.com/things-to-do/peace-bridge-p701951)
 - Titanic Museum Belfast Image from [Visit Belfast](https://visitbelfast.com/partners/titanic-belfast/)
 
+The vector image used for the site logo and the favicon can be found below:
+
+- Open Mouth Vector Icon from [Flat Icon](https://www.flaticon.com/authors/smashicons)
+
 ### Acknowledgements
 
-- A huge thanks to Igor in Tutor Support for helping me spot an error in my code that wouldn't let me render the edit_word functionality. (It's always the silly things that catch me out!)
-- Thanks to the Code Institute Slack community for being an incredible bunch of people! Especially Ed B who helped someone in a thread in #data-centric-dev that was having similar issues with a delete confirmation modal deleting the first word in the collection rather than the targeted word.
+- Thanks to my mentor Spencer Barriball for all his advice and feedback throughout this project - you've been awesome as always and your knowledge of Northern Irish slang is just as good as mine!
+
+- A huge thank you to Igor in Tutor Support for helping me spot an error in my code that wouldn't let me render the edit word functionality - It's always the silly things that catch me out!
+
+- And thank you to the Code Institute Slack community for being an incredible bunch of people! Especially Ed B who helped someone in a thread in #data-centric-dev that was having similar issues with a delete confirmation modal deleting the first word in the collection rather than the targeted word - that was a huge help after what felt like hours of searching for a solution!
 
 [Contents](#contents)
