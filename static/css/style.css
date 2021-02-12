@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* ---------- Color Variables ---------- */
 
 /* Color Palette from coolors.co */
@@ -26,9 +33,17 @@
 body {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     height: 100vh;
 
@@ -170,6 +185,8 @@ nav i {
     background-color: var(--white);
     font-size: 1.4rem;
     font-weight: 700;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -205,6 +222,8 @@ nav i {
     border-radius: 20px;
     font-weight: 700;
     height: 40vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 40px;
 }
@@ -212,6 +231,7 @@ nav i {
 .error-card h4 {
     font-size: 1.8rem;
 }
+
 /* ---------- End Dictionary ---------- */
 
 
@@ -257,6 +277,10 @@ form .card {
     padding: 20px;
     margin: 20px 10px 100px;
 
+    -webkit-box-pack: center;
+
+    -ms-flex-pack: center;
+
     justify-content: center;
 }
 
@@ -277,6 +301,26 @@ form .card {
 
 .input-field .prefix.active {
     color: var(--pink);
+}
+
+::-webkit-input-placeholder {
+    color: var(--black-fade);
+    font-size: 1rem;
+}
+
+::-moz-placeholder {
+    color: var(--black-fade);
+    font-size: 1rem;
+}
+
+:-ms-input-placeholder {
+    color: var(--black-fade);
+    font-size: 1rem;
+}
+
+::-ms-input-placeholder {
+    color: var(--black-fade);
+    font-size: 1rem;
 }
 
 ::placeholder {
@@ -351,6 +395,7 @@ form .card {
     padding: 20px;
     margin: 0;
 }
+
 /* ---------- End Flash Messages --------- */
 
 /* ---------- Background Images --------- */
@@ -369,6 +414,8 @@ form .card {
 
 /* Open Mouth Logo */
 .bg-img-heading {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--white-fade)), to(var(--white-fade))), url('../images/open-mouth.png') no-repeat center;
+    background: -o-linear-gradient(var(--white-fade), var(--white-fade)), url('../images/open-mouth.png') no-repeat center;
     background: linear-gradient(var(--white-fade), var(--white-fade)), url('../images/open-mouth.png') no-repeat center;
     background-size: contain;
 }
@@ -490,6 +537,8 @@ i.fa-envelope {
 /* ---------- Error Handler 404 ---------- */
 
 .error {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -502,8 +551,12 @@ i.fa-envelope {
 }
 
 .error .card {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--white-fade)), to(var(--white-fade))),
+        url('../images/open-mouth.png');
+    background: -o-linear-gradient(var(--white-fade), var(--white-fade)),
+        url('../images/open-mouth.png');
     background: linear-gradient(var(--white-fade), var(--white-fade)),
-    url('../images/open-mouth.png');
+        url('../images/open-mouth.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40vh;
