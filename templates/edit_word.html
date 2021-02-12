@@ -2,7 +2,7 @@
 {% block content %}
 
 <!-- Page Heading -->
-<div class="heading container center-align">
+<section class="heading container center-align">
     <div>
         <h1>Add A Word To Our Wee Guide</h1>
     </div>
@@ -10,17 +10,18 @@
     <div class="description">
         <p>Ach, ya eejit!<br>Did you make a mistake? Don't worry, you can fix that here!</p>
     </div>
-</div>
+</section>
 
-<!-- Add Word Form -->
+<!-- Edit Word Form -->
 <section class="form-container bg-img bg-img-add">
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_word', word_id=word._id) }}">
             <div class="card center-align">
+
                 <!-- Word -->
                 <div class="input-field">
                     <i class="fas fa-font prefix"></i>
-                    <input placeholder="Add Word Here" id="word" name="word" value="{{ word.word }}" type="text"
+                    <input id="word" name="word" value="{{ word.word }}" type="text"
                         class="validate" required>
                     <label for="word">Word</label>
                 </div>
@@ -28,7 +29,7 @@
                 <!-- Definition -->
                 <div class="input-field">
                     <i class="fas fa-file-alt prefix"></i>
-                    <textarea placeholder="Add Word Definition Here" id="definition" name="definition" type="text"
+                    <textarea id="definition" name="definition" type="text"
                         class="materialize-textarea validate" required>
                         {{- word.definition -}}
                         </textarea>
@@ -38,30 +39,36 @@
                 <!-- Example -->
                 <div class="input-field">
                     <i class="fas fa-comment prefix"></i>
-                    <textarea placeholder="Add Word Example Here" id="example" name="example" type="text"
+                    <textarea id="example" name="example" type="text"
                         class="materialize-textarea validate" required>
                         {{- word.example -}}
                         </textarea>
                     <label for="example">Example</label>
                 </div>
 
+                <!-- Added By -->
+                <div class="input-field">
+                    <i class="fas fa-comment prefix"></i>
+                    <textarea id="added_by" name="added_by" type="text"
+                        class="materialize-textarea validate" required>
+                        {{- word.added_by -}}
+                        </textarea>
+                    <label for="added_by">Added By</label>
+                </div>
+
                 <!-- Buttons -->
-                <div class="row">
+                <div>
                     <!-- Cancel Button -->
-                    <div class="col s12 m6">
-                        <a href="{{ url_for('dictionary') }}" class="btn cancel waves-effect waves-light z-depth-0">
-                            <i class="fas fa-times"></i>
-                            Cancel
-                        </a>
-                    </div>
+                    <a href="{{ url_for('dictionary') }}" class="btn cancel-delete waves-effect waves-light z-depth-0">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </a>
 
                     <!-- Save Word Button -->
-                    <div class="col s12 m6">
-                        <button type="submit" class="btn save waves-effect waves-light z-depth-0">
-                            <i class="fas fa-save"></i>
-                            Save
-                        </button>
-                    </div>
+                    <button type="submit" class="btn edit-save waves-effect waves-light z-depth-0">
+                        <i class="fas fa-save"></i>
+                        Save
+                    </button>
                 </div>
             </div>
         </form>

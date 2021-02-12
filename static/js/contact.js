@@ -1,4 +1,4 @@
-const messageStatus = document.getElementById('message-status');
+const messageStatus = document.getElementById('message_status');
 
 function sendMail(contactForm) {
     emailjs.send("service_5x8dw5r", "contact_form", {
@@ -9,7 +9,7 @@ function sendMail(contactForm) {
         .then(
             //Change button text to confirm feedback has been sent
             function (response) {
-                messageStatus.innerHTML = `Thanks For Contacting Us!`;
+                messageStatus.innerHTML = `Thanks For Contacting Us <i class="far fa-grin-beam"></i>`;
             },
             //If feedback fails to send, change button text to ask user to try again
             function (error) {
@@ -17,6 +17,6 @@ function sendMail(contactForm) {
             }
         );
     //Resets form after submission
-    document.getElementById('feedback-form').reset();
+    document.getElementById('contact_form').reset();
     return false;
 }

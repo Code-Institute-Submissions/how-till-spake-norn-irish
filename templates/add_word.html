@@ -15,7 +15,6 @@
 <!-- Add Word Form -->
 <section class="form-container bg-img bg-img-add">
     <div class="row">
-
         <!-- Flash Message -->
         <!-- Code from Pretty Printed on YouTube:
         https://www.youtube.com/watch?v=lcVdZtVvnnk -->
@@ -61,22 +60,18 @@
                 </div>
 
                 <!-- Buttons -->
-                <div class="row">
+                <div>
                     <!-- Cancel Button -->
-                    <div class="col s12 m6">
-                        <a href="{{ url_for('dictionary') }}" class="btn cancel waves-effect waves-light z-depth-0">
-                            <i class="fas fa-times"></i>
-                            Cancel
-                        </a>
-                    </div>
+                    <a href="{{ url_for('dictionary') }}" class="btn cancel-delete waves-effect waves-light z-depth-0">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </a>
 
                     <!-- Add Word Button -->
-                    <div class="col s12 m6">
-                        <button type="submit" class="btn save waves-effect waves-light z-depth-0">
-                            <i class="fas fa-plus"></i>
-                            Add Word
-                        </button>
-                    </div>
+                    <button type="submit" class="btn edit-save waves-effect waves-light z-depth-0">
+                        <i class="fas fa-plus"></i>
+                        Add Word
+                    </button>
                 </div>
             </div>
         </form>

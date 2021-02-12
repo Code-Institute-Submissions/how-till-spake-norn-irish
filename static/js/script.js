@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
 
     // Form Input Character Count
-    $('input#first_name, input#username, input#password').characterCounter();
+    $('input#first_name, input#username, input#password, input#confirm_password').characterCounter();
 
     // Dictionary Collapsible
     $('.collapsible').collapsible();

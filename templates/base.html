@@ -22,6 +22,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
     {% block styles %}
     {% endblock %}
 
@@ -63,7 +64,7 @@
             </div>
         </nav>
 
-        <!-- Mobile SideBar Navigation -->
+        <!-- Mobile Side Bar Navigation -->
         <ul id="mobile-side-nav" class="center-align sidenav z-depth-0">
             <li class="mobile-title">How Till Spake Norn Irish</li>
             <li class="{{ 'active' if active_page == 'home' }}"><a href="{{ url_for('home') }}">Home</a></li>
@@ -149,7 +150,7 @@
         <!-- Footer Copyright -->
         <div class="footer-copyright">
             <div class="container center-align">
-                <a href="https://github.com/KirstChat" target="_blank">© 2021 Created by Kirsty Chatterton</a>
+                <a href="https://github.com/KirstChat" target="_blank">2021 Created by Kirsty Chatterton</a>
             </div>
         </div>
     </footer>
@@ -159,14 +160,15 @@
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
 
-
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
     {% block scripts %}
     {% endblock %}
+
 </body>
 
 </html>

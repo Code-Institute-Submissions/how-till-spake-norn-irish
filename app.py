@@ -190,10 +190,11 @@ def edit_word(word_id):
             "word": request.form.get("word"),
             "definition": request.form.get("definition"),
             "example": request.form.get("example"),
-            "added_by": session["user"]
+            "added_by": request.form.get("added_by")
         }
         # Update word in dictionary
         mongo.db.dictionary.update({"_id": ObjectId(word_id)}, submit)
+        
         # Display flash message if word has been successfully updated
         flash("You've successfully updated a word in Our Wee Guide", "edit")
         return redirect(url_for("dictionary"))
@@ -224,6 +225,7 @@ def contact():
 # 404 Error Handler
 def page_not_found(e):
     return render_template("404.html"), 404
+
 
 @app.errorhandler(500)
 # 500 Error Handler
