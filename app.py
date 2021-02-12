@@ -61,7 +61,10 @@ def descending():
 # Render Sign Up Page
 def sign_up():
     if request.method == "POST":
-        # Check if the username already exists in MongoDB user_profile collection
+        """
+        Check if the username already exists in
+        MongoDB user_profile collection
+        """
         existing_user = mongo.db.user_profile.find_one(
             {"username": request.form.get("username")})
 
@@ -85,7 +88,9 @@ def sign_up():
 
         # Display flash message if sign up is successful
         flash(
-            "You've successfully created a wee account with us. Welcome to your profile page!", "success")
+            "You've successfully created a wee account with us."
+            "Welcome to your profile page!",
+            "success")
 
         # Redirect user to their profile
         return redirect(url_for("profile", username=session["user"]))
@@ -105,8 +110,10 @@ def login():
             # Check if hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-
-                # Put existing user into a 'session' cookie using first_name and username
+                """
+                Put existing user into a 'session' cookie
+                using first_name and username
+                """
                 session["user"] = request.form.get("username")
                 flash("Welcome back to your wee profile!", "welcome")
                 # Redirect user to their profile
@@ -114,7 +121,9 @@ def login():
 
             # Display flash message if password doesn't match input
             else:
-                flash("That's the wrong username/password ya melter!", "incorrect")
+                flash(
+                    "That's the wrong username/password ya melter!",
+                    "incorrect")
                 return redirect(url_for("login"))
 
         # Display flash message if username doesn't exist
@@ -148,7 +157,9 @@ def profile(username):
         {"added_by": session["user"]})
 
     if session["user"]:
-        return render_template("profile.html", dictionary=dictionary, username=username)
+        return render_template(
+            "profile.html",
+            dictionary=dictionary, username=username)
 
     return redirect(url_for("login"))
 
@@ -163,7 +174,9 @@ def add_word():
 
         if existing_word:
             # Display flash message if word already exists
-            flash("Sorry, that word is already in Our Wee Guide", "word_exists")
+            flash(
+                "Sorry, that word is already in Our Wee Guide",
+                "word_exists")
             return redirect(url_for("add_word"))
 
         word = {
@@ -194,7 +207,6 @@ def edit_word(word_id):
         }
         # Update word in dictionary
         mongo.db.dictionary.update({"_id": ObjectId(word_id)}, submit)
-        
         # Display flash message if word has been successfully updated
         flash("You've successfully updated a word in Our Wee Guide", "edit")
         return redirect(url_for("dictionary"))
@@ -231,6 +243,7 @@ def page_not_found(e):
 # 500 Error Handler
 def internal_server_error(e):
     return render_template("500.html"), 500
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
