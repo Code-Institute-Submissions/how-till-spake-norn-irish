@@ -105,19 +105,19 @@ _Colour palette generated using [coolors.co](https://coolors.co)_
 The colour scheme of this project is based on both the [Discover Northern Ireland](https://discovernorthernireland.com/) website and the [Visit Belfast](https://visitbelfast.com) website. Both of these websites feature a white background with the colours blue, green and pink being used for headings and buttons on the site.
 
 - ![#A90F5E](https://via.placeholder.com/15/a90f5e/000000?text=+) `#A90F5E`:
-  - This was used as the background colour for the footer section, the colour for all the main page headings and all the buttons on the site
+  - Used for the background colour of the footer section, all page headings and all buttons
 
 - ![#0B5650](https://via.placeholder.com/15/0b5650/000000?text=+) `#0B5650`:
-  - This was used as the background colour for all the flash messages, the background colour on the mobile side navigation menu and for the button hover state colour
+  - Used for the background colour of all the flash messages and the sub-heading on the home page
 
 - ![#137BB3](https://via.placeholder.com/15/137bb3/000000?text=+) `#137BB3`:
-  - This was used as the background colour for the image descriptions and the sub heading featured on the home page
+  - Used for the background colour of all the image descriptions
 
 - ![#292825](https://via.placeholder.com/15/292825/000000?text=+) `#292825`:
-  - This was used as the main font colour throughout the site
+  - Used for the main font colour throughout the site and the link hover states in the footer
 
 - ![#F2F2F2](https://via.placeholder.com/15/f2f2f2/000000?text=+) `#F2F2F2`:
-  - This was used as the background colour of the website and as the button font colour
+  - Used as the main background colour of the site and for all button text
 
 #### Typography
 
@@ -129,9 +129,7 @@ I then paired this with the suggested font of Open Sans to use as the main font 
 
 #### Imagery
 
-The images featured on this site are of popular landmarks and visitor attractions within Northern Ireland. These images are from various different Northern Ireland tourism sites. Links to these sites can be found in the [credits](#credits) section at the end of this document. These images have been used as background images for the main content section on each page. Each page/section features a different image.
-
-I've also included a site logo and favicon which is a vector image of an open mouth
+The images featured on this site are of popular landmarks and visitor attractions within Northern Ireland. These images are from various different Northern Ireland tourism sites. Links to these sites can be found in the [credits](#credits) section at the end of this document. These images have been used as background images for the main content section on each page. Each page/section features a different image. I've also included a site logo and favicon which is a vector image of an open mouth to fit with the name of the site.
 
 #### Wireframes
 
@@ -202,11 +200,11 @@ MongoDB Collections:
 
 - A footer located on every page with links to social media accounts, the contact us form and various different Northern Ireland visitor websites
 
-- A custom 404 error page
+- A custom 404 error page and 500 error page
 
 ### Features left to be implemented
 
-In future releases of this project and as I learn more about the languages used in this project, I would like to add some additional features to improve user experience:
+In future releases of this project and I progress as a developer, I would like to add some additional features to improve user experience:
 
 - Rating/Voting System
   - This feature would allow users to rate the words within the dictionary either through a star based rating system or an up-vote/down-vote based system

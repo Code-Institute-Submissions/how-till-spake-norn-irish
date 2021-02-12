@@ -67,7 +67,7 @@ def sign_up():
 
         if existing_user:
             # Display flash message if username already exists
-            flash("Sorry! That wee username is already being used!", "error")
+            flash("Sorry, that wee username is already being used!", "error")
             return redirect(url_for("sign_up"))
 
         # Add new user details to collection
@@ -85,7 +85,7 @@ def sign_up():
 
         # Display flash message if sign up is successful
         flash(
-            "You've successfully created a wee account with us! Welcome to your profile page!", "success")
+            "You've successfully created a wee account with us. Welcome to your profile page!", "success")
 
         # Redirect user to their profile
         return redirect(url_for("profile", username=session["user"]))
@@ -163,7 +163,7 @@ def add_word():
 
         if existing_word:
             # Display flash message if word already exists
-            flash("Sorry, that word is already in Our Wee Guide!", "word_exists")
+            flash("Sorry, that word is already in Our Wee Guide", "word_exists")
             return redirect(url_for("add_word"))
 
         word = {
@@ -207,7 +207,7 @@ def edit_word(word_id):
 # Delete Functionality
 def delete_word(word_id):
     mongo.db.dictionary.remove({"_id": ObjectId(word_id)})
-    flash("Your word has been deleted from Our Wee Guide!", "delete")
+    flash("Your word has been deleted from Our Wee Guide", "delete")
     return redirect(url_for("dictionary"))
 
 
