@@ -374,7 +374,7 @@ form .card {
 /* Open Mouth Logo */
 .bg-img-heading {
     background: linear-gradient(rgba(242, 242, 242, 0.8), rgba(242, 242, 242, 0.8)),
-    url('../images/open-mouth.png');
+    url('../images/open-mouth.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -498,19 +498,12 @@ i.fa-envelope {
 
 .error {
     justify-content: center;
-}
-
-.error-404 {
     background-color: var(--green);
-}
-
-.error-500 {
-    background-color: var(--blue);
 }
 
 .error .card {
     background: linear-gradient(rgba(242, 242, 242, 0.8), rgba(242, 242, 242, 0.8)),
-    url('../images/open-mouth.png');
+    url('../images/open-mouth.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40vh;
