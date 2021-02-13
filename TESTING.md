@@ -4,8 +4,6 @@
 
 - [Code Validation](#code-validation)
 - [User Stories](#user-stories)
-  - First Time Visitor Goals
-  - Registered User Goals
 - [Branches](#branches)
 - [Responsiveness](#responsiveness)
 - [Performance](#performance)
@@ -69,16 +67,18 @@ After fixing the errors above, I ran the code through PEP8 online again to check
 
 ### First Time Visitor Goals
 
-- As a **first time visitor**, I want to understand the main purpose of the site:
-  - I've added an about section to the home page that explains the purpose of the site which is to help visitors learn Northern Irish
+As a **first time visitor**, I want to understand the main purpose of the site:
+
+- I've added an about section to the home page that explains the purpose of the site which is to help visitors learn Northern Irish
 
 _Home Page About Section_
 ![About Us Section](static/images/readme/about-section.jpg)
 
-- As a **first time visitor**, I want to be able to easily navigate through the site:
-  - I've added a navigation bar at the top of all pages to provide links to all other pages on the site
-  - I've also included buttons throughout the site that also link to other pages on the site
-  - I've added external links in the footer to social media platforms and various Northern Ireland tourism sites, as well as an email link to contact the site owner
+As a **first time visitor**, I want to be able to easily navigate through the site:
+
+- I've added a navigation bar at the top of all pages to provide links to all other pages on the site
+- I've also included buttons throughout the site that also link to other pages on the site
+- I've added external links in the footer to social media platforms and various Northern Ireland tourism sites, as well as an email link to contact the site owner
 
 _Desktop Navigation Bar_
 ![Navigation Bar Desktop](static/images/readme/navbar-visitor.jpg)
@@ -89,32 +89,36 @@ _Mobile/Tablet Navigation Bar_
 _Footer_
 ![Footer](static/images/readme/footer.jpg)
 
-- As a **first time visitor**, I want to be able to find out which common words and phrases are used by locals in Northern Ireland:
-  - I've created a dictionary titled 'Our Wee Guide' which contains a collapsible list of all the words and phrases that have been added to the site so far
-  - When a visitor clicks on a word in the list, the word will pop out with a definition of that word and an example of it being used in conversation
+As a **first time visitor**, I want to be able to find out which common words and phrases are used by locals in Northern Ireland:
+
+- I've created a dictionary titled 'Our Wee Guide' which contains a collapsible list of all the words and phrases that have been added to the site so far
+- When a visitor clicks on a word in the list, the word will pop out with a definition of that word and an example of it being used in conversation
 
 _Dictionary Word Example_
 ![Word Example](static/images/readme/word-example.jpg)
 
-- As a **first time visitor**, I want to be able to sign up for an account to add my own suggestions:
-  - I've added a page with a sign up form to the site to allow visitors to create an account
-  - After creating an account, the user will then have the option to add words to the dictionary
+As a **first time visitor**, I want to be able to sign up for an account to add my own suggestions:
+
+- I've added a page with a sign up form to the site to allow visitors to create an account
+- After creating an account, the user will then have the option to add words to the dictionary
 
 _Sign Up Form_
 ![Sign Up Form](static/images/readme/sign-up.jpg)
 
-- As a **first time visitor**, I want to be able to contact the site owner
-  - I've included a contact us page on the site to allow the user to leave feedback about the overall site or ask any questions they might have
-  - I've also included links to social media pages in the footer as well as an email link which gives the user another way to contact the site owner if the contact form were to stop working
+As a **first time visitor**, I want to be able to contact the site owner:
+
+- I've included a contact us page on the site to allow the user to leave feedback about the overall site or ask any questions they might have
+- I've also included links to social media pages in the footer as well as an email link which gives the user another way to contact the site owner if the contact form were to stop working
 
 _Contact Form_
 ![Contact Form](static/images/readme/contact.jpg)
 
 ### Registered User Goals
 
-- As a **registered user**, I want to be able to easily login and logout of my account
-  - I've included a login page to allow the user to sign into their account
-  - The user can easily logout of their account by clicking on the logout button in the navigation bar at the top of the page
+As a **registered user**, I want to be able to easily login and logout of my account:
+
+- I've included a login page to allow the user to sign into their account
+- The user can easily logout of their account by clicking on the logout button in the navigation bar at the top of the page
 
 _Login Form_
 ![Login Form](static/images/readme/login.jpg)
@@ -122,16 +126,17 @@ _Login Form_
 _Logout Function_
 ![Logout Function](static/images/readme/logout.jpg)
 
-- As a **registered user**, I want to be able to add words or phrases to the dictionary
-  - When a user is logged into their account, they will have the option to add words to the dictionary
-  - The add word function is located on the user profile page, the home page and the dictionary page
+As a **registered user**, I want to be able to add words or phrases to the dictionary:
+- When a user is logged into their account, they will have the option to add words to the dictionary
+- The add word function is located on the user profile page, the home page and the dictionary page
 
 _Add Word Function_
 ![Add Word Function](static/images/readme/add-word.jpg)
 
-- As a **registered user**, I want to be able to edit any words or phrases I've added to the dictionary
-  - When a user is logged into their account, they will have the option to edit any of the words they have added to the dictionary
-  - The user can easily see which words they have added by going to their profile page
+As a **registered user**, I want to be able to edit any words or phrases I've added to the dictionary:
+
+- When a user is logged into their account, they will have the option to edit any of the words they have added to the dictionary
+- The user can easily see which words they have added by going to their profile page
 
 _Edit Word Button_
 ![Edit Word Button](static/images/readme/edit-button.jpg)
@@ -142,9 +147,10 @@ _Edit Word Function_
 _User Profile Page_
 ![User Profile Page](static/images/readme/user-profile.jpg)
 
-- As a **registered user**, I want to be able to delete any words or phrases I've added to the dictionary
-  - When a used is logged into their account, they will have the option to delete any of the words they have added to the dictionary
-  - The user can easily see which words they have added by going to their profile page
+As a **registered user**, I want to be able to delete any words or phrases I've added to the dictionary:
+
+- When a used is logged into their account, they will have the option to delete any of the words they have added to the dictionary
+- The user can easily see which words they have added by going to their profile page
 
 _Delete Word Button_
 ![Delete Word Button](static/images/readme/delete-button.jpg)
@@ -208,18 +214,22 @@ Mobile Performance:
 
 ## Manual Testing
 
-Each page has also been tested individually to check that:
+Each page has been tested individually to check that:
 
 - Images load properly
 - Navigation buttons link to the correct pages in the site
 - External links located in the footer open in a new tab/window
 
-Each of the forms featured on the site were also tested individually:
+Each of the forms featured on the site were also tested individually to check that:
 
-- sign_up.html
-- login.html
-- add_word.html
-- edit_word.html
+- Form validation works
+- Flash messages appear on appropriate pages when a user has:
+  - Created an account
+  - Logged in to their account
+  - Logged out of their account
+  - Successfully dded a word to the dictionary
+  - Successfully edited a word in the dictionary
+  - Successfully deleted a word in the dictionary
 
 The site has also been reviewed by some fellow Code Institute students on the peer-code-review channel on Slack. Following some feedback from another student (Marcin Kli), I changed the position and styling of the message status in the contact form to follow a similar style of the flash messages that appear throughout the site. This styling helps the message stand out more for the user.
 

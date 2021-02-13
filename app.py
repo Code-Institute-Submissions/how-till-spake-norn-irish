@@ -91,7 +91,7 @@ def sign_up():
 
         # Display flash message if sign up is successful
         flash(
-            "You've successfully created a wee account with us."
+            "You've successfully created a wee account with us. "
             "Welcome to your profile page!",
             "success")
 
