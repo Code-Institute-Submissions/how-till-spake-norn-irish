@@ -217,6 +217,10 @@ nav i {
 
 /* ---------- Delete Modal ---------- */
 
+li.modal.open {
+    margin: auto;
+}
+
 .modal {
     border-radius: 20px;
     font-weight: 700;

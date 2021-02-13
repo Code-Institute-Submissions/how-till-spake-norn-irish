@@ -27,7 +27,7 @@
                 <!-- Definition -->
                 <div class="input-field">
                     <i class="fas fa-file-alt prefix"></i>
-                    <textarea id="definition" name="definition" type="text"
+                    <textarea id="definition" name="definition"
                         class="materialize-textarea validate" required>
                         {{- word.definition -}}
                         </textarea>
@@ -37,7 +37,7 @@
                 <!-- Example -->
                 <div class="input-field">
                     <i class="fas fa-comment prefix"></i>
-                    <textarea id="example" name="example" type="text"
+                    <textarea id="example" name="example"
                         class="materialize-textarea validate" required>
                         {{- word.example -}}
                         </textarea>
@@ -46,11 +46,8 @@
 
                 <!-- Added By -->
                 <div class="input-field">
-                    <i class="fas fa-comment prefix"></i>
-                    <textarea id="added_by" name="added_by" type="text"
-                        class="materialize-textarea validate" required>
-                        {{- word.added_by -}}
-                        </textarea>
+                    <i class="fas fa-user-tag prefix"></i>
+                    <input id="added_by" name="added_by" value="{{ word.added_by }}" type="text" class="validate" required>
                     <label for="added_by">Added By</label>
                 </div>
 

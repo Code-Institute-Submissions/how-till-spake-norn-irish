@@ -226,7 +226,7 @@ def delete_word(word_id):
     return redirect(url_for("dictionary"))
 
 
-@app.route("/contact-us")
+@app.route("/contact_us")
 # Render Contact Us Page
 def contact():
     return render_template("contact.html")
