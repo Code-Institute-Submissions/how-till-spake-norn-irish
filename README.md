@@ -99,7 +99,7 @@ The site features a simple and easy to follow layout with a navigation bar at th
 
 #### Colour Scheme
 
-![Colour palette generated using coolors.co](static/images/spake-norn-irish-palette.png)
+![Colour palette generated using coolors.co](static/readme-images/spake-norn-irish-palette.png)
 _Colour palette generated using [coolors.co](https://coolors.co)_
 
 The colour scheme of this project is based on both the [Discover Northern Ireland](https://discovernorthernireland.com/) website and the [Visit Belfast](https://visitbelfast.com) website. Both of these websites feature a white background with the colours blue, green and pink being used for headings and buttons on the site.
