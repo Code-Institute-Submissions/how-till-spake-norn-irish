@@ -2,7 +2,7 @@
 
 How Till Spake Norn Irish (How to Speak Northern Irish) is an online guide to all the words and phrases you're likely to hear when visiting Northern Ireland.
 
-- **Insert Mockup Screenshot**
+![Multi Device Website Mockup Generator](static/images/readme/multi-device-screenshot.jpg)
 
 The image above is a screenshot of the site displayed on different devices using [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/).
 
@@ -99,7 +99,7 @@ The site features a simple and easy to follow layout with a navigation bar at th
 
 #### Colour Scheme
 
-![Colour palette generated using coolors.co](static/readme-images/spake-norn-irish-palette.jpg)
+![Colour palette generated using coolors.co](static/images/readme/spake-norn-irish-palette.jpg)
 _Colour palette generated using [coolors.co](https://coolors.co)_
 
 The colour scheme of this project is based on both the [Discover Northern Ireland](https://discovernorthernireland.com/) website and the [Visit Belfast](https://visitbelfast.com) website. Both of these websites feature a white background with the colours blue, green and pink being used for headings and buttons on the site.
@@ -218,27 +218,6 @@ In future releases of this project and I progress as a developer, I would like t
   - This feature would allow users to hear how each of the words featured in the dictionary are pronounced
   - When a user clicks on a word to view the definition and example, they will also be presented with an audio button to hear the pronunciation of that word
   - When a user is adding a word to the dictionary, they will have the option to upload an audio file of the word pronunciation
-
-[Contents](#contents)
-
----
-
-## Branches
-
-Throughout the development process, different branches have been created to test different features and layouts which have been merged with the master branch.
-
-Dictionary Branch:
-
-- This branch was created to test a different layout for the dictionary template
-- I originally used a grid layout with each of the words in a materialize card container and when clicked, this displayed the word definition and example
-- This layout caused overflow issues in some of the cards which meant that the cards couldn't have a fixed height
-- To fix this issue, I tried using the materialize collapsible accordion feature instead to display the dictionary and this helped fix the sizing issues with the original card layout
-
-Sort Branch:
-
-- This branch was created to test a sort function that sorts the words in the dictionary alphabetically from A-Z or Z-A
-- This was achieved by creating two new routes in app.py; one route for the ascending order and another route for the descending order
-- I then added a Materialize dropdown button to the dictionary template and linked each option in the dropdown to the relevant route
 
 [Contents](#contents)
 

@@ -70,24 +70,35 @@
                 </li>
 
                 <!-- Delete Confirmation Modal -->
-                <!-- Code below is from a slack thread in #data-centric-dev | Credited in README -->
+                <!-- Code from a slack thread in #data-centric-dev (credited in README.md) -->
                 <li id="{{ word._id }}" class="modal">
+                    <!-- Modal Content -->
                     <div class="modal-content">
-                        <h4>Are you sure you want to delete "{{ word.word }}" from Our Wee Guide?</h4>
+                        <h4>
+                            Are you sure you want to delete<br>
+                            "{{ word.word }}"<br>
+                            from Our Wee Guide?
+                        </h4>
                     </div>
-                    <div class="modal-footer center-align">
+
+                    <!-- Buttons -->
+                    <div class="row modal-footer center-align">
                         <!-- Cancel Button -->
-                        <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
-                            <i class="fas fa-times"></i>
-                            Cancel
-                        </a>
+                        <div class="col s12 m6">
+                            <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
+                                <i class="fas fa-times"></i>
+                                Cancel
+                            </a>
+                        </div>
 
                         <!-- Delete Button -->
-                        <a href="{{ url_for('delete_word', word_id=word._id) }}"
-                            class="btn delete waves-effect waves-light z-depth-0">
-                            <i class="fas fa-trash-alt"></i>
-                            Delete
-                        </a>
+                        <div class="col s12 m6">
+                            <a href="{{ url_for('delete_word', word_id=word._id) }}"
+                                class="btn delete waves-effect waves-light z-depth-0">
+                                <i class="fas fa-trash-alt"></i>
+                                Delete
+                            </a>
+                        </div>
                     </div>
                 </li>
 
