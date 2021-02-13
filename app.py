@@ -40,8 +40,11 @@ def search():
     return render_template("dictionary.html", dictionary=dictionary)
 
 
-# Code is from W3 Schools on using the MongoDB sort function:
-# https://www.w3schools.com/python/python_mongodb_sort.asp
+"""
+Code below is from W3 Schools on using the MongoDB sort function:
+https://www.w3schools.com/python/python_mongodb_sort.asp
+"""
+
 
 @app.route("/ascending")
 # Ascending Sort Functionality
@@ -83,7 +86,7 @@ def sign_up():
         # Add new user details to user_profile collection in MongoDB
         mongo.db.user_profile.insert_one(new_user)
 
-        # Put the new user into a 'session' cookie
+        # Put the new user into a session cookie
         session["user"] = request.form.get("username")
 
         # Display flash message if sign up is successful
@@ -230,8 +233,11 @@ def contact():
 
 
 # Error Handlers
-# Code is from Flask documentation for Error Handlers:
-# https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
+"""
+Code is from Flask documentation for Error Handlers:
+https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
+"""
+
 
 @app.errorhandler(404)
 # 404 Error Handler

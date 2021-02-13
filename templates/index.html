@@ -3,24 +3,25 @@
 {% block content %}
 
 <!-- Page Heading -->
-<section class="heading container center-align">
+<div class="heading container center-align">
     <div class="bg-img-heading valign-wrapper">
         <h1>How Till Spake<br>Norn Irish</h1>
     </div>
+
     <div class="description">
         <p>A Guide to Understanding the Northern Irish</p>
     </div>
-</section>
+</div>
 
 <!-- Image 1 -->
-<section class="img-container bg-img bg-img-top">
+<div class="img-container bg-img bg-img-top">
     <div class="img-description">
         <p><span>Giants Causeway</span> - Bushmills, Northern Ireland</p>
     </div>
-</section>
+</div>
 
 <!-- About -->
-<section class="about container center-align">
+<div class="about container center-align">
     <h2>About Us</h2>
     <div class="description">
         <p>
@@ -37,17 +38,17 @@
         </p>
     </div>
     <a href="{{ url_for('dictionary') }}" class="btn waves-effect waves-light z-depth-0">Our Wee Guide</a>
-</section>
+</div>
 
 <!-- Image 2 -->
-<section class="img-container bg-img bg-img-bottom">
+<div class="img-container bg-img bg-img-bottom">
     <div class="img-description">
         <p><span>The Dark Hedges</span> - Ballymoney, Northern Ireland</p>
     </div>
-</section>
+</div>
 
 <!-- Login/Sign Up -->
-<section class="login-signup container center-align">
+<div class="login-signup container center-align">
     <div class="row">
         {% if session.user %}
             <!-- Profile -->
@@ -87,6 +88,6 @@
             </div>
         {% endif %}
     </div>
-</section>
+</div>
 
 {% endblock %}

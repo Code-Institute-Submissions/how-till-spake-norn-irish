@@ -3,18 +3,16 @@
 {% block content %}
 
 <!-- Page Heading -->
-<section class="heading container center-align">
-    <div>
-        <h1>Bout ye {{ username }}?</h1>
-    </div>
+<div class="heading container center-align">
+    <h1>Bout ye {{ username }}?</h1>
 
     <div class="description">
         <p>Here's all the Norn Irish words you've added to Our Wee Guide:</p>
     </div>
-</section>
+</div>
 
 <!-- User Profile -->
-<section class="dictionary bg-img bg-img-profile">
+<div class="dictionary bg-img bg-img-profile">
 
     <!-- Flash Message -->
     <!-- Code from Pretty Printed on YouTube:
@@ -111,10 +109,10 @@
     <div class="img-description">
         <p><span>Belfast City Hall</span> - Belfast, Northern Ireland</p>
     </div>
-</section>
+</div>
 
 <!-- Add Word -->
-<section class="container center-align">
+<div class="container center-align">
     <div class="add-word">
         <p>Recently learn a new Norn Irish word?<br>Add it to Our Wee Guide now!</p>
         <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
@@ -122,6 +120,6 @@
             Add Word
         </a>
     </div>
-</section>
+</div>
 
 {% endblock %}

@@ -21,6 +21,8 @@
 
 The W3C Markup Validator and the W3C CSS Validator were used to validate the HTML and CSS files in the project and ensure there were no syntax errors. The following shows the results:
 
+HTML error for lack of heading in section class - fixed by changing section elements to div elements instead
+
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
   - No errors found in style.css
   - The validator displayed a warning for the use of the root colour variable names

@@ -3,10 +3,8 @@
 {% block content %}
 
 <!-- Page Heading -->
-<section class="heading container center-align">
-    <div>
-        <h1>Our Wee Guide</h1>
-    </div>
+<div class="heading container center-align">
+    <h1>Our Wee Guide</h1>
 
     <div class="description">
         <p>Click on the words below to find out what they mean<br>Or search for a word in our wee guide</p>
@@ -52,10 +50,10 @@
             </div>
         </form>
     </div>
-</section>
+</div>
 
 <!-- Dictionary -->
-<section class="dictionary bg-img bg-img-dictionary">
+<div class="dictionary bg-img bg-img-dictionary">
     <!-- Flash Message -->
     <!-- Code from Pretty Printed on YouTube:
         https://www.youtube.com/watch?v=lcVdZtVvnnk -->
@@ -168,11 +166,11 @@
     <div class="img-description">
         <p><span>Belfast City Hall</span> - Belfast, Northern Ireland</p>
     </div>
-</section>
+</div>
 
 <!-- Add Word Button -->
 {% if session.user %}
-    <section class="container center-align">
+    <div class="container center-align">
         <div class="add-word">
             <p>Think there's a word missing?<br>Add it to Our Wee Guide now!</p>
             <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light z-depth-0">
@@ -180,7 +178,7 @@
                 Add Word
             </a>
         </div>
-    </section>
+    </div>
 {% endif %}
 
 {% endblock %}

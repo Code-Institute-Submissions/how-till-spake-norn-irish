@@ -2,18 +2,16 @@
 {% block content %}
 
 <!-- Page Heading -->
-<section class="heading container center-align">
-    <div>
-        <h1>Add A Word To Our Wee Guide</h1>
-    </div>
+<div class="heading container center-align">
+    <h1>Add A Word To Our Wee Guide</h1>
 
     <div class="description">
         <p>Ach, ya eejit!<br>Did you make a mistake? Don't worry, you can fix that here!</p>
     </div>
-</section>
+</div>
 
 <!-- Edit Word Form -->
-<section class="form-container bg-img bg-img-add">
+<div class="form-container bg-img bg-img-add">
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_word', word_id=word._id) }}">
             <div class="card center-align">
@@ -78,6 +76,6 @@
     <div class="img-description">
         <p><span>Dunluce Castle</span> - Bushmills, Northern Ireland</p>
     </div>
-</section>
+</div>
 
 {% endblock %}

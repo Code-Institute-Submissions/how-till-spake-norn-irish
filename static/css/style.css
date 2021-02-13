@@ -417,7 +417,7 @@ form .card {
 }
 
 /* Remove white border on bottom of images caused by margin */
-section .row {
+div .row {
     margin-bottom: 0;
 }
 

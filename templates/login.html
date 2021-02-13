@@ -3,10 +3,8 @@
 {% block content %}
 
 <!-- Page Heading -->
-<section class="heading container center-align">
-    <div>
-        <h1>Login to your wee account</h1>
-    </div>
+<div class="heading container center-align">
+    <h1>Login to your wee account</h1>
 
     <div class="description">
         <p>Login into your wee account now to:</p>
@@ -15,10 +13,10 @@
             <li>Edit or Delete words you've already added to Our Wee Guide</li>
         </ul>
     </div>
-</section>
+</div>
 
 <!-- Login Form -->
-<section class="form-container bg-img bg-img-login">
+<div class="form-container bg-img bg-img-login">
     <div class="row">
 
         <!-- Flash Messages -->
@@ -79,10 +77,10 @@
     <div class="img-description">
         <p><span>Titanic Museum</span> - Belfast, Northern Ireland</p>
     </div>
-</section>
+</div>
 
 <!-- Sign Up Button -->
-<section class="container center-align">
+<div class="container center-align">
     <div class="sign-up">
         <p>
             Don't have an account yet?<br>
@@ -90,6 +88,6 @@
         </p>
         <a href="{{ url_for('sign_up') }}" class="btn waves-effect waves-light z-depth-0">Sign Up</a>
     </div>
-</section>
+</div>
 
 {% endblock %}
