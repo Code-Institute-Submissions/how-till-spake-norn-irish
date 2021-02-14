@@ -83,9 +83,6 @@ As a **first time visitor**, I want to be able to easily navigate through the si
 _Desktop Navigation Bar_
 ![Navigation Bar Desktop](static/images/readme/navbar-visitor.jpg)
 
-_Mobile/Tablet Navigation Bar_
-![Navigation Menu Mobile](static/images/readme/mobile-nav-visitor.jpg)
-
 _Footer_
 ![Footer](static/images/readme/footer.jpg)
 
@@ -127,6 +124,7 @@ _Logout Function_
 ![Logout Function](static/images/readme/logout.jpg)
 
 As a **registered user**, I want to be able to add words or phrases to the dictionary:
+
 - When a user is logged into their account, they will have the option to add words to the dictionary
 - The add word function is located on the user profile page, the home page and the dictionary page
 
@@ -227,7 +225,7 @@ Each of the forms featured on the site were also tested individually to check th
   - Created an account
   - Logged in to their account
   - Logged out of their account
-  - Successfully dded a word to the dictionary
+  - Successfully added a word to the dictionary
   - Successfully edited a word in the dictionary
   - Successfully deleted a word in the dictionary
 

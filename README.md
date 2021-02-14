@@ -108,20 +108,20 @@ The colour scheme of this project is based on both the [Discover Northern Irelan
   - Used for the background colour of the footer section, all page headings and all buttons
 
 - ![#0B5650](https://via.placeholder.com/15/0b5650/000000?text=+) `#0B5650`:
-  - Used for the background colour of all the flash messages and the sub-heading on the home page
+  - Used for the background colour of all flash messages, the sub-heading on the home page and all button hover states
 
 - ![#137BB3](https://via.placeholder.com/15/137bb3/000000?text=+) `#137BB3`:
-  - Used for the background colour of all the image descriptions
+  - Used for the background colour of all the image descriptions and icon prefixes on forms
 
 - ![#292825](https://via.placeholder.com/15/292825/000000?text=+) `#292825`:
-  - Used for the main font colour throughout the site and the link hover states in the footer
+  - Used for the main font colour throughout the site and all link hover states in the footer
 
 - ![#F2F2F2](https://via.placeholder.com/15/f2f2f2/000000?text=+) `#F2F2F2`:
   - Used as the main background colour of the site and for all button text
 
 #### Typography
 
-Throughout the site, I used two different fonts from Google Fonts - [Permanent Marker](https://fonts.google.com/specimen/Permanent+Marker?query=perman&preview.text_type=custom) with the suggested pairing of [Open Sans](https://fonts.google.com/specimen/Open+Sans?preview.text_type=custom&query=open+sans).
+Throughout the site, I used two different fonts from Google Fonts. These were [Permanent Marker](https://fonts.google.com/specimen/Permanent+Marker?query=perman&preview.text_type=custom) with the suggested pairing of [Open Sans](https://fonts.google.com/specimen/Open+Sans?preview.text_type=custom&query=open+sans).
 
 I chose the Permanent Marker font as this was this font was similar to the font used for headings on the [Discover Northern Ireland](https://discovernorthernireland.com/) website and I wanted to keep the design similar to this site to keep with the tourism site theme. This font was used on all headings throughout the site.
 
@@ -129,11 +129,15 @@ I then paired this with the suggested font of Open Sans to use as the main font 
 
 #### Imagery
 
-The images featured on this site are of popular landmarks and visitor attractions within Northern Ireland. These images are from various different Northern Ireland tourism sites. Links to these sites can be found in the [credits](#credits) section at the end of this document. These images have been used as background images for the main content section on each page. Each page/section features a different image. I've also included a site logo and favicon which is a vector image of an open mouth to fit with the name of the site.
+The images featured on this site are of popular landmarks and visitor attractions within Northern Ireland. These images are from various different Northern Ireland tourism sites. Links to these sites can be found in the [credits](#credits) section at the end of this document. These images have been used as background images for the main content section on each page. Each page/section features a different image. I've also used an open mouth vector icon for the site logo and favicon.
 
 #### Wireframes
 
 The wireframes for my site were created using [Balsamiq](https://balsamiq.com/). I created wireframes for mobile, tablet and desktop devices.
+
+The final design of this project is slightly different to the design of the wireframes. As I started coding the project and looking at Northern Ireland tourism sites, I decided to base the design of this project on those sites instead. This has resulted in some changes to the layout of some pages.
+
+Rather than having a single form displayed in the centre of the page for the sign up, login and add/edit word forms, I decided to keep the design of the site more consistent and split each page into different sections. This layout consists of a header, the main content and a footer, and is used across the site. I've also added an additional error page for an internal server error (500) which I didn't create a wireframe for. The design of this page is similar to the 404 error page included in the wireframes. The final design of the dictionary layout has also changed from a card based layout to a collapsible list which I've explained in the branches section in [TESTING.md](TESTING.md).
 
 Links to the wireframes can be found below. Each link contains the wireframes for mobile, tablet and desktop devices:
 
@@ -153,7 +157,7 @@ Links to the wireframes can be found below. Each link contains the wireframes fo
 
 ## Database Schema
 
-MongoDB Collections:
+MongoDB Atlas was the cloud database service used to create and store the database collections for this project:
 
 ### Dictionary Collection
 
@@ -198,7 +202,7 @@ MongoDB Collections:
 
 - A contact page with an easy to use form connected to EmailJS to allow anyone to contact the site owner
 
-- A footer located on every page with links to social media accounts, the contact us form and various different Northern Ireland visitor websites
+- A footer located on every page with links to social media accounts, an email link and various different Northern Ireland tourism websites
 
 - A custom 404 error page and 500 error page
 
@@ -417,6 +421,6 @@ All images used on this site were optimized for web using [TinyJPG](https://tiny
 
 - A huge thank you to Igor in Tutor Support for helping me spot an error in my code that wouldn't let me render the edit word functionality - It's always the silly things that catch me out!
 
-- And thank you to the Code Institute Slack community for being an incredible bunch of people! Especially Ed B who helped someone in a thread in #data-centric-dev that was having similar issues with a delete confirmation modal deleting the first word in the collection rather than the targeted word - that was a huge help after what felt like hours of searching for a solution!
+- And thanks as always to the Code Institute Slack community for being an incredible bunch of people! Especially Ed B who helped someone in a thread in #data-centric-dev that was having similar issues with a delete confirmation modal deleting the first word in the collection rather than the targeted word - that was a huge help after what felt like hours of searching for a solution!
 
 [Contents](#contents)
