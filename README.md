@@ -10,7 +10,7 @@ A demo of the website can be found here: [www.howtillspakenornirish.com](https:/
 
 ## Contents
 
-- [**User Experience (UX)**](<#user-experience-(ux)>)
+- [**User Experience (UX)**](#user-experience)
   - Project Goals
   - User Stories
     - First Time Visitor Goals
@@ -50,7 +50,7 @@ A demo of the website can be found here: [www.howtillspakenornirish.com](https:/
 
 ---
 
-## User Experience (UX)
+## User Experience
 
 ### Project Goals
 
