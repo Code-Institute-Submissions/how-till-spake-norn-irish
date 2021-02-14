@@ -146,7 +146,7 @@ Links to the wireframes can be found below. Each link contains the wireframes fo
 - [Dictionary](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/dictionary.pdf)
 - [Login](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/login.pdf)
 - [Profile](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/profile.pdf)
-- Add Word/Edit Word (Upload Missing Wireframe)
+- [Add/Edit Word](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/add-edit-word.pdf)
 - [Sign Up](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/sign-up.pdf)
 - [Contact](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/contact-us.pdf)
 - [404](https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/wireframes/404.pdf)
