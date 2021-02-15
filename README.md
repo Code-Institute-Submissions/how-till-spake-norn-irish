@@ -10,7 +10,7 @@ A demo of the website can be found here: [www.howtillspakenornirish.com](https:/
 
 ## Contents
 
-- [**User Experience (UX)**](#user-experience)
+- [**User Experience**](#user-experience)
   - Project Goals
   - User Stories
     - First Time Visitor Goals
@@ -27,8 +27,6 @@ A demo of the website can be found here: [www.howtillspakenornirish.com](https:/
 - [**Features**](#features)
   - Features that have been implemented
   - Features left to be implemented
-
-- [**Branches**](#branches)
 
 - [**Technologies Used**](#technologies-used)
   - Languages Used

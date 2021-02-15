@@ -14,14 +14,14 @@
 
 ## Code Validation
 
-The W3C Markup Validator and the W3C CSS Validator were used to validate the HTML and CSS files in the project and to check there were no syntax errors. The following shows the results for each page:
+The W3C Markup Validator and the W3C CSS Validator were used to validate the HTML and CSS files in the project and check there were no syntax errors. The following shows the results for each page:
 
 [W3C Markup Validator](https://validator.w3.org/)
 
 - An error across all pages for lack of heading in section element
   - Replaced all section elements with div elements instead
 - contact.html displayed a warning for unnecessary use of the type attribute in JavaScript resources
-  - Removed the type attribute from the script tag
+  - Removed the type attribute from the script tag in contact.html
 - add_word.html and edit_word.html displayed a warning for the use of type attribute on a textarea element
   - Removed the type attribute from all textarea elements
 - dictionary.html and profile.html displayed a warning for the use of a div element within a ul element
@@ -53,7 +53,7 @@ After fixing the errors above, I ran the CSS code through the validator again to
 [PEP8 Online](http://pep8online.com/) was used to check that the Python code meets PEP8 requirements:
 
 - Errors displaying for lines being too long on flash messages and comments
-  - Displayed flash messages and comments across multiple lines where required
+  - Split flash messages and comments across multiple lines where required
 
 After fixing the errors above, I ran the code through PEP8 online again to check that there were no other errors:
   
@@ -77,7 +77,7 @@ _Home Page About Section_
 As a **first time visitor**, I want to be able to easily navigate through the site:
 
 - I've added a navigation bar at the top of all pages to provide links to all other pages on the site
-- I've also included buttons throughout the site that also link to other pages on the site
+- I've included buttons throughout the site that also link to other pages on the site
 - I've added external links in the footer to social media platforms and various Northern Ireland tourism sites, as well as an email link to contact the site owner
 
 _Desktop Navigation Bar_
@@ -126,7 +126,7 @@ _Logout Function_
 As a **registered user**, I want to be able to add words or phrases to the dictionary:
 
 - When a user is logged into their account, they will have the option to add words to the dictionary
-- The add word function is located on the user profile page, the home page and the dictionary page
+- The add word button is located on the user profile page, the home page and the dictionary page
 
 _Add Word Function_
 ![Add Word Function](static/images/readme/add-word.jpg)
@@ -147,7 +147,7 @@ _User Profile Page_
 
 As a **registered user**, I want to be able to delete any words or phrases I've added to the dictionary:
 
-- When a used is logged into their account, they will have the option to delete any of the words they have added to the dictionary
+- When a user is logged into their account, they will have the option to delete any of the words they have added to the dictionary
 - The user can easily see which words they have added by going to their profile page
 
 _Delete Word Button_
@@ -216,20 +216,28 @@ Each page has been tested individually to check that:
 
 - Images load properly
 - Navigation buttons link to the correct pages in the site
-- External links located in the footer open in a new tab/window
-
-Each of the forms featured on the site were also tested individually to check that:
-
-- Form validation works
-- Flash messages appear on appropriate pages when a user has:
+- External links located in the footer open in a new tab/window and link to the correct site
+- Logged in users have access to a profile page to see which words they have added to the dictionary
+- Logged in users are able to edit and delete any words they've added to the dictionary
+- Logged in users can easily log out of their account
+- Site admin has permission to edit and delete any of the words in the dictionary
+- Form validation works on all forms
+- Flash messages appear on the correct pages when a user has:
   - Created an account
+  - Entered a username that is already being used
   - Logged in to their account
+  - Entered an incorrect username or password
   - Logged out of their account
   - Successfully added a word to the dictionary
+  - Entered a word that already exists in the dictionary
   - Successfully edited a word in the dictionary
   - Successfully deleted a word in the dictionary
 
-The site has also been reviewed by some fellow Code Institute students on the peer-code-review channel on Slack. Following some feedback from another student (Marcin Kli), I changed the position and styling of the message status in the contact form to follow a similar style of the flash messages that appear throughout the site. This styling helps the message stand out more for the user.
+The feedback form was also tested to check that EmailJS was working properly. I tested this by entering the relevant details on the form and clicking the submit button at the bottom of the form. After submitting the form, a message appeared above to state that the email had been successfully sent. I received an email to my own personal email account stating that I had received "How Till Spake Northern Irish Feedback". The email received can be seen in the screenshot below:
+
+![Feedback Email](static/images/readme/emailjs.jpg)
+
+The site has also been reviewed by some fellow Code Institute students on the peer-code-review channel on Slack and has also been reviewed by my mentor(Spencer Barriball). Following some feedback from another student (Marcin Kli), I changed the position and styling of the message status in the contact form to follow a similar style of the flash messages that appear throughout the site. This styling helps the message stand out more for the user.
 
 [Contents](#contents)
 
@@ -237,7 +245,7 @@ The site has also been reviewed by some fellow Code Institute students on the pe
 
 ## Known Bugs
 
-There was a minor bug found on the site on completion of the project which has been listed below
+There was a minor bug found on the site on completion of the project which has been listed below.
 
 Issue with form reset in contact.html:
 
