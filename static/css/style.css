@@ -157,13 +157,16 @@ nav i {
 
 .dictionary {
     position: relative;
-    height: auto;
-
-    padding-bottom: 70px;
+    height: 100vh;
+    overflow: scroll;
 }
 
 .dictionary .container {
     margin: 30px auto;
+}
+
+.dictionary .img-description {
+    position: sticky;
 }
 
 .collapsible-header {
